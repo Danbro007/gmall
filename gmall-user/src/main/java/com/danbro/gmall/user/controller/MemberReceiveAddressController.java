@@ -1,8 +1,7 @@
 package com.danbro.gmall.user.controller;
 
-import com.danbro.gmall.user.bean.MemberReceiveAddress;
-import com.danbro.gmall.user.service.MemberReceiveAddressService;
-import org.springframework.stereotype.Controller;
+import com.danbro.gmall.api.service.MemberReceiveAddressService;
+import com.danbro.gmall.api.bean.MemberReceiveAddress;
 import org.springframework.web.bind.annotation.*;
 
 /**

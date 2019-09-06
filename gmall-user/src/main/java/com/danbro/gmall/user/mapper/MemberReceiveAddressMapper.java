@@ -1,7 +1,7 @@
 package com.danbro.gmall.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.danbro.gmall.user.bean.MemberReceiveAddress;
+import com.danbro.gmall.api.bean.MemberReceiveAddress;
 
 /**
  * @author Danrbo

@@ -1,6 +1,6 @@
-package com.danbro.gmall.user.service;
+package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.user.bean.MemberReceiveAddress;
+import com.danbro.gmall.api.bean.MemberReceiveAddress;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import java.util.List;
  * @date 2019/9/6 12:24
  * description
  **/
-public interface MemberReceiveAddressServiceIml {
+public interface MemberReceiveAddressService {
 
     /**
      * 添加新的地址

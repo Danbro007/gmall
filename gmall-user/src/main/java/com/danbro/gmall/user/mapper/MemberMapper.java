@@ -2,7 +2,7 @@ package com.danbro.gmall.user.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.danbro.gmall.user.bean.Member;
+import com.danbro.gmall.api.bean.Member;
 
 /**
  * @author Danrbo

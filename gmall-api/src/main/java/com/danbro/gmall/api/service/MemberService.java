@@ -1,6 +1,6 @@
-package com.danbro.gmall.user.service;
+package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.user.bean.Member;
+import com.danbro.gmall.api.bean.Member;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
  * description
  **/
 
-public interface MemberServiceIml {
+public interface MemberService {
     /**
      * 获得所有member
      * @return 所有member

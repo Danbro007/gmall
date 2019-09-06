@@ -1,6 +1,8 @@
-package com.danbro.gmall.user.service;
+package com.danbro.gmall.user.service.Impl;
 
-import com.danbro.gmall.user.bean.Member;
+import com.danbro.gmall.api.bean.Member;
+
+import com.danbro.gmall.api.service.MemberService;
 import com.danbro.gmall.user.mapper.MemberMapper;
 import com.danbro.gmall.user.mapper.MemberReceiveAddressMapper;
 import org.springframework.stereotype.Service;
@@ -15,13 +17,13 @@ import java.util.List;
  * description
  **/
 @Service
-public class MemberService implements MemberServiceIml {
+public class MemberServiceImpl implements MemberService {
 
     private MemberMapper memberMapper;
 
     private MemberReceiveAddressMapper memberReceiveAddressMapper;
 
-    public MemberService(MemberMapper memberMapper, MemberReceiveAddressMapper memberReceiveAddressMapper) {
+    public MemberServiceImpl(MemberMapper memberMapper, MemberReceiveAddressMapper memberReceiveAddressMapper) {
         this.memberMapper = memberMapper;
         this.memberReceiveAddressMapper = memberReceiveAddressMapper;
     }

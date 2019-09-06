@@ -1,4 +1,4 @@
-package com.danbro.gmall.user.bean;
+package com.danbro.gmall.api.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
