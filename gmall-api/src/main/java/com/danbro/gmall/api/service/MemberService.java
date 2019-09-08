@@ -1,6 +1,7 @@
 package com.danbro.gmall.api.service;
 
 import com.danbro.gmall.api.bean.Member;
+import com.danbro.gmall.api.vo.MemberInfoVO;
 
 import java.util.List;
 
@@ -12,8 +13,8 @@ import java.util.List;
 
 public interface MemberService {
     /**
-     * 获得所有member
-     * @return 所有member
+     * 获得所有memberDto
+     * @return 所有memberDto
      */
     List<Member> getAllMembers();
 
@@ -40,5 +41,6 @@ public interface MemberService {
      * @param memberId 会员id
      * @return 会员对象
      */
-    Member selectMember(Long memberId);
+    MemberInfoVO selectMember(Long memberId);
+
 }

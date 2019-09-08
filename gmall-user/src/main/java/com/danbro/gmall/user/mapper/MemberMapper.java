@@ -3,6 +3,7 @@ package com.danbro.gmall.user.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.danbro.gmall.api.bean.Member;
+import com.danbro.gmall.api.vo.MemberInfoVO;
 
 /**
  * @author Danrbo
@@ -10,5 +11,4 @@ import com.danbro.gmall.api.bean.Member;
  * description
  **/
 public interface MemberMapper extends BaseMapper<Member> {
-
 }

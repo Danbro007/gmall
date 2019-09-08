@@ -1,10 +1,12 @@
 package com.danbro.gmall.user.service.Impl;
 
 import com.danbro.gmall.api.bean.Member;
-
+import com.danbro.gmall.api.bean.MemberReceiveAddress;
+import com.danbro.gmall.api.vo.MemberInfoVO;
 import com.danbro.gmall.api.service.MemberService;
 import com.danbro.gmall.user.mapper.MemberMapper;
 import com.danbro.gmall.user.mapper.MemberReceiveAddressMapper;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -42,10 +44,11 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void deleteMember(Long memberId) {
         memberMapper.deleteById(memberId);
-        HashMap<String, Object> columnMap  = new HashMap<>(16);
-        columnMap .put("memberId",memberId);
+        HashMap<String, Object> columnMap = new HashMap<>(16);
+        columnMap.put("member_id", memberId);
         memberReceiveAddressMapper.deleteByMap(columnMap);
     }
+
 
     @Override
     public void updateMember(Member member) {
@@ -53,8 +56,13 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public Member selectMember(Long memberId) {
-        return memberMapper.selectById(memberId);
+    public MemberInfoVO selectMember(Long memberId) {
+        Member member = memberMapper.selectById(memberId);
+        MemberInfoVO memberInfoVO = new MemberInfoVO();
+        BeanUtils.copyProperties(member,memberInfoVO);
+        List<MemberReceiveAddress> addressList= memberReceiveAddressMapper.getAddressByMemberId(memberId);
+        memberInfoVO.setAddressList(addressList);
+        return memberInfoVO;
     }
 
 }

@@ -35,6 +35,10 @@
         <jest.version>5.3.3</jest.version>
         <jna.version>4.5.1</jna.version>
         <beanUtils.version>1.9.3</beanUtils.version>
+        <mybatis-plus.version>3.2.0</mybatis-plus.version>
+        <mysql.version>5.1.47</mysql.version>
+        <lombok.version>1.18.8</lombok.version>
+        <thymeleaf.version>2.1.8.RELEASE</thymeleaf.version>
     </properties>
 
     <dependencyManagement>
@@ -62,8 +66,6 @@
                 <artifactId>spring-boot-starter-dubbo</artifactId>
                 <version>${dubbo-starter.version}</version>
             </dependency>
-
-
 
             <dependency>
                 <groupId>net.sourceforge.nekohtml</groupId>
@@ -103,9 +105,6 @@
                 <version>${commons-lang3.version}</version>
             </dependency>
 
-
-
-
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
@@ -132,7 +131,29 @@
                 <version>${beanUtils.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
 
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-thymeleaf</artifactId>
+                <version>${thymeleaf.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

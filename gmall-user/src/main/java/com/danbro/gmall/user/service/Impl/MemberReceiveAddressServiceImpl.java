@@ -1,6 +1,7 @@
 package com.danbro.gmall.user.service.Impl;
 
 import com.danbro.gmall.api.bean.MemberReceiveAddress;
+import com.danbro.gmall.api.service.MemberReceiveAddressService;
 import com.danbro.gmall.user.mapper.MemberReceiveAddressMapper;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +14,7 @@ import java.util.List;
  * description
  **/
 @Service
-public class MemberReceiveAddressServiceImpl implements com.danbro.gmall.api.service.MemberReceiveAddressService {
+public class MemberReceiveAddressServiceImpl implements MemberReceiveAddressService {
 
     private MemberReceiveAddressMapper memberReceiveAddressMapper;
 
@@ -44,7 +45,7 @@ public class MemberReceiveAddressServiceImpl implements com.danbro.gmall.api.ser
     @Override
     public List<MemberReceiveAddress> selectAddressByMemberId(Long memberId) {
         HashMap<String, Object> columnMap = new HashMap<>(16);
-        columnMap.put("memberId",memberId);
+        columnMap.put("member_id",memberId);
         return memberReceiveAddressMapper.selectByMap(columnMap);
     }
 }

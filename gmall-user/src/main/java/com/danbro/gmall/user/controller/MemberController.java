@@ -1,9 +1,9 @@
 package com.danbro.gmall.user.controller;
 
+import com.danbro.gmall.api.bean.Member;
+import com.danbro.gmall.api.vo.MemberInfoVO;
 import com.danbro.gmall.api.service.MemberReceiveAddressService;
 import com.danbro.gmall.api.service.MemberService;
-import com.danbro.gmall.api.bean.Member;
-import com.danbro.gmall.api.bean.MemberReceiveAddress;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -44,9 +44,10 @@ public class MemberController {
     public void updateMember(Member member) {
         memberService.updateMember(member);
     }
+
     @GetMapping("/members/{id}")
-    public List<MemberReceiveAddress> getAddressByMemberId(@PathVariable("id") Long memberId) {
-        return memberReceiveAddressService.selectAddressByMemberId(memberId);
+    public MemberInfoVO getAddressByMemberId(@PathVariable("id") Long memberId) {
+        return memberService.selectMember(memberId);
     }
 
 
