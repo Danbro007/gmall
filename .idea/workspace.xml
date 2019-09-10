@@ -5,77 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e539db0-3c96-4ff8-9e6b-da5094266bda" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_17_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_6_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_2_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_2_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-api/gmall-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/gmall-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/MemberReceiveAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/MemberReceiveAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/vo/MemberInfoVO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/bean/Member.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/bean/Member.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/bean/MemberReceiveAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/bean/MemberReceiveAddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-common-utils/gmall-common-utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common-utils/gmall-common-utils.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-common-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-common-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-service-utils/gmall-service-utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-service-utils/gmall-service-utils.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-service-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-service-utils/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/gmall-user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-user/gmall-user.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-user/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-user-web/src/main/java/com/danbro/gmall/user/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/controller/MemberReceiveAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-user-web/src/main/java/com/danbro/gmall/user/controller/MemberReceiveAddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/mapper/MemberMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/mapper/MemberReceiveAddressMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/service/Impl/MemberReceiveAddressServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/service/Impl/MemberServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/target/classes/com/danbro/gmall/user/GmallUserApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/target/classes/com/danbro/gmall/user/controller/MemberController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/target/classes/com/danbro/gmall/user/controller/MemberReceiveAddressController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/target/classes/com/danbro/gmall/user/mapper/MemberMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/target/classes/com/danbro/gmall/user/mapper/MemberReceiveAddressMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/target/classes/com/danbro/gmall/user/service/Impl/MemberReceiveAddressServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-user/target/classes/com/danbro/gmall/user/service/Impl/MemberServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-web-utils/gmall-web-utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-web-utils/gmall-web-utils.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-web-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-web-utils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/bean/PmsBaseCatalog3.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/bean/PmsBaseCatalog3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/gmall-user/target/" />
     <ignored path="$PROJECT_DIR$/gmall-api/target/" />
@@ -120,13 +53,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="gmall: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="gmall@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="gmall: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="pms_base_catalog3: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -138,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/controller/PmsBaseCatalogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="122">
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#866#867#0" expanded="true" />
@@ -149,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseCatalog3.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/controller/PmsBaseAttrInfoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1">
-              <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            <state relative-caret-position="26">
+              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,14 +87,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseCatalogImpl.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="88">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -211,24 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/MemberDto.java" />
-        <option value="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/service/Impl/MemberReceiveAddressServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/mapper/MemberReceiveAddressMapper.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/vo/MemberInfoVO.java" />
-        <option value="$PROJECT_DIR$/gmall-user/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/gmall-user/src/main/resources/mapper/MemberMapper.xml" />
-        <option value="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/mapper/MemberMapper.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/MemberService.java" />
-        <option value="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/service/Impl/MemberServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gmall-user/src/main/java/com/danbro/gmall/user/controller/MemberController.java" />
-        <option value="$PROJECT_DIR$/gmall-user/src/test/java/com/danbro/gmall/user/GmallUserApplicationTests.java" />
-        <option value="$PROJECT_DIR$/gmall-user-service/src/main/java/com/danbro/gmall/user/Impl/MemberReceiveAddressServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gmall-user-service/src/main/java/com/danbro/gmall/user/Impl/MemberServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gmall-user-service/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/gmall-user/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-user-service/src/main/java/com/danbro/gmall/user/GmallUserServiceApplication.java" />
-        <option value="$PROJECT_DIR$/gmall-user-web/src/main/java/com/danbro/gmall/user/controller/MemberReceiveAddressController.java" />
-        <option value="$PROJECT_DIR$/gmall-user-web/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-common-utils/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-service-utils/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-api/pom.xml" />
@@ -246,9 +160,7 @@
         <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseCatalog2Mapper.java" />
         <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseCatalog3Mapper.java" />
         <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseCatalog1Iml.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/gmall-user-web/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/gmall-user-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/GmallManageWebApplication.java" />
         <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/GmallManageServiceApplication.java" />
@@ -262,6 +174,26 @@
         <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseCatalogImpl.java" />
         <option value="$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/controller/PmsBaseCatalogController.java" />
         <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseCatalog3.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/.gitignore" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/.gitignore" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/CatalogAttrInfo.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseAttrInfo.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/CatalogAttrValue.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseAttrValue.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/CatalogAttrInfoImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/CatalogAttrValueImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/PmsBaseAttrInfoImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/PmsBaseAttrInfoService.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/PmsBaseAttrValueImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseAttrInfoMapper.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseAttrValue.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseAttrInfoImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseAttrValueMapper.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseAttrValueImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/PmsBaseAttrValueService.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/controller/PmsBaseAttrInfoController.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -305,6 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -315,70 +248,25 @@
             <path>
               <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-api" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-api" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-user-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-user-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-user-web" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-user-web" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -386,20 +274,20 @@
             <path>
               <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-user-web" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall" type="462c0819:PsiDirectoryNode" />
-              <item name="gmall-user-web" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-manage-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -407,7 +295,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -421,7 +308,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="database.console.LAST_STATE" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-manage-service/src/main/resources" />
@@ -577,7 +464,8 @@
       <workItem from="1567918973640" duration="13138000" />
       <workItem from="1567994174296" duration="6223000" />
       <workItem from="1568019305461" duration="9400000" />
-      <workItem from="1568082347319" duration="9418000" />
+      <workItem from="1568082347319" duration="11841000" />
+      <workItem from="1568113298094" duration="481000" />
     </task>
     <task id="LOCAL-00001" summary="创建member模块">
       <created>1567668664533</created>
@@ -643,12 +531,58 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68900000" />
+    <option name="totallyTimeSpent" value="71804000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23039612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23443815" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22735347" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5328597" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.9094139" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.1563055" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.053285968" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.08703375" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.5328597" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.3815683" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.21341956" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23039612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -662,10 +596,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5328597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.9094139" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.9094139" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.1563055" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.40319717" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.053285968" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.08703375" />
@@ -678,43 +612,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.3815683" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.21341956" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09620049" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Image Layers" order="6" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.074600354" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Database Console" order="8" weight="0.1563055" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.37122557" />
-      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.26998225" />
-      <window_info anchor="bottom" id="Java Enterprise" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.5328597" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.112368636" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.040420372" />
+      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.21341956" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -769,24 +667,6 @@
     <MESSAGE value="创建parent maven工程" />
     <option name="LAST_COMMIT_MESSAGE" value="创建parent maven工程" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/controller/PmsBaseCatalogController.java</url>
-          <line>39</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/controller/PmsBaseCatalogController.java</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
@@ -807,236 +687,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gmall-user-web/src/main/java/com/danbro/gmall/user/controller/MemberReceiveAddressController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="49" lean-forward="true" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-user/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-common-utils/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-service-utils/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="27" column="57" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-user-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-user-web/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/com/baomidou/mybatis-plus-annotation/3.2.0/mybatis-plus-annotation-3.2.0-sources.jar!/com/baomidou/mybatisplus/annotation/TableId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c0215df9-adb5-4e58-997b-84fa77119da0/schema/gmall/table/pms_base_catalog1">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="b5a6091b-d011-4f72-8ba0-b643aa77b609">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/MemberReceiveAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/thymeleaf/extras/thymeleaf-extras-java8time/3.0.4.RELEASE/thymeleaf-extras-java8time-3.0.4.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="321" column="24" selection-start-line="321" selection-start-column="24" selection-end-line="321" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://MAVEN/com.danbro.gmall.web.utils:gmall-web-utils:1.0-SNAPSHOT">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>MAVEN</ID>
-          <OriginalElement>com.danbro.gmall.web.utils:gmall-web-utils:1.0-SNAPSHOT</OriginalElement>
-          <nodes>
-            <node x="" y="">com.danbro.gmall.web.utils:gmall-web-utils:1.0-SNAPSHOT</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.5.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.8</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.5.RELEASE/com.fasterxml.jackson.core:jackson-databind:jar:2.9.8/com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.5.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.8</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.5.RELEASE/com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.8</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-json:jar:2.1.5.RELEASE/com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.8</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.5.RELEASE/org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.19</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.5.RELEASE/org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.19</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.5.RELEASE/org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.19</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.16.Final</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.16.Final/javax.validation:validation-api:jar:2.0.1.Final</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.16.Final/org.jboss.logging:jboss-logging:jar:3.3.2.Final</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.hibernate.validator:hibernate-validator:jar:6.0.16.Final/com.fasterxml:classmate:jar:1.4.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework:spring-web:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework:spring-web:jar:5.1.7.RELEASE/org.springframework:spring-beans:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework:spring-webmvc:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework:spring-webmvc:jar:5.1.7.RELEASE/org.springframework:spring-aop:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-web:jar:2.1.5.RELEASE/org.springframework:spring-webmvc:jar:5.1.7.RELEASE/org.springframework:spring-expression:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-test:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-test-autoconfigure:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/com.jayway.jsonpath:json-path:jar:2.4.0/net.minidev:json-smart:jar:2.3/net.minidev:accessors-smart:jar:1.2/org.ow2.asm:asm:jar:5.0.4</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/junit:junit:jar:4.12</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.assertj:assertj-core:jar:3.11.1</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.mockito:mockito-core:jar:2.23.4</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.mockito:mockito-core:jar:2.23.4/net.bytebuddy:byte-buddy:jar:1.9.12</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.mockito:mockito-core:jar:2.23.4/net.bytebuddy:byte-buddy-agent:jar:1.9.12</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.mockito:mockito-core:jar:2.23.4/org.objenesis:objenesis:jar:2.6</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.hamcrest:hamcrest-core:jar:1.3</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.hamcrest:hamcrest-library:jar:1.3</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.skyscreamer:jsonassert:jar:1.5.0/com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.springframework:spring-core:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.springframework:spring-core:jar:5.1.7.RELEASE/org.springframework:spring-jcl:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.springframework:spring-test:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter-test:jar:2.1.5.RELEASE/org.xmlunit:xmlunit-core:jar:2.6.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-autoconfigure:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.5.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.5.RELEASE/ch.qos.logback:logback-classic:jar:1.2.3/ch.qos.logback:logback-core:jar:1.2.3</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.5.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.5.RELEASE/org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.2/org.apache.logging.log4j:log4j-api:jar:2.11.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/org.springframework.boot:spring-boot-starter-logging:jar:2.1.5.RELEASE/org.slf4j:jul-to-slf4j:jar:1.7.26</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/javax.annotation:javax.annotation-api:jar:1.3.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.springframework.boot:spring-boot-starter:jar:2.1.5.RELEASE/org.yaml:snakeyaml:jar:1.23</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.alibaba:fastjson:jar:1.2.46</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.apache.commons:commons-lang3:jar:3.7</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/commons-beanutils:commons-beanutils:jar:1.9.3</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/commons-beanutils:commons-beanutils:jar:1.9.3/commons-logging:commons-logging:jar:1.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/commons-beanutils:commons-beanutils:jar:1.9.3/commons-collections:commons-collections:jar:3.2.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.apache.httpcomponents:httpclient:jar:4.5.5</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.apache.httpcomponents:httpclient:jar:4.5.5/org.apache.httpcomponents:httpcore:jar:4.4.11</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/org.apache.httpcomponents:httpclient:jar:4.5.5/commons-codec:commons-codec:jar:1.11</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/com.baomidou:mybatis-plus:jar:3.2.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/com.baomidou:mybatis-plus:jar:3.2.0/com.baomidou:mybatis-plus-extension:jar:3.2.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/com.baomidou:mybatis-plus:jar:3.2.0/com.baomidou:mybatis-plus-extension:jar:3.2.0/com.baomidou:mybatis-plus-core:jar:3.2.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/com.baomidou:mybatis-plus:jar:3.2.0/com.baomidou:mybatis-plus-extension:jar:3.2.0/com.baomidou:mybatis-plus-core:jar:3.2.0/com.baomidou:mybatis-plus-annotation:jar:3.2.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/com.baomidou:mybatis-plus:jar:3.2.0/com.baomidou:mybatis-plus-extension:jar:3.2.0/com.baomidou:mybatis-plus-core:jar:3.2.0/com.github.jsqlparser:jsqlparser:jar:2.1</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/com.baomidou:mybatis-plus:jar:3.2.0/com.baomidou:mybatis-plus-extension:jar:3.2.0/com.baomidou:mybatis-plus-core:jar:3.2.0/org.mybatis:mybatis:jar:3.5.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/com.baomidou:mybatis-plus:jar:3.2.0/com.baomidou:mybatis-plus-extension:jar:3.2.0/org.mybatis:mybatis-spring:jar:2.0.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.5.RELEASE/com.zaxxer:HikariCP:jar:3.2.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.5.RELEASE/org.springframework:spring-jdbc:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/com.baomidou:mybatis-plus-boot-starter:jar:3.2.0/org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.5.RELEASE/org.springframework:spring-jdbc:jar:5.1.7.RELEASE/org.springframework:spring-tx:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.danbro.gmall.api:gmall-api:jar:1.0-SNAPSHOT/org.projectlombok:lombok:jar:1.18.8</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.alibaba:dubbo:jar:2.6.6</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.alibaba:dubbo:jar:2.6.6/org.springframework:spring-context:jar:5.1.7.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.alibaba:dubbo:jar:2.6.6/org.javassist:javassist:jar:3.20.0-GA</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.alibaba:dubbo:jar:2.6.6/org.jboss.netty:netty:jar:3.2.5.Final</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.101tec:zkclient:jar:0.10</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.101tec:zkclient:jar:0.10/org.slf4j:slf4j-api:jar:1.7.26</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.101tec:zkclient:jar:0.10/org.apache.zookeeper:zookeeper:jar:3.4.8</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.101tec:zkclient:jar:0.10/org.apache.zookeeper:zookeeper:jar:3.4.8/log4j:log4j:jar:1.2.16</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.101tec:zkclient:jar:0.10/org.apache.zookeeper:zookeeper:jar:3.4.8/jline:jline:jar:0.9.94</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.101tec:zkclient:jar:0.10/org.apache.zookeeper:zookeeper:jar:3.4.8/io.netty:netty:jar:3.7.0.Final</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/org.slf4j:log4j-over-slf4j:jar:1.7.26</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/org.springframework.boot:spring-boot-starter-validation:jar:2.1.5.RELEASE</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/com.alibaba:dubbo-registry-nacos:jar:2.6.6</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/com.alibaba.nacos:nacos-client:jar:1.0.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/com.alibaba.nacos:nacos-client:jar:1.0.0/com.alibaba.nacos:nacos-common:jar:1.0.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/com.alibaba.nacos:nacos-client:jar:1.0.0/com.alibaba.nacos:nacos-common:jar:1.0.0/commons-io:commons-io:jar:2.2</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/com.alibaba.nacos:nacos-client:jar:1.0.0/com.alibaba.nacos:nacos-api:jar:1.0.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/com.alibaba.nacos:nacos-client:jar:1.0.0/com.google.guava:guava:jar:19.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/com.alibaba.nacos:nacos-client:jar:1.0.0/com.fasterxml.jackson.core:jackson-core:jar:2.9.8</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/com.alibaba.nacos:nacos-client:jar:1.0.0/io.prometheus:simpleclient:jar:0.5.0</node>
-            <node x="" y="">com.danbro.gmall.common.utils:gmall-common-utils:jar:1.0-SNAPSHOT/com.gitee.reger:spring-boot-starter-dubbo:jar:1.1.3/io.netty:netty-all:jar:4.1.36.Final</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.5.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.5.RELEASE/org.thymeleaf:thymeleaf-spring5:jar:2.1.5.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.5.RELEASE/org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.5.RELEASE/org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE/org.thymeleaf:thymeleaf:jar:2.1.5.RELEASE</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.5.RELEASE/org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE/org.thymeleaf:thymeleaf:jar:2.1.5.RELEASE/ognl:ognl:jar:3.0.8</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.5.RELEASE/org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE/org.thymeleaf:thymeleaf:jar:2.1.5.RELEASE/org.javassist:javassist:jar:3.16.1-GA</node>
-            <node x="" y="">org.springframework.boot:spring-boot-starter-thymeleaf:jar:2.1.5.RELEASE/org.thymeleaf.extras:thymeleaf-extras-java8time:jar:3.0.4.RELEASE/org.thymeleaf:thymeleaf:jar:2.1.5.RELEASE/org.unbescape:unbescape:jar:1.1.0.RELEASE</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.4000000000000001" x="859.8121878121883" y="2127.285714285714" />
-          <SelectedNodes />
-          <Categories />
-          <VISIBILITY>All</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://MAVEN/com.danbro.gmall:gmall-parent:1.0-SNAPSHOT">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1047,9 +697,10 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="228.0" y="10.5" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="228.0" y="11.0" />
           <SelectedNodes />
           <Categories />
+          <SCOPE>All</SCOPE>
           <VISIBILITY>All</VISIBILITY>
         </state>
       </provider>
@@ -1065,13 +716,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/MemberReceiveAddressService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1092,24 +736,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseCatalog2Mapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/vo/MemberInfoVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1127,13 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -1194,13 +817,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseCatalog2Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseCatalog2Impl.java" />
     <entry file="das://c0215df9-adb5-4e58-997b-84fa77119da0/schema/gmall/table/pms_base_catalog2">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="b5a6091b-d011-4f72-8ba0-b643aa77b609">
@@ -1241,13 +858,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseCatalog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseCatalog.java" />
     <entry file="file://$PROJECT_DIR$/gmall-user-service/src/main/java/com/danbro/gmall/user/Impl/MemberReceiveAddressServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-336">
@@ -1294,30 +905,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/PmsBaseCatalogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gmall-user-web/src/main/java/com/danbro/gmall/user/controller/MemberController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseCatalogImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1331,10 +922,176 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseCatalog3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c0215df9-adb5-4e58-997b-84fa77119da0/schema/gmall/table/pms_base_attr_info.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c0215df9-adb5-4e58-997b-84fa77119da0/schema/gmall/table/pms_base_attr_info">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="b5a6091b-d011-4f72-8ba0-b643aa77b609">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c0215df9-adb5-4e58-997b-84fa77119da0/schema/gmall/table/pms_base_attr_value">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="b5a6091b-d011-4f72-8ba0-b643aa77b609">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c0215df9-adb5-4e58-997b-84fa77119da0/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/MemberReceiveAddressService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/PmsBaseCatalogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseCatalogImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-199">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseCatalog2Mapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseAttrInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/PmsBaseAttrInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseAttrInfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseAttrInfoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseAttrValueMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseAttrValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/PmsBaseAttrValueService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/PmsBaseAttrValueImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/controller/PmsBaseCatalogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+        <state relative-caret-position="122">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#866#867#0" expanded="true" />
@@ -1343,13 +1100,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/PmsBaseCatalog3.java">
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/controller/PmsBaseAttrInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1">
-          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="26">
+          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
         </state>
       </provider>
     </entry>
