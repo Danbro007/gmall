@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author Danrbo
  * @date 2019/9/5 21:30
@@ -13,7 +15,7 @@ import lombok.Data;
  **/
 @TableName(value = "ums_member_receive_address")
 @Data
-public class MemberReceiveAddress {
+public class MemberReceiveAddress implements Serializable {
     @TableId(value = "id",type = IdType.AUTO)
     private Long id;
     private Long memberId;
