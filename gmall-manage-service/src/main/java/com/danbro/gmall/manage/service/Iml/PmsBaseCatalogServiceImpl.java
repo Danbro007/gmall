@@ -18,12 +18,12 @@ import java.util.List;
  * description
  **/
 @Service
-public class PmsBaseCatalogImpl implements PmsBaseCatalogService {
+public class PmsBaseCatalogServiceImpl implements PmsBaseCatalogService {
     private PmsBaseCatalog1Mapper pmsBaseCatalog1Mapper;
     private PmsBaseCatalog2Mapper pmsBaseCatalog2Mapper;
     private PmsBaseCatalog3Mapper pmsBaseCatalog3Mapper;
 
-    public PmsBaseCatalogImpl(PmsBaseCatalog1Mapper pmsBaseCatalog1Mapper, PmsBaseCatalog2Mapper pmsBaseCatalog2Mapper, PmsBaseCatalog3Mapper pmsBaseCatalog3Mapper) {
+    public PmsBaseCatalogServiceImpl(PmsBaseCatalog1Mapper pmsBaseCatalog1Mapper, PmsBaseCatalog2Mapper pmsBaseCatalog2Mapper, PmsBaseCatalog3Mapper pmsBaseCatalog3Mapper) {
         this.pmsBaseCatalog1Mapper = pmsBaseCatalog1Mapper;
         this.pmsBaseCatalog2Mapper = pmsBaseCatalog2Mapper;
         this.pmsBaseCatalog3Mapper = pmsBaseCatalog3Mapper;

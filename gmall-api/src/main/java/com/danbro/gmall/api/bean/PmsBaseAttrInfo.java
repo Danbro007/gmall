@@ -1,10 +1,14 @@
 package com.danbro.gmall.api.bean;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.beans.Transient;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author Danrbo
@@ -14,9 +18,11 @@ import java.io.Serializable;
 @TableName(value = "pms_base_attr_info")
 @Data
 public class PmsBaseAttrInfo implements Serializable {
-    @TableId
+    @TableId(value = "id",type = IdType.AUTO)
     private Long id;
     private String attrName;
     private Long catalog3Id;
     private String isEnabled;
+    @TableField(exist = false)
+    List<PmsBaseAttrValue> attrValueList;
 }
