@@ -11,17 +11,15 @@ import java.util.List;
 
 /**
  * @author Danrbo
- * @date 2019/9/10 14:17
+ * @date 2019/9/11 15:55
  * description
  **/
-@TableName(value = "pms_base_attr_info")
 @Data
-public class PmsBaseAttrInfo implements Serializable {
-    @TableId(value = "id",type = IdType.AUTO)
+@TableName(value = "pms_base_sale_attr")
+public class PmsBaseSaleAttr implements Serializable {
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
-    private String attrName;
-    private Long catalog3Id;
-    private String isEnabled;
+    private String name;
     @TableField(exist = false)
-    List<PmsBaseAttrValue> attrValueList;
+    private List<PmsBaseSaleAttrValue> saleAttrValueList;
 }

@@ -1,7 +1,6 @@
 package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.api.bean.PmsBaseAttrInfo;
-import com.danbro.gmall.api.bean.PmsBaseAttrValue;
+import com.danbro.gmall.api.bean.*;
 
 import java.util.List;
 
@@ -26,10 +25,30 @@ public interface AttrService {
     String addOrUpdateAttr(PmsBaseAttrInfo pmsBaseAttrInfo);
 
     /**
-     * 通过属性平台的id找打所有属性值
+     * 通过属性平台的id找到所有属性值
      * @param id 属性平台id
      * @return 所有属性值
      */
     List<PmsBaseAttrValue> getAttrValueByAttrInfoId(Long id);
+
+    /**
+     * 获得所有的属性列表
+     * @return 属性列表
+     */
+    List<PmsBaseSaleAttr> getSaleAttrList();
+
+    /**
+     * 通过spuId获得所有相关的属性
+     * @param id spuId
+     * @return 相关的属性列表
+     */
+    List<PmsProductSaleAttr> getProductSaleAttrListBySpuId(Long id);
+
+    /**
+     * 通过spuId查找相关的产品图片
+     * @param id spuId
+     * @return 产品图片
+     */
+    List<PmsProductImage> getProductImageListBySpuId(Long id);
 
 }

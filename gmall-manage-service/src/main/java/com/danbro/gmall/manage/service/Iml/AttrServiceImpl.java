@@ -1,11 +1,9 @@
 package com.danbro.gmall.manage.service.Iml;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.danbro.gmall.api.bean.PmsBaseAttrInfo;
-import com.danbro.gmall.api.bean.PmsBaseAttrValue;
+import com.danbro.gmall.api.bean.*;
 import com.danbro.gmall.api.service.AttrService;
-import com.danbro.gmall.manage.service.mapper.PmsBaseAttrInfoMapper;
-import com.danbro.gmall.manage.service.mapper.PmsBaseAttrValueMapper;
+import com.danbro.gmall.manage.service.mapper.*;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
@@ -18,12 +16,20 @@ import java.util.List;
  **/
 @Service
 public class AttrServiceImpl implements AttrService {
+    private PmsProductSaleAttrMapper pmsProductSaleAttrMapper;
+    private PmsProductImageMapper pmsProductImageMapper;
     private PmsBaseAttrInfoMapper pmsBaseAttrInfoMapper;
     private PmsBaseAttrValueMapper pmsBaseAttrValueMapper;
+    private PmsBaseSaleAttrMapper pmsBaseSaleAttrMapper;
+    private PmsProductSaleAttrValueMapper pmsProductSaleAttrValueMapper;
 
-    public AttrServiceImpl(PmsBaseAttrInfoMapper pmsBaseAttrInfoMapper, PmsBaseAttrValueMapper pmsBaseAttrValueMapper) {
+    public AttrServiceImpl(PmsProductSaleAttrMapper pmsProductSaleAttrMapper, PmsProductImageMapper pmsProductImageMapper, PmsBaseAttrInfoMapper pmsBaseAttrInfoMapper, PmsBaseAttrValueMapper pmsBaseAttrValueMapper, PmsBaseSaleAttrMapper pmsBaseSaleAttrMapper, PmsProductSaleAttrValueMapper pmsProductSaleAttrValueMapper) {
+        this.pmsProductSaleAttrMapper = pmsProductSaleAttrMapper;
+        this.pmsProductImageMapper = pmsProductImageMapper;
         this.pmsBaseAttrInfoMapper = pmsBaseAttrInfoMapper;
         this.pmsBaseAttrValueMapper = pmsBaseAttrValueMapper;
+        this.pmsBaseSaleAttrMapper = pmsBaseSaleAttrMapper;
+        this.pmsProductSaleAttrValueMapper = pmsProductSaleAttrValueMapper;
     }
 
     @Override
@@ -33,12 +39,46 @@ public class AttrServiceImpl implements AttrService {
         return pmsBaseAttrValueMapper.selectByMap(columnMap);
     }
 
+    @Override
+    public List<PmsBaseSaleAttr> getSaleAttrList() {
+        return pmsBaseSaleAttrMapper.selectList(null);
+    }
+
+    @Override
+    public List<PmsProductSaleAttr> getProductSaleAttrListBySpuId(Long id) {
+        HashMap<String, Object> columnMap = new HashMap<>(16);
+        columnMap.put("product_id", id);
+        List<PmsProductSaleAttr> pmsProductSaleAttrs = pmsProductSaleAttrMapper.selectByMap(columnMap);
+        for (PmsProductSaleAttr pmsProductSaleAttr : pmsProductSaleAttrs) {
+            HashMap<String, Object> searchMap = new HashMap<>(16);
+            searchMap.put("product_id",pmsProductSaleAttr.getProductId());
+            searchMap.put("sale_attr_id",pmsProductSaleAttr.getSaleAttrId());
+            List<PmsProductSaleAttrValue> pmsProductSaleAttrValues = pmsProductSaleAttrValueMapper.selectByMap(searchMap);
+            pmsProductSaleAttr.setProductSaleAttrValueList(pmsProductSaleAttrValues);
+        }
+        return pmsProductSaleAttrs;
+    }
+
+    @Override
+    public List<PmsProductImage> getProductImageListBySpuId(Long id) {
+        HashMap<String, Object> columnMap = new HashMap<>(16);
+        columnMap.put("product_id", id);
+        return pmsProductImageMapper.selectByMap(columnMap);
+    }
+
 
     @Override
     public List<PmsBaseAttrInfo> getAttrInfoByCatalog3Id(Long id) {
         HashMap<String, Object> columnMap = new HashMap<>(16);
         columnMap.put("catalog3_id", id);
-        return pmsBaseAttrInfoMapper.selectByMap(columnMap);
+        List<PmsBaseAttrInfo> pmsBaseAttrInfos = pmsBaseAttrInfoMapper.selectByMap(columnMap);
+        for (PmsBaseAttrInfo pmsBaseAttrInfo : pmsBaseAttrInfos) {
+            HashMap<String, Object> searchMap = new HashMap<>(16);
+            searchMap.put("attr_id", pmsBaseAttrInfo.getId());
+            List<PmsBaseAttrValue> pmsBaseAttrValues = pmsBaseAttrValueMapper.selectByMap(searchMap);
+            pmsBaseAttrInfo.setAttrValueList(pmsBaseAttrValues);
+        }
+        return pmsBaseAttrInfos;
     }
 
     @Override
@@ -49,7 +89,7 @@ public class AttrServiceImpl implements AttrService {
         if (id != null) {
             pmsBaseAttrInfoMapper.updateById(pmsBaseAttrInfo);
             HashMap<String, Object> columnMap = new HashMap<>(16);
-            columnMap.put("attr_id",pmsBaseAttrInfo.getId());
+            columnMap.put("attr_id", pmsBaseAttrInfo.getId());
             pmsBaseAttrValueMapper.deleteByMap(columnMap);
             for (PmsBaseAttrValue pmsBaseAttrValue : attrValueList) {
                 pmsBaseAttrValue.setAttrId(pmsBaseAttrInfo.getId());
@@ -61,7 +101,6 @@ public class AttrServiceImpl implements AttrService {
                 pmsBaseAttrValueMapper.insert(pmsBaseAttrValue);
             }
         }
-
         return "success";
     }
 

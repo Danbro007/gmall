@@ -7,21 +7,20 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * @author Danrbo
- * @date 2019/9/10 14:17
+ * @date 2019/9/11 16:51
  * description
  **/
-@TableName(value = "pms_base_attr_info")
 @Data
-public class PmsBaseAttrInfo implements Serializable {
+@TableName(value = "pms_product_sale_attr_value")
+public class PmsBaseSaleAttrValue implements Serializable {
     @TableId(value = "id",type = IdType.AUTO)
-    private Long id;
-    private String attrName;
-    private Long catalog3Id;
-    private String isEnabled;
+    private Long id ;
+    private Long productId;
+    private Long saleAttrId;
+    private String saleAttrValueName;
     @TableField(exist = false)
-    List<PmsBaseAttrValue> attrValueList;
+    private String isChecked;
 }
