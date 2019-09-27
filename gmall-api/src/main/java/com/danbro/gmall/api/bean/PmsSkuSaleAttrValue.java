@@ -1,6 +1,7 @@
 package com.danbro.gmall.api.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -28,4 +29,7 @@ public class PmsSkuSaleAttrValue implements Serializable {
     private String saleAttrName;
 
     private String saleAttrValueName;
+
+    @TableField(exist = false)
+    private String isChecked;
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.danbro.gmall.manage.service.mapper.PmsSkuInfoMapper">
+    <resultMap id="pmsSkuInfoMap" type="com.danbro.gmall.api.bean.PmsSkuInfo" autoMapping="true">
+        <result column="si_id" property="id"></result>
+        <collection property="skuAttrValueList" ofType="com.danbro.gmall.api.bean.PmsSkuAttrValue" autoMapping="true">
+            <result column="ssav_id" property="id" ></result>
+            <collection property="skuSaleAttrValueList" ofType="com.danbro.gmall.api.bean.PmsSkuSaleAttrValue" autoMapping="true">
+                <result column="sale_attr_value_id" property="saleAttrValueId"></result>
+            </collection>
+        </collection>
+    </resultMap>
+
+    <select id="selectSkuSaleAttrListCheckBySpu" resultMap="pmsSkuInfoMap">
+    SELECT
+        si.id AS si_id,
+        ssav.id AS ssav_id,
+        ssav.sale_attr_id,
+        ssav.sale_attr_value_id,
+        ssav.sku_id
+    FROM
+        pms_sku_sale_attr_value ssav
+        LEFT JOIN pms_sku_info si ON si.id = ssav.sku_id
+    WHERE
+        si.product_id = #{product_id}
+    </select>
+</mapper>

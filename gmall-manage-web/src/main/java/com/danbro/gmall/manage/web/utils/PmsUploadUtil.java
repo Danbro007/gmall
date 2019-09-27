@@ -1,14 +1,12 @@
 package com.danbro.gmall.manage.web.utils;
 
 import com.danbro.gmall.manage.web.GmallManageWebApplication;
-import org.csource.common.MyException;
 import org.csource.fastdfs.ClientGlobal;
 import org.csource.fastdfs.StorageClient;
 import org.csource.fastdfs.TrackerClient;
 import org.csource.fastdfs.TrackerServer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
 
 /**
  * @author Danrbo
@@ -18,6 +16,7 @@ import java.io.IOException;
 public class PmsUploadUtil {
 
     public static String uploadImage(MultipartFile multipartFile) {
+
         String file = GmallManageWebApplication.class.getResource("/tracker.conf").getFile();
         TrackerClient trackerClient;
         TrackerServer trackerServer;
@@ -32,7 +31,7 @@ public class PmsUploadUtil {
             int i = originalFilename.lastIndexOf(".");
             String extName = originalFilename.substring(i + 1);
             String[] uploadFileInfo = storageClient.upload_file(bytes, extName, null);
-            return "http://192.168.1.109/" + uploadFileInfo[0] + "/" + uploadFileInfo[1];
+            return "http://192.168.0.109/" + uploadFileInfo[0] + "/" + uploadFileInfo[1];
         } catch (Exception e) {
             e.printStackTrace();
             return null;

@@ -1,11 +1,14 @@
 package com.danbro.gmall.api.bean;
 
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
+
 /**
  * @author Danrbo
  * @date 2019/9/10 11:01
@@ -23,5 +26,9 @@ public class PmsSkuAttrValue implements Serializable {
     private String valueId;
 
     private Long skuId;
+
+    @TableField(exist = false)
+    List<PmsSkuSaleAttrValue> skuSaleAttrValueList;
+
 
 }

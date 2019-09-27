@@ -1,6 +1,7 @@
 package com.danbro.gmall.api.service;
 
 import com.danbro.gmall.api.bean.PmsProductInfo;
+import com.danbro.gmall.api.bean.PmsProductSaleAttr;
 
 import java.util.List;
 
@@ -23,4 +24,14 @@ public interface PmsProductService {
      * @return success信息
      */
     int addProductInfo(PmsProductInfo pmsProductInfo);
+
+    /**
+     * 通过spuId找到所有相关的sku,通过skuId找到选中的sku
+     * @param productId spuId
+     * @param skuId skuId
+     * @return 相关sku
+     */
+    List<PmsProductSaleAttr> selectSpuSaleAttrListCheckBySku(Long productId,Long skuId);
+
+
 }

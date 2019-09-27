@@ -54,7 +54,7 @@ public class AttrServiceImpl implements AttrService {
             searchMap.put("product_id",pmsProductSaleAttr.getProductId());
             searchMap.put("sale_attr_id",pmsProductSaleAttr.getSaleAttrId());
             List<PmsProductSaleAttrValue> pmsProductSaleAttrValues = pmsProductSaleAttrValueMapper.selectByMap(searchMap);
-            pmsProductSaleAttr.setProductSaleAttrValueList(pmsProductSaleAttrValues);
+            pmsProductSaleAttr.setSaleAttrValueList(pmsProductSaleAttrValues);
         }
         return pmsProductSaleAttrs;
     }

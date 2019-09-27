@@ -20,6 +20,4 @@ public class PmsBaseSaleAttr implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
     private String name;
-    @TableField(exist = false)
-    private List<PmsBaseSaleAttrValue> saleAttrValueList;
 }
