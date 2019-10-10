@@ -2,7 +2,6 @@ package com.danbro.gmall.api.service;
 
 import com.danbro.gmall.api.bean.PmsSkuInfo;
 
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -42,5 +41,12 @@ public interface PmsSkuService {
      */
     PmsSkuInfo getSkuById(Long skuId);
 
+
+    /**
+     * 返回所有sku列表
+     * @param catalog3Id 三级目录id
+     * @return sku列表
+     */
+    List<PmsSkuInfo> getAllSku(Long catalog3Id);
 
 }

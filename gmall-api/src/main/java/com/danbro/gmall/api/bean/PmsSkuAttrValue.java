@@ -23,7 +23,7 @@ public class PmsSkuAttrValue implements Serializable {
 
     private Long attrId;
 
-    private String valueId;
+    private Long valueId;
 
     private Long skuId;
 

@@ -22,6 +22,8 @@
         <option value="$PROJECT_DIR$/gmall-expection/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-exception/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-exception-handle/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-search-web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-search-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

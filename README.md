@@ -6,3 +6,9 @@ user-service端口8070
 
 manage-web端口8081
 manage-service端口8071
+
+item-web端口8083
+
+search-web端口8082
+search-service端口8072
+

@@ -107,16 +107,16 @@ public class SkuServiceImpl implements PmsSkuService {
         RLock lock = redissonClient.getLock("lock");
         lock.lock();
         try {
-            String skuKey = "sku:" + skuId +":info";
+            String skuKey = "sku:" + skuId + ":info";
             String skuVal = jedis.get(skuKey);
-            if (StringUtils.isNotBlank(skuVal)){
-                return JSON.parseObject(skuVal,PmsSkuInfo.class);
-            }else {
+            if (StringUtils.isNotBlank(skuVal)) {
+                return JSON.parseObject(skuVal, PmsSkuInfo.class);
+            } else {
                 PmsSkuInfo skuFromDb = getSkuFromDb(skuId);
-                if (skuFromDb != null){
+                if (skuFromDb != null) {
                     jedis.set(skuKey, JSON.toJSONString(skuFromDb));
-                }else {
-                    jedis.setex(skuKey,60*5, JSON.toJSONString(""));
+                } else {
+                    jedis.setex(skuKey, 60 * 5, JSON.toJSONString(""));
                 }
                 return skuFromDb;
             }
@@ -124,5 +124,21 @@ public class SkuServiceImpl implements PmsSkuService {
             lock.unlock();
             jedis.close();
         }
+    }
+
+    @Override
+    public List<PmsSkuInfo> getAllSku(Long catalog3Id) {
+        HashMap<String, Object> pmsSkuInfoColumnMap = new HashMap<>(16);
+        pmsSkuInfoColumnMap.put("catalog3_id",catalog3Id);
+        List<PmsSkuInfo> pmsSkuInfoList = pmsSkuInfoMapper.selectByMap(pmsSkuInfoColumnMap);
+        for (PmsSkuInfo pmsSkuInfo : pmsSkuInfoList) {
+            PmsSkuAttrValue pmsSkuAttrValue = new PmsSkuAttrValue();
+            pmsSkuAttrValue.setSkuId(pmsSkuInfo.getId());
+            HashMap<String, Object> columnMap = new HashMap<>(16);
+            columnMap.put("sku_id", pmsSkuInfo.getId());
+            List<PmsSkuAttrValue> pmsSkuAttrValues = pmsSkuAttrValueMapper.selectByMap(columnMap);
+            pmsSkuInfo.setSkuAttrValueList(pmsSkuAttrValues);
+        }
+        return pmsSkuInfoList;
     }
 }
