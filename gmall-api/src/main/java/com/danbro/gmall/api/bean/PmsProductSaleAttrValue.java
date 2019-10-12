@@ -24,11 +24,7 @@ public class PmsProductSaleAttrValue implements Serializable {
 
     private Long saleAttrId;
 
-    private Long saleAttrValueId;
-
     private String saleAttrValueName;
-
-    private String saleAttrName;
 
     @TableField(exist = false)
     private String isChecked;

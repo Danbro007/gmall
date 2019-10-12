@@ -58,17 +58,22 @@ public class SearchServiceImpl implements SearchService {
         return pmsSearchSkuInfos;
     }
 
+    /**
+     * 通过搜索参数过滤出商品列表
+     * @param pmsSearchParam 搜索参数对象
+     * @return 过滤后的商品列表
+     */
     private String getDsl(PmsSearchParam pmsSearchParam){
         String keyword = pmsSearchParam.getKeyword();
-        List<PmsSkuAttrValue> skuAttrValueList = pmsSearchParam.getSkuAttrValueList();
+        String[] skuAttrValueList = pmsSearchParam.getValueId();
         Long catalog3Id = pmsSearchParam.getCatalog3Id();
 
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
         //filter
         if(skuAttrValueList != null){
-            for (PmsSkuAttrValue pmsSkuAttrValue : skuAttrValueList) {
-                TermQueryBuilder termQueryBuilder = new TermQueryBuilder("skuAttrValueList.valueId",pmsSkuAttrValue.getValueId());
+            for (String pmsSkuAttrValue : skuAttrValueList) {
+                TermQueryBuilder termQueryBuilder = new TermQueryBuilder("skuAttrValueList.valueId",pmsSkuAttrValue);
                 boolQueryBuilder.filter(termQueryBuilder);
             }
         }

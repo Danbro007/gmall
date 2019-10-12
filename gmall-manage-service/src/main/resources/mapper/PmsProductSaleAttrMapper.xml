@@ -5,6 +5,7 @@
         <result column="sa_id" property="id"></result>
         <collection property="saleAttrValueList" ofType="com.danbro.gmall.api.bean.PmsProductSaleAttrValue" autoMapping="true">
             <result column="sav_id" property="id" ></result>
+            <result column="sale_attr_value_id" property="saleAttrValueId"></result>
         </collection>
     </resultMap>
 

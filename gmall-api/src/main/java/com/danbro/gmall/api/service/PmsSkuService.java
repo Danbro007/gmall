@@ -1,5 +1,6 @@
 package com.danbro.gmall.api.service;
 
+import com.danbro.gmall.api.bean.InsertSkuInfo;
 import com.danbro.gmall.api.bean.PmsSkuInfo;
 
 import java.util.List;
@@ -14,10 +15,10 @@ public interface PmsSkuService {
 
     /**
      * 添加sku信息
-     * @param pmsSkuInfo sku信息
+     * @param insertSkuInfo sku信息
      * @return 成功信息
      */
-    int addSkuInfo(PmsSkuInfo pmsSkuInfo);
+    int addSkuInfo(InsertSkuInfo insertSkuInfo);
 
     /**
      * 通过skuId访问DB获取单个sku信息

@@ -41,5 +41,4 @@ public class PmsSkuInfo implements Serializable {
     @TableField(exist = false)
     List<PmsSkuAttrValue> skuAttrValueList;
 
-
 }

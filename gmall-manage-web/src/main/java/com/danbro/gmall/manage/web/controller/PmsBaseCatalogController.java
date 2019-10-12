@@ -34,10 +34,6 @@ public class PmsBaseCatalogController {
 
     @GetMapping("/catalog3")
     public List<PmsBaseCatalog3> getAllCatalog3(@RequestParam("catalog2Id") Long id) {
-        List<PmsBaseCatalog3> allCatalog3 = pmsBaseCatalogService.getAllCatalog3(id);
-        for (PmsBaseCatalog3 pmsBaseCatalog3 : allCatalog3) {
-            System.out.println(pmsBaseCatalog3);
-        }
         return pmsBaseCatalogService.getAllCatalog3(id);
     }
 

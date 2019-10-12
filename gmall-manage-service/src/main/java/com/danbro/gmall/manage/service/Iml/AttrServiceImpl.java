@@ -4,10 +4,10 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.danbro.gmall.api.bean.*;
 import com.danbro.gmall.api.service.AttrService;
 import com.danbro.gmall.manage.service.mapper.*;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Danrbo
@@ -66,6 +66,12 @@ public class AttrServiceImpl implements AttrService {
         return pmsProductImageMapper.selectByMap(columnMap);
     }
 
+    @Override
+    public List<PmsBaseAttrInfo> getAttrValueByValueId(HashSet<Long> valueIdSet) {
+        String valueIdStr = StringUtils.join(valueIdSet, ",");
+        return pmsBaseAttrInfoMapper.getAttrValueByValueId(valueIdStr);
+    }
+
 
     @Override
     public List<PmsBaseAttrInfo> getAttrInfoByCatalog3Id(Long id) {
@@ -86,6 +92,7 @@ public class AttrServiceImpl implements AttrService {
     public String addOrUpdateAttr(PmsBaseAttrInfo pmsBaseAttrInfo) {
         Long id = pmsBaseAttrInfo.getId();
         List<PmsBaseAttrValue> attrValueList = pmsBaseAttrInfo.getAttrValueList();
+        /*修改*/
         if (id != null) {
             pmsBaseAttrInfoMapper.updateById(pmsBaseAttrInfo);
             HashMap<String, Object> columnMap = new HashMap<>(16);
@@ -96,8 +103,10 @@ public class AttrServiceImpl implements AttrService {
                 pmsBaseAttrValueMapper.insert(pmsBaseAttrValue);
             }
         } else {
+            /*添加*/
             pmsBaseAttrInfoMapper.insert(pmsBaseAttrInfo);
             for (PmsBaseAttrValue pmsBaseAttrValue : attrValueList) {
+                pmsBaseAttrValue.setAttrId(pmsBaseAttrInfo.getId());
                 pmsBaseAttrValueMapper.insert(pmsBaseAttrValue);
             }
         }

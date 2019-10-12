@@ -2,10 +2,7 @@ package com.danbro.gmall.manage.service.Iml;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.fastjson.JSON;
-import com.danbro.gmall.api.bean.PmsSkuAttrValue;
-import com.danbro.gmall.api.bean.PmsSkuImage;
-import com.danbro.gmall.api.bean.PmsSkuInfo;
-import com.danbro.gmall.api.bean.PmsSkuSaleAttrValue;
+import com.danbro.gmall.api.bean.*;
 import com.danbro.gmall.api.service.PmsSkuService;
 import com.danbro.gmall.manage.service.mapper.PmsSkuAttrValueMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuImageMapper;
@@ -15,6 +12,7 @@ import com.danbro.gmall.util.RedisUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
+import org.springframework.beans.BeanUtils;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.transaction.annotation.Transactional;
 import redis.clients.jedis.Jedis;
@@ -50,18 +48,19 @@ public class SkuServiceImpl implements PmsSkuService {
 
     @Transactional(rollbackFor = Exception.class)
     @Override
-    public int addSkuInfo(PmsSkuInfo pmsSkuInfo) {
+    public int addSkuInfo(InsertSkuInfo insertSkuInfo) {
+        PmsSkuInfo pmsSkuInfo = new PmsSkuInfo();
+        BeanUtils.copyProperties(insertSkuInfo,pmsSkuInfo);
         int flag = pmsSkuInfoMapper.insert(pmsSkuInfo);
         if (flag == 1) {
             for (PmsSkuAttrValue pmsSkuAttrValue : pmsSkuInfo.getSkuAttrValueList()) {
                 pmsSkuAttrValue.setSkuId(pmsSkuInfo.getId());
                 pmsSkuAttrValueMapper.insert(pmsSkuAttrValue);
-                for (PmsSkuSaleAttrValue pmsSkuSaleAttrValue : pmsSkuAttrValue.getSkuSaleAttrValueList()) {
+                for (PmsSkuSaleAttrValue pmsSkuSaleAttrValue : insertSkuInfo.getSkuSaleAttrValueList()) {
                     pmsSkuSaleAttrValue.setSkuId(pmsSkuInfo.getId());
                     pmsSkuSaleAttrValueMapper.insert(pmsSkuSaleAttrValue);
                 }
             }
-
             for (PmsSkuImage pmsSkuImage : pmsSkuInfo.getSkuImageList()) {
                 pmsSkuImage.setSkuId(pmsSkuInfo.getId());
                 pmsSkuImageMapper.insert(pmsSkuImage);

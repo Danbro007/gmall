@@ -2,6 +2,7 @@ package com.danbro.gmall.api.service;
 
 import com.danbro.gmall.api.bean.*;
 
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -51,4 +52,12 @@ public interface AttrService {
      */
     List<PmsProductImage> getProductImageListBySpuId(Long id);
 
+
+    /**
+     * 通过属性值集合找到相应的属性
+     * @param valueIdSet 属性值集合
+     * @param chosenValueIdSet 选中的属性值
+     * @return  属性
+     */
+    List<PmsBaseAttrInfo> getAttrValueByValueId(HashSet<Long> valueIdSet);
 }
