@@ -1,7 +1,9 @@
 package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.api.bean.PmsSearchParam;
-import com.danbro.gmall.api.bean.PmsSearchSkuInfo;
+import com.danbro.gmall.api.dto.PmsSearchParamDto;
+import com.danbro.gmall.api.dto.PmsSearchSkuInfoDto;
+import com.danbro.gmall.api.vo.PmsSearchParamVo;
+import com.danbro.gmall.api.vo.PmsSearchSkuInfoVo;
 
 import java.io.IOException;
 import java.util.List;
@@ -16,9 +18,9 @@ public interface SearchService {
 
     /**
      * 通过筛选条件找到过滤后的sku
-     * @param pmsSearchParam 筛选条件
+     * @param pmsSearchParamVo sku筛选参数Vo
      * @return 过滤后的sku列表
      */
-    List<PmsSearchSkuInfo> getSkuInfoListByParam(PmsSearchParam pmsSearchParam) throws IOException;
+    List<PmsSearchSkuInfoDto> getSkuInfoListByParam(PmsSearchParamVo pmsSearchParamVo) throws IOException;
 
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.danbro.gmall.manage.service.mapper.PmsProductSaleAttrMapper">
-    <resultMap id="pmsProductSaleAttrMap" type="com.danbro.gmall.api.bean.PmsProductSaleAttr" autoMapping="true">
+    <resultMap id="pmsProductSaleAttrMap" type="com.danbro.gmall.api.dto.PmsProductSaleAttrDto" autoMapping="true">
         <result column="sa_id" property="id"></result>
-        <collection property="saleAttrValueList" ofType="com.danbro.gmall.api.bean.PmsProductSaleAttrValue" autoMapping="true">
+        <collection property="saleAttrValueList" ofType="com.danbro.gmall.api.dto.PmsProductSaleAttrValueDto" autoMapping="true">
             <result column="sav_id" property="id" ></result>
             <result column="sale_attr_value_id" property="saleAttrValueId"></result>
         </collection>

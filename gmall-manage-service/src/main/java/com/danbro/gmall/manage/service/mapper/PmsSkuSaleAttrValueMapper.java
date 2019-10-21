@@ -1,8 +1,8 @@
 package com.danbro.gmall.manage.service.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.danbro.gmall.api.bean.PmsProductSaleAttr;
-import com.danbro.gmall.api.bean.PmsSkuSaleAttrValue;
+import com.danbro.gmall.api.dto.PmsSkuSaleAttrValueDto;
+import com.danbro.gmall.api.po.PmsSkuSaleAttrValuePo;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -12,8 +12,8 @@ import java.util.List;
  * @date 2019/9/17 12:57
  * description
  **/
-public interface PmsSkuSaleAttrValueMapper  extends BaseMapper<PmsSkuSaleAttrValue> {
+public interface PmsSkuSaleAttrValueMapper  extends BaseMapper<PmsSkuSaleAttrValueDto> {
 
-    List<PmsSkuSaleAttrValue> selectSpuSaleAttrListCheckBySku(@Param("product_id") Long productId, @Param("sku_id") Long skuId);
+    List<PmsSkuSaleAttrValueDto> selectSkuSaleAttrListCheckBySpu(@Param("product_id") Long productId, @Param("sku_id") Long skuId);
 
 }

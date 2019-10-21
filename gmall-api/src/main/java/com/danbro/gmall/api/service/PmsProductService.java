@@ -1,7 +1,10 @@
 package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.api.bean.PmsProductInfo;
-import com.danbro.gmall.api.bean.PmsProductSaleAttr;
+import com.danbro.gmall.api.dto.PmsProductInfoDto;
+import com.danbro.gmall.api.dto.PmsProductSaleAttrDto;
+import com.danbro.gmall.api.po.PmsProductInfoPo;
+import com.danbro.gmall.api.po.PmsProductSaleAttrPo;
+import com.danbro.gmall.api.vo.PmsProductInfoVo;
 
 import java.util.List;
 
@@ -16,14 +19,14 @@ public interface PmsProductService {
      * @param id 目录id
      * @return 相关的spu
      */
-    List<PmsProductInfo> getProductInfoListByCatalogId(Long id);
+    List<PmsProductInfoDto> getProductInfoListByCatalogId(Long id);
 
     /**
      * 添加spu信息
-     * @param pmsProductInfo spu信息
+     * @param pmsProductInfoVo spu信息Dto
      * @return success信息
      */
-    int addProductInfo(PmsProductInfo pmsProductInfo);
+    int addProductInfo(PmsProductInfoVo pmsProductInfoVo);
 
     /**
      * 通过spuId找到所有相关的sku,通过skuId找到选中的sku
@@ -31,7 +34,7 @@ public interface PmsProductService {
      * @param skuId skuId
      * @return 相关sku
      */
-    List<PmsProductSaleAttr> selectSpuSaleAttrListCheckBySku(Long productId,Long skuId);
+    List<PmsProductSaleAttrDto> selectSpuSaleAttrListCheckBySku(Long productId, Long skuId);
 
 
 }

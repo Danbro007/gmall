@@ -1,8 +1,11 @@
 package com.danbro.gmall.manage.service;
 
-import com.danbro.gmall.api.bean.PmsBaseAttrInfo;
-import com.danbro.gmall.api.bean.PmsProductSaleAttr;
-import com.danbro.gmall.api.bean.PmsSkuInfo;
+import com.danbro.gmall.api.dto.PmsBaseAttrInfoDto;
+import com.danbro.gmall.api.dto.PmsProductSaleAttrDto;
+import com.danbro.gmall.api.dto.PmsSkuInfoDto;
+import com.danbro.gmall.api.po.PmsBaseAttrInfoPo;
+import com.danbro.gmall.api.po.PmsProductSaleAttrPo;
+import com.danbro.gmall.api.po.PmsSkuInfoPo;
 import com.danbro.gmall.manage.service.mapper.PmsBaseAttrInfoMapper;
 import com.danbro.gmall.manage.service.mapper.PmsProductSaleAttrMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuInfoMapper;
@@ -37,18 +40,18 @@ public class GmallManageServiceApplicationTests {
     @Test
     public void contextLoads() {
 
-        List<PmsProductSaleAttr> pmsProductSaleAttrs = pmsProductSaleAttrMapper.selectSpuSaleAttrListCheckBySku(65L, 105L);
-        for (PmsProductSaleAttr pmsProductSaleAttr : pmsProductSaleAttrs) {
-            System.out.println(pmsProductSaleAttr);
+        List<PmsProductSaleAttrDto> pmsProductSaleAttrDtoList = pmsProductSaleAttrMapper.selectSpuSaleAttrListCheckBySku(65L, 105L);
+        for (PmsProductSaleAttrDto pmsProductSaleAttrDto : pmsProductSaleAttrDtoList) {
+            System.out.println(pmsProductSaleAttrDto);
         }
 
     }
 
     @Test
     public void test2(){
-        List<PmsSkuInfo> pmsSkuInfos = pmsSkuInfoMapper.selectSkuSaleAttrListCheckBySpu(66L);
-        for (PmsSkuInfo pmsSkuInfo : pmsSkuInfos) {
-            System.out.println(pmsSkuInfo);
+        List<PmsSkuInfoDto> pmsSkuInfoDtoList = pmsSkuInfoMapper.selectSkuSaleAttrListCheckBySpu(66L);
+        for (PmsSkuInfoDto pmsSkuInfoDto : pmsSkuInfoDtoList) {
+            System.out.println(pmsSkuInfoDto);
         }
     }
 
@@ -60,9 +63,9 @@ public class GmallManageServiceApplicationTests {
 
     @Test
     public void test04(){
-        List<PmsBaseAttrInfo> attrValueByValueId = pmsBaseAttrInfoMapper.getAttrValueByValueId("41,45,46");
-        for (PmsBaseAttrInfo pmsBaseAttrInfo : attrValueByValueId) {
-            System.out.println(pmsBaseAttrInfo);
+        List<PmsBaseAttrInfoDto> attrValueByValueId = pmsBaseAttrInfoMapper.getAttrValueByValueId("41,45,46");
+        for (PmsBaseAttrInfoDto pmsBaseAttrInfoDto : attrValueByValueId) {
+            System.out.println(pmsBaseAttrInfoDto);
         }
     }
 

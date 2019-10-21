@@ -1,7 +1,7 @@
 package com.danbro.gmall.manage.service.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.danbro.gmall.api.bean.PmsSkuInfo;
+import com.danbro.gmall.api.dto.PmsSkuInfoDto;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ import java.util.List;
  * @date 2019/9/17 12:57
  * description
  **/
-public interface PmsSkuInfoMapper extends BaseMapper<PmsSkuInfo> {
+public interface PmsSkuInfoMapper extends BaseMapper<PmsSkuInfoDto> {
 
     /**
      * 通过spuId查找到所有的相关的sku
@@ -18,6 +18,6 @@ public interface PmsSkuInfoMapper extends BaseMapper<PmsSkuInfo> {
      * @param spuId spuId
      * @return 相关的sku
      */
-    List<PmsSkuInfo> selectSkuSaleAttrListCheckBySpu(Long spuId);
+    List<PmsSkuInfoDto> selectSkuSaleAttrListCheckBySpu(Long spuId);
 
 }

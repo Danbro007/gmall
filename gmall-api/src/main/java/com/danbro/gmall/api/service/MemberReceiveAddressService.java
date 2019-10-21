@@ -1,6 +1,6 @@
 package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.api.bean.MemberReceiveAddress;
+import com.danbro.gmall.api.po.MemberReceiveAddressPo;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ public interface MemberReceiveAddressService {
 
     /**
      * 添加新的地址
-     * @param memberReceiveAddress 地址对象
+     * @param memberReceiveAddressPo 地址对象
      */
-    void insertAddress(MemberReceiveAddress memberReceiveAddress);
+    void insertAddress(MemberReceiveAddressPo memberReceiveAddressPo);
 
     /**
      * 通过地址id删除地址
@@ -25,21 +25,21 @@ public interface MemberReceiveAddressService {
 
     /**
      * 更新地址
-     * @param memberReceiveAddress 新的地址信息
+     * @param memberReceiveAddressPo 新的地址信息
      */
-    void updateAddress(MemberReceiveAddress memberReceiveAddress);
+    void updateAddress(MemberReceiveAddressPo memberReceiveAddressPo);
 
     /**
      * 通过地址id查找地址
      * @param addressId 地址id
      * @return 地址对象
      */
-    MemberReceiveAddress selectAddress(Long addressId);
+    MemberReceiveAddressPo selectAddress(Long addressId);
 
     /**
      * 通过会员id获得他的所有地址
      * @param memberId 会员id
      * @return 会员的所有地址
      */
-    List<MemberReceiveAddress> selectAddressByMemberId(Long memberId);
+    List<MemberReceiveAddressPo> selectAddressByMemberId(Long memberId);
 }

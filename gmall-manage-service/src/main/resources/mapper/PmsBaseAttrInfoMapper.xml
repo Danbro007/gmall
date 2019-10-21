@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.danbro.gmall.manage.service.mapper.PmsBaseAttrInfoMapper">
-    <resultMap id="pmsBaseAttrInfoMap" type="com.danbro.gmall.api.bean.PmsBaseAttrInfo" autoMapping="true">
+    <resultMap id="pmsBaseAttrInfoMap" type="com.danbro.gmall.api.dto.PmsBaseAttrInfoDto" autoMapping="true">
         <result column="ai_id" property="id"></result>
         <result column="ai_attr_name" property="attrName"></result>
-        <collection property="attrValueList" ofType="com.danbro.gmall.api.bean.PmsBaseAttrValue" autoMapping="true">
+        <collection property="attrValueList" ofType="com.danbro.gmall.api.dto.PmsBaseAttrValueDto" autoMapping="true">
             <result column="av_id" property="id"></result>
             <result column="av_value_name" property="valueName"></result>
         </collection>

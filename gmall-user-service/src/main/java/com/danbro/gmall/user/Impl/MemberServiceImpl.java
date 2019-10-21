@@ -1,10 +1,10 @@
 package com.danbro.gmall.user.Impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.danbro.gmall.api.bean.Member;
-import com.danbro.gmall.api.bean.MemberReceiveAddress;
+import com.danbro.gmall.api.po.MemberPo;
+import com.danbro.gmall.api.po.MemberReceiveAddressPo;
 import com.danbro.gmall.api.service.MemberService;
-import com.danbro.gmall.api.vo.MemberInfoVO;
+import com.danbro.gmall.api.vo.MemberPoInfoVo;
 import com.danbro.gmall.user.mapper.MemberMapper;
 import com.danbro.gmall.user.mapper.MemberReceiveAddressMapper;
 import org.springframework.beans.BeanUtils;
@@ -31,13 +31,13 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public List<Member> getAllMembers() {
+    public List<MemberPo> getAllMembers() {
         return memberMapper.selectList(null);
     }
 
     @Override
-    public void insertMember(Member member) {
-        memberMapper.insert(member);
+    public void insertMember(MemberPo memberPo) {
+        memberMapper.insert(memberPo);
     }
 
     @Transactional(rollbackFor = Exception.class)
@@ -51,16 +51,16 @@ public class MemberServiceImpl implements MemberService {
 
 
     @Override
-    public void updateMember(Member member) {
-        memberMapper.updateById(member);
+    public void updateMember(MemberPo memberPo) {
+        memberMapper.updateById(memberPo);
     }
 
     @Override
-    public MemberInfoVO selectMember(Long memberId) {
-        Member member = memberMapper.selectById(memberId);
-        MemberInfoVO memberInfoVO = new MemberInfoVO();
-        BeanUtils.copyProperties(member,memberInfoVO);
-        List<MemberReceiveAddress> addressList= memberReceiveAddressMapper.getAddressByMemberId(memberId);
+    public MemberPoInfoVo selectMember(Long memberId) {
+        MemberPo memberPo = memberMapper.selectById(memberId);
+        MemberPoInfoVo memberInfoVO = new MemberPoInfoVo();
+        BeanUtils.copyProperties(memberPo,memberInfoVO);
+        List<MemberReceiveAddressPo> addressList= memberReceiveAddressMapper.getAddressByMemberId(memberId);
         memberInfoVO.setAddressList(addressList);
         return memberInfoVO;
     }

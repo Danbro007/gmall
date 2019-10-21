@@ -1,7 +1,7 @@
 package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.api.bean.Member;
-import com.danbro.gmall.api.vo.MemberInfoVO;
+import com.danbro.gmall.api.po.MemberPo;
+import com.danbro.gmall.api.vo.MemberPoInfoVo;
 
 import java.util.List;
 
@@ -16,13 +16,13 @@ public interface MemberService {
      * 获得所有memberDto
      * @return 所有memberDto
      */
-    List<Member> getAllMembers();
+    List<MemberPo> getAllMembers();
 
     /**
      * 添加新的会员
-     * @param member 添加的会员数据
+     * @param memberPo 添加的会员数据
      */
-    void insertMember(Member member);
+    void insertMember(MemberPo memberPo);
 
     /**
      * 通过会员id删除会员
@@ -32,15 +32,15 @@ public interface MemberService {
 
     /**
      * 更新会员信息
-     * @param member 要更新的会员对象
+     * @param memberPo 要更新的会员对象
      */
-    void updateMember(Member member);
+    void updateMember(MemberPo memberPo);
 
     /**
      * 通过会员id查到会员信息
      * @param memberId 会员id
      * @return 会员对象
      */
-    MemberInfoVO selectMember(Long memberId);
+    MemberPoInfoVo selectMember(Long memberId);
 
 }

@@ -1,7 +1,7 @@
 package com.danbro.gmall.manage.service.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.danbro.gmall.api.bean.PmsProductInfo;
+import com.danbro.gmall.api.dto.PmsProductInfoDto;
 
 /**
  * @author Danrbo
@@ -9,5 +9,5 @@ import com.danbro.gmall.api.bean.PmsProductInfo;
  * description
  **/
 
-public interface SpuInfoMapper  extends BaseMapper<PmsProductInfo> {
+public interface SpuInfoMapper  extends BaseMapper<PmsProductInfoDto> {
 }

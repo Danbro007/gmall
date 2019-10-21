@@ -1,8 +1,10 @@
 package com.danbro.gmall.item.web.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.danbro.gmall.api.bean.PmsProductSaleAttr;
-import com.danbro.gmall.api.bean.PmsSkuInfo;
+import com.danbro.gmall.api.dto.PmsProductSaleAttrDto;
+import com.danbro.gmall.api.dto.PmsSkuInfoDto;
+import com.danbro.gmall.api.po.PmsProductSaleAttrPo;
+import com.danbro.gmall.api.po.PmsSkuInfoPo;
 import com.danbro.gmall.api.service.PmsProductService;
 import com.danbro.gmall.api.service.PmsSkuService;
 import org.springframework.stereotype.Controller;
@@ -11,7 +13,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -31,11 +32,11 @@ public class ItemController {
 
     @RequestMapping("{skuId}.html")
     public String itemView(@PathVariable("skuId") Long skuId, Model model){
-        PmsSkuInfo pmsSkuInfo = pmsSkuService.getSkuById(skuId);
-        String skuInfoMap = pmsSkuService.selectSkuSaleAttrListCheckBySpu(pmsSkuInfo.getProductId());
-        List<PmsProductSaleAttr> pmsProductSaleAttrs = pmsProductService.selectSpuSaleAttrListCheckBySku(pmsSkuInfo.getProductId(), skuId);
-        model.addAttribute("skuInfo",pmsSkuInfo);
-        model.addAttribute("spuSaleAttrValueList",pmsProductSaleAttrs);
+        PmsSkuInfoDto pmsSkuInfoDto = pmsSkuService.getSkuById(skuId);
+        String skuInfoMap = pmsSkuService.selectSkuSaleAttrListCheckBySpu(pmsSkuInfoDto.getProductId());
+        List<PmsProductSaleAttrDto> pmsProductSaleAttrDtoList = pmsProductService.selectSpuSaleAttrListCheckBySku(pmsSkuInfoDto.getProductId(), skuId);
+        model.addAttribute("skuInfo", pmsSkuInfoDto);
+        model.addAttribute("spuSaleAttrValueList", pmsProductSaleAttrDtoList);
         model.addAttribute("valuesSku",skuInfoMap);
         return "item";
     }

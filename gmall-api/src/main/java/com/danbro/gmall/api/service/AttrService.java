@@ -1,6 +1,8 @@
 package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.api.bean.*;
+import com.danbro.gmall.api.dto.*;
+import com.danbro.gmall.api.po.*;
+import com.danbro.gmall.api.vo.PmsBaseAttrInfoVo;
 
 import java.util.HashSet;
 import java.util.List;
@@ -16,48 +18,47 @@ public interface AttrService {
      * @param id 目录id
      * @return 目录先关的属性
      */
-    List<PmsBaseAttrInfo> getAttrInfoByCatalog3Id(Long id);
+    List<PmsBaseAttrInfoDto> getAttrInfoByCatalog3Id(Long id);
 
     /**
      * 添加或者更新属性平台信息
-     * @param pmsBaseAttrInfo 属性平台对象
+     * @param pmsBaseAttrInfoVo 属性平台对象
      * @return 成功信息
      */
-    String addOrUpdateAttr(PmsBaseAttrInfo pmsBaseAttrInfo);
+    String addOrUpdateAttr(PmsBaseAttrInfoVo pmsBaseAttrInfoVo);
 
     /**
      * 通过属性平台的id找到所有属性值
      * @param id 属性平台id
      * @return 所有属性值
      */
-    List<PmsBaseAttrValue> getAttrValueByAttrInfoId(Long id);
+    List<PmsBaseAttrValueDto> getAttrValueByAttrInfoId(Long id);
 
     /**
      * 获得所有的属性列表
      * @return 属性列表
      */
-    List<PmsBaseSaleAttr> getSaleAttrList();
+    List<PmsBaseSaleAttrDto> getSaleAttrList();
 
     /**
      * 通过spuId获得所有相关的属性
      * @param id spuId
      * @return 相关的属性列表
      */
-    List<PmsProductSaleAttr> getProductSaleAttrListBySpuId(Long id);
+    List<PmsProductSaleAttrDto> getProductSaleAttrListBySpuId(Long id);
 
     /**
      * 通过spuId查找相关的产品图片
      * @param id spuId
      * @return 产品图片
      */
-    List<PmsProductImage> getProductImageListBySpuId(Long id);
+    List<PmsProductImageDto> getProductImageListBySpuId(Long id);
 
 
     /**
      * 通过属性值集合找到相应的属性
      * @param valueIdSet 属性值集合
-     * @param chosenValueIdSet 选中的属性值
      * @return  属性
      */
-    List<PmsBaseAttrInfo> getAttrValueByValueId(HashSet<Long> valueIdSet);
+    List<PmsBaseAttrInfoDto> getAttrValueByValueId(HashSet<Long> valueIdSet);
 }

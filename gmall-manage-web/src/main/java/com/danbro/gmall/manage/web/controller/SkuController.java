@@ -1,8 +1,7 @@
 package com.danbro.gmall.manage.web.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.danbro.gmall.api.bean.InsertSkuInfo;
-import com.danbro.gmall.api.bean.PmsSkuInfo;
+import com.danbro.gmall.api.vo.PmsSkuInfoVo;
 import com.danbro.gmall.api.service.PmsSkuService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,8 +22,8 @@ public class SkuController {
 
 
     @PostMapping("/skuInfo")
-    public String addSkuInfo(@RequestBody InsertSkuInfo insertSkuInfo){
-        int flag = pmsSkuService.addSkuInfo(insertSkuInfo);
+    public String addSkuInfo(@RequestBody PmsSkuInfoVo insertSkuInfoVo){
+        int flag = pmsSkuService.addSkuInfo(insertSkuInfoVo);
         if (flag == 1){
             return "success";
         }return "fail";

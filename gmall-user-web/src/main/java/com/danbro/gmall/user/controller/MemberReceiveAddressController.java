@@ -1,7 +1,7 @@
 package com.danbro.gmall.user.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.danbro.gmall.api.bean.MemberReceiveAddress;
+import com.danbro.gmall.api.po.MemberReceiveAddressPo;
 import com.danbro.gmall.api.service.MemberReceiveAddressService;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,13 +17,13 @@ public class MemberReceiveAddressController {
     MemberReceiveAddressService memberReceiveAddressService;
 
     @GetMapping("/address/{id}")
-    public MemberReceiveAddress selectAddress(@PathVariable("id") Long addressId) {
+    public MemberReceiveAddressPo selectAddress(@PathVariable("id") Long addressId) {
         return memberReceiveAddressService.selectAddress(addressId);
     }
 
     @PostMapping("/address")
-    public void insertAddress(MemberReceiveAddress memberReceiveAddress) {
-        memberReceiveAddressService.insertAddress(memberReceiveAddress);
+    public void insertAddress(MemberReceiveAddressPo memberReceiveAddressPo) {
+        memberReceiveAddressService.insertAddress(memberReceiveAddressPo);
     }
 
     @DeleteMapping("/address/{id}")
@@ -32,7 +32,7 @@ public class MemberReceiveAddressController {
     }
 
     @PutMapping("/address")
-    public void updateAddress(MemberReceiveAddress memberReceiveAddress) {
-        memberReceiveAddressService.updateAddress(memberReceiveAddress);
+    public void updateAddress(MemberReceiveAddressPo memberReceiveAddressPo) {
+        memberReceiveAddressService.updateAddress(memberReceiveAddressPo);
     }
 }

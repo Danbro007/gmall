@@ -1,15 +1,14 @@
 package com.danbro.gmall.search;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.danbro.gmall.api.bean.PmsSearchSkuInfo;
-import com.danbro.gmall.api.bean.PmsSkuInfo;
+import com.danbro.gmall.api.dto.PmsSkuInfoDto;
+import com.danbro.gmall.api.dto.PmsSkuInfoFromEsDto;
+import com.danbro.gmall.api.po.PmsSkuInfoPo;
 import com.danbro.gmall.api.service.PmsSkuService;
 import io.searchbox.client.JestClient;
-import io.searchbox.client.JestResult;
 import io.searchbox.core.Index;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.MatchQueryBuilder;
-import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.TermQueryBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.junit.Test;
@@ -33,17 +32,21 @@ public class GmallSearchServiceApplicationTests {
     @Reference
     PmsSkuService pmsSkuService;
 
+    /**
+     * 更新elasticsearch
+     * @throws IOException
+     */
     @Test
     public void contextLoads() throws IOException {
-        List<PmsSkuInfo> pmsSkuInfoList = pmsSkuService.getAllSku(61L);
-        List<PmsSearchSkuInfo> searchPmsSkuInfos = new ArrayList<>();
-        for (PmsSkuInfo pmsSkuInfo : pmsSkuInfoList) {
-            PmsSearchSkuInfo pmsSearchSkuInfo = new PmsSearchSkuInfo();
-            BeanUtils.copyProperties(pmsSkuInfo,pmsSearchSkuInfo);
-            searchPmsSkuInfos.add(pmsSearchSkuInfo);
+        List<PmsSkuInfoDto> pmsSkuInfoDtoList = pmsSkuService.getAllSku(285L);
+        List<PmsSkuInfoFromEsDto> searchPmsSkuInfos = new ArrayList<>();
+        for (PmsSkuInfoPo pmsSkuInfoPo : pmsSkuInfoDtoList) {
+            PmsSkuInfoFromEsDto pmsSkuInfoFromEsDto = new PmsSkuInfoFromEsDto();
+            BeanUtils.copyProperties(pmsSkuInfoPo, pmsSkuInfoFromEsDto);
+            searchPmsSkuInfos.add(pmsSkuInfoFromEsDto);
         }
-        for (PmsSearchSkuInfo searchPmsSkuInfo : searchPmsSkuInfos) {
-            Index build = new Index.Builder(searchPmsSkuInfo).index("gmall").type("pmsSkuInfo").id(Long.toString(searchPmsSkuInfo.getId())).build();
+        for (PmsSkuInfoFromEsDto searchPmsSkuInfo : searchPmsSkuInfos) {
+            Index build = new Index.Builder(searchPmsSkuInfo).index("gmall").type("PmsSkuInfo").id(Long.toString(searchPmsSkuInfo.getId())).build();
             jestClient.execute(build);
         }
     }

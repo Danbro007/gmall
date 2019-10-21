@@ -1,7 +1,7 @@
 package com.danbro.gmall.user;
 
-import com.danbro.gmall.api.bean.Member;
-import com.danbro.gmall.api.bean.MemberReceiveAddress;
+import com.danbro.gmall.api.po.MemberPo;
+import com.danbro.gmall.api.po.MemberReceiveAddressPo;
 import com.danbro.gmall.api.service.MemberReceiveAddressService;
 import com.danbro.gmall.api.service.MemberService;
 import org.junit.Test;
@@ -24,12 +24,12 @@ public class GmallUserApplicationTests {
 
     @Test
     public void getAllMembers() {
-        List<Member> members = memberService.getAllMembers();
-        members.forEach(System.out::println);
+        List<MemberPo> memberPos = memberService.getAllMembers();
+        memberPos.forEach(System.out::println);
     }
     @Test
     public void getAddressByMemberId() {
-        List<MemberReceiveAddress> address = memberReceiveAddressService.selectAddressByMemberId(1L);
+        List<MemberReceiveAddressPo> address = memberReceiveAddressService.selectAddressByMemberId(1L);
         address.forEach(System.out::println);
     }
 

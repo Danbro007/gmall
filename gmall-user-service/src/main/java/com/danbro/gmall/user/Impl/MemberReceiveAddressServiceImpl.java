@@ -1,7 +1,7 @@
 package com.danbro.gmall.user.Impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.danbro.gmall.api.bean.MemberReceiveAddress;
+import com.danbro.gmall.api.po.MemberReceiveAddressPo;
 import com.danbro.gmall.api.service.MemberReceiveAddressService;
 import com.danbro.gmall.user.mapper.MemberReceiveAddressMapper;
 
@@ -23,8 +23,8 @@ public class MemberReceiveAddressServiceImpl implements MemberReceiveAddressServ
     }
 
     @Override
-    public void insertAddress(MemberReceiveAddress memberReceiveAddress) {
-        memberReceiveAddressMapper.insert(memberReceiveAddress);
+    public void insertAddress(MemberReceiveAddressPo memberReceiveAddressPo) {
+        memberReceiveAddressMapper.insert(memberReceiveAddressPo);
     }
 
     @Override
@@ -33,17 +33,17 @@ public class MemberReceiveAddressServiceImpl implements MemberReceiveAddressServ
     }
 
     @Override
-    public void updateAddress(MemberReceiveAddress memberReceiveAddress) {
-        memberReceiveAddressMapper.updateById(memberReceiveAddress);
+    public void updateAddress(MemberReceiveAddressPo memberReceiveAddressPo) {
+        memberReceiveAddressMapper.updateById(memberReceiveAddressPo);
     }
 
     @Override
-    public MemberReceiveAddress selectAddress(Long addressId) {
+    public MemberReceiveAddressPo selectAddress(Long addressId) {
         return memberReceiveAddressMapper.selectById(addressId);
     }
 
     @Override
-    public List<MemberReceiveAddress> selectAddressByMemberId(Long memberId) {
+    public List<MemberReceiveAddressPo> selectAddressByMemberId(Long memberId) {
         HashMap<String, Object> columnMap = new HashMap<>(16);
         columnMap.put("member_id",memberId);
         return memberReceiveAddressMapper.selectByMap(columnMap);

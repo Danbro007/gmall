@@ -1,9 +1,9 @@
 package com.danbro.gmall.user.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.danbro.gmall.api.bean.Member;
+import com.danbro.gmall.api.po.MemberPo;
 import com.danbro.gmall.api.service.MemberService;
-import com.danbro.gmall.api.vo.MemberInfoVO;
+import com.danbro.gmall.api.vo.MemberPoInfoVo;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,13 +23,13 @@ public class MemberController {
 
 
     @GetMapping("/members")
-    public List<Member> getAllMember() {
+    public List<MemberPo> getAllMember() {
         return memberService.getAllMembers();
     }
 
     @PostMapping("/members")
-    public void insertMember(Member member) {
-        memberService.insertMember(member);
+    public void insertMember(MemberPo memberPo) {
+        memberService.insertMember(memberPo);
     }
 
     @DeleteMapping("/members/{id}")
@@ -38,12 +38,12 @@ public class MemberController {
     }
 
     @PutMapping("/members")
-    public void updateMember(Member member) {
-        memberService.updateMember(member);
+    public void updateMember(MemberPo memberPo) {
+        memberService.updateMember(memberPo);
     }
 
     @GetMapping("/members/{id}")
-    public MemberInfoVO getAddressByMemberId(@PathVariable("id") Long memberId) {
+    public MemberPoInfoVo getAddressByMemberId(@PathVariable("id") Long memberId) {
         return memberService.selectMember(memberId);
     }
 

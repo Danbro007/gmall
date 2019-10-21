@@ -1,7 +1,7 @@
 package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.api.bean.InsertSkuInfo;
-import com.danbro.gmall.api.bean.PmsSkuInfo;
+import com.danbro.gmall.api.dto.PmsSkuInfoDto;
+import com.danbro.gmall.api.vo.PmsSkuInfoVo;
 
 import java.util.List;
 
@@ -15,17 +15,17 @@ public interface PmsSkuService {
 
     /**
      * 添加sku信息
-     * @param insertSkuInfo sku信息
+     * @param pmsSkuInfoVo 要添加的sku信息
      * @return 成功信息
      */
-    int addSkuInfo(InsertSkuInfo insertSkuInfo);
+    int addSkuInfo(PmsSkuInfoVo pmsSkuInfoVo);
 
     /**
      * 通过skuId访问DB获取单个sku信息
      * @param skuId skuId
      * @return sku的信息
      */
-    PmsSkuInfo getSkuFromDb(Long skuId);
+    PmsSkuInfoDto getSkuFromDb(Long skuId);
 
     /**
      * 通过spuId查找到所有的相关的sku
@@ -40,7 +40,7 @@ public interface PmsSkuService {
      * @param skuId skuId
      * @return sku信息
      */
-    PmsSkuInfo getSkuById(Long skuId);
+    PmsSkuInfoDto getSkuById(Long skuId);
 
 
     /**
@@ -48,6 +48,6 @@ public interface PmsSkuService {
      * @param catalog3Id 三级目录id
      * @return sku列表
      */
-    List<PmsSkuInfo> getAllSku(Long catalog3Id);
+    List<PmsSkuInfoDto> getAllSku(Long catalog3Id);
 
 }

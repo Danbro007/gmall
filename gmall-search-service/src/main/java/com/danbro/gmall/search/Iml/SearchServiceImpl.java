@@ -1,10 +1,12 @@
 package com.danbro.gmall.search.Iml;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.danbro.gmall.api.bean.PmsSearchParam;
-import com.danbro.gmall.api.bean.PmsSearchSkuInfo;
-import com.danbro.gmall.api.bean.PmsSkuAttrValue;
+import com.danbro.gmall.api.dto.PmsSearchParamDto;
+import com.danbro.gmall.api.dto.PmsSearchSkuInfoDto;
+import com.danbro.gmall.api.dto.PmsSkuAttrValueDto;
+import com.danbro.gmall.api.dto.PmsSkuInfoFromEsDto;
 import com.danbro.gmall.api.service.SearchService;
+import com.danbro.gmall.api.vo.PmsSearchParamVo;
 import io.searchbox.client.JestClient;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
@@ -15,10 +17,12 @@ import org.elasticsearch.index.query.TermQueryBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.sort.SortOrder;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -34,46 +38,70 @@ public class SearchServiceImpl implements SearchService {
     JestClient jestClient;
 
     @Override
-    public List<PmsSearchSkuInfo> getSkuInfoListByParam(PmsSearchParam pmsSearchParam){
-        String dsl = this.getDsl(pmsSearchParam);
-        List<PmsSearchSkuInfo> pmsSearchSkuInfos = new ArrayList<>();
-        Search build = new Search.Builder(dsl).addIndex("gmall").addType("pmsSkuInfo").build();
+    public List<PmsSearchSkuInfoDto> getSkuInfoListByParam(PmsSearchParamVo pmsSearchParamVo){
+        /*从es获取sku商品数据*/
+        PmsSearchParamDto pmsSearchParamDto = new PmsSearchParamDto();
+        BeanUtils.copyProperties(pmsSearchParamVo,pmsSearchParamDto);
+        String dsl = this.getDsl(pmsSearchParamDto);
+        System.out.println(dsl);
+        List<PmsSearchSkuInfoDto> pmsSearchSkuInfoDtoList = new ArrayList<>();
+        Search build = new Search.Builder(dsl).addIndex("gmall").addType("PmsSkuInfo").build();
         SearchResult execute = null;
         try {
             execute = jestClient.execute(build);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        List<SearchResult.Hit<PmsSkuInfoFromEsDto, Void>> hits = execute.getHits(PmsSkuInfoFromEsDto.class);
 
-        List<SearchResult.Hit<PmsSearchSkuInfo, Void>> hits = execute.getHits(PmsSearchSkuInfo.class);
-        for (SearchResult.Hit<PmsSearchSkuInfo, Void> hit : hits) {
-            PmsSearchSkuInfo source = hit.source;
-            if (StringUtils.isNotBlank(pmsSearchParam.getKeyword())){
+        HashMap<Long, PmsSearchSkuInfoDto> pmsSearchSkuInfoDtoHashMap = new HashMap<>(16);
+        for (SearchResult.Hit<PmsSkuInfoFromEsDto, Void> hit : hits) {
+            PmsSkuInfoFromEsDto source = hit.source;
+            PmsSkuAttrValueDto pmsSkuAttrValueDto = new PmsSkuAttrValueDto();
+
+            if (!pmsSearchSkuInfoDtoHashMap.keySet().contains(source.getId())){
+                PmsSearchSkuInfoDto pmsSearchSkuInfoDto = new PmsSearchSkuInfoDto();
+                BeanUtils.copyProperties(source,pmsSearchSkuInfoDto);
+                ArrayList<PmsSkuAttrValueDto> skuAttrValueDtoArrayList = new ArrayList<>();
+                BeanUtils.copyProperties(source,pmsSkuAttrValueDto);
+                skuAttrValueDtoArrayList.add(pmsSkuAttrValueDto);
+                pmsSearchSkuInfoDto.setSkuAttrValueList(skuAttrValueDtoArrayList);
+                pmsSearchSkuInfoDtoHashMap.put(source.getId(),pmsSearchSkuInfoDto);
+            }else {
+                PmsSearchSkuInfoDto pmsSearchSkuInfoDto = pmsSearchSkuInfoDtoHashMap.get(source.getId());
+                BeanUtils.copyProperties(source,pmsSkuAttrValueDto);
+                pmsSearchSkuInfoDto.getSkuAttrValueList().add(pmsSkuAttrValueDto);
+            }
+
+            if (StringUtils.isNotBlank(pmsSearchParamDto.getKeyword())){
                 Map<String, List<String>> highlight = hit.highlight;
                 String skuName = highlight.get("skuName").get(0);
                 source.setSkuName(skuName);
             }
-            pmsSearchSkuInfos.add(source);
         }
-        return pmsSearchSkuInfos;
+        for (Long key : pmsSearchSkuInfoDtoHashMap.keySet()) {
+            PmsSearchSkuInfoDto pmsSearchSkuInfoDto = pmsSearchSkuInfoDtoHashMap.get(key);
+            pmsSearchSkuInfoDtoList.add(pmsSearchSkuInfoDto);
+        }
+        return pmsSearchSkuInfoDtoList;
     }
 
     /**
      * 通过搜索参数过滤出商品列表
-     * @param pmsSearchParam 搜索参数对象
+     * @param pmsSearchParamDto 搜索参数对象
      * @return 过滤后的商品列表
      */
-    private String getDsl(PmsSearchParam pmsSearchParam){
-        String keyword = pmsSearchParam.getKeyword();
-        String[] skuAttrValueList = pmsSearchParam.getValueId();
-        Long catalog3Id = pmsSearchParam.getCatalog3Id();
+    private String getDsl(PmsSearchParamDto pmsSearchParamDto){
+        String keyword = pmsSearchParamDto.getKeyword();
+        String[] skuAttrValueList = pmsSearchParamDto.getValueId();
+        Long catalog3Id = pmsSearchParamDto.getCatalog3Id();
 
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
         //filter
         if(skuAttrValueList != null){
             for (String pmsSkuAttrValue : skuAttrValueList) {
-                TermQueryBuilder termQueryBuilder = new TermQueryBuilder("skuAttrValueList.valueId",pmsSkuAttrValue);
+                TermQueryBuilder termQueryBuilder = new TermQueryBuilder("valueId",pmsSkuAttrValue);
                 boolQueryBuilder.filter(termQueryBuilder);
             }
         }
@@ -97,7 +125,7 @@ public class SearchServiceImpl implements SearchService {
         searchSourceBuilder.highlighter(highlightBuilder);
 
         searchSourceBuilder.from(0);
-        searchSourceBuilder.size(20);
+        searchSourceBuilder.size(200);
         return searchSourceBuilder.toString();
     }
 
