@@ -20,6 +20,6 @@ public class PmsSkuInfoFromEsDto implements Serializable {
     private Double price;
     private String skuDefaultImg;
     private Long productId;
-    private List<PmsSkuAttrValueDto> skuAttrValueList;
+    private List<String> skuAttrValueList;
 
 }
