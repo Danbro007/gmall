@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gmall-web-utils" />
-        <module name="gmall-exception-handle" />
         <module name="gmall-manage-web" />
         <module name="gmall-redisson-test" />
         <module name="gmall-common-utils" />

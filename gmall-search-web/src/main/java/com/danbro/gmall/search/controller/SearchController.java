@@ -31,6 +31,7 @@ public class SearchController {
     @Reference
     AttrService attrService;
 
+
     @GetMapping("/list.html")
     public String search(PmsSearchParamVo pmsSearchParamVo, ModelMap modelMap) {
         try {
@@ -40,9 +41,9 @@ public class SearchController {
             if (delValueIdList != null) {
                 modelMap.put("attrValueSelectedList", SearchControllerUtils.getPmsSearchParamCrumbVoList(delValueIdList, pmsBaseAttrInfoDtoList, pmsSearchParamVo));
             }
+            modelMap.put("attrList", pmsBaseAttrInfoDtoList);
             modelMap.put("skuLsInfoList", skuInfoList);
             modelMap.put("urlParam", SearchControllerUtils.getUrlParam(pmsSearchParamVo));
-            modelMap.put("attrList", pmsBaseAttrInfoDtoList);
         } catch (IOException e) {
         }
         return "list";

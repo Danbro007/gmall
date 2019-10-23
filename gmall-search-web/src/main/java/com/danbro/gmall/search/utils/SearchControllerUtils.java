@@ -7,6 +7,7 @@ import com.danbro.gmall.api.dto.PmsSkuAttrValueDto;
 import com.danbro.gmall.api.vo.PmsSearchParamCrumbVo;
 import com.danbro.gmall.api.vo.PmsSearchParamVo;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -19,6 +20,9 @@ import java.util.List;
  * description
  **/
 public class SearchControllerUtils {
+
+    @Autowired
+
 
     /**
      * 获得面包屑列表

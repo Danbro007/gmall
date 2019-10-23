@@ -38,7 +38,7 @@ public class GmallSearchServiceApplicationTests {
      */
     @Test
     public void contextLoads() throws IOException {
-        List<PmsSkuInfoDto> pmsSkuInfoDtoList = pmsSkuService.getAllSku(285L);
+        List<PmsSkuInfoDto> pmsSkuInfoDtoList = pmsSkuService.getAllSku(61L);
         List<PmsSkuInfoFromEsDto> searchPmsSkuInfos = new ArrayList<>();
         for (PmsSkuInfoPo pmsSkuInfoPo : pmsSkuInfoDtoList) {
             PmsSkuInfoFromEsDto pmsSkuInfoFromEsDto = new PmsSkuInfoFromEsDto();

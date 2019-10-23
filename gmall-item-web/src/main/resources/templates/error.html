@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/scss/shop.css"/>
+    <link rel="stylesheet" type="text/css" href="/scss/main.css"/>
+    <link rel="stylesheet" href="/scss/header.css"/>
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css"/>
+</head>
+<body>
+<div id="max">
+    <header>
+
+        <div class="min">
+            <ul class="header_ul_left">
+                <li class="glyphicon glyphicon-home"><a href="shouye.html" class="aa">首页</a></li>
+                <li class="glyphicon glyphicon-map-marker"><a href="javascript:;">北京</a>
+                    <ol id="beijing">
+                        <li style="background: red;"><a href="javascript:;" style="color: white;">北京</a></li>
+                        <li><a href="javascript:;">上海</a></li>
+                        <li><a href="javascript:;">天津</a></li>
+                        <li><a href="javascript:;">重庆</a></li>
+                        <li><a href="javascript:;">河北</a></li>
+                        <li><a href="javascript:;">山西</a></li>
+                        <li><a href="javascript:;">河南</a></li>
+                        <li><a href="javascript:;">辽宁</a></li>
+                        <li><a href="javascript:;">吉林</a></li>
+                        <li><a href="javascript:;">黑龙江</a></li>
+                        <li><a href="javascript:;">内蒙古</a></li>
+                        <li><a href="javascript:;">江苏</a></li>
+                        <li><a href="javascript:;">山东</a></li>
+                        <li><a href="javascript:;">安徽</a></li>
+                        <li><a href="javascript:;">浙江</a></li>
+                        <li><a href="javascript:;">福建</a></li>
+                        <li><a href="javascript:;">湖北</a></li>
+                        <li><a href="javascript:;">湖南</a></li>
+                        <li><a href="javascript:;">广东</a></li>
+                        <li><a href="javascript:;">广西</a></li>
+                        <li><a href="javascript:;">江西</a></li>
+                        <li><a href="javascript:;">四川</a></li>
+                        <li><a href="javascript:;">海南</a></li>
+                        <li><a href="javascript:;">贵州</a></li>
+                        <li><a href="javascript:;">云南</a></li>
+                        <li><a href="javascript:;">西藏</a></li>
+                        <li><a href="javascript:;">陕西</a></li>
+                        <li><a href="javascript:;">甘肃</a></li>
+                        <li><a href="javascript:;">青海</a></li>
+                        <li><a href="javascript:;">宁夏</a></li>
+                        <li><a href="javascript:;">新疆</a></li>
+                        <li><a href="javascript:;">港澳</a></li>
+                        <li><a href="javascript:;">台湾</a></li>
+                        <li><a href="javascript:;">钓鱼岛</a></li>
+                        <li><a href="javascript:;">海外</a></li>
+                    </ol>
+                </li>
+            </ul>
+            <ul class="header_ul_right">
+                <li style="border: 0;"><a href="../登录页面\index.html" class="aa">你好，请登录</a></li>
+                <li><a href="../注册页面\index.html" style="color: red;">免费注册</a> |</li>
+                <li><a href="javascript:;" class="aa">我的订单</a> |</li>
+
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <div class="nav_min">
+            <div class="nav_top">
+                <div class="nav_top_one"><a href="#"><img src="/img/logo1.jpg"/></a></div>
+                <div class="nav_top_two"><input type="text"/>
+                    <button>搜索</button>
+                </div>
+                <div class="nav_top_three"><a href="../JD_Shop/One_JDshop.html">我的购物车</a><span
+                        class="glyphicon glyphicon-shopping-cart"></span>
+                    <div class="nav_top_three_1">
+                        <img src="/img/44.png"/>购物车还没有商品，赶紧选购吧！
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+</div>
+
+
+
+
+<div class="Fixedbian">
+    <ul>
+        <li class="li1"><a class="aaa" href="##">顶部</a></li>
+    </ul>
+</div>
+<div class="gouwuchexiaguo">
+    <img src="/img/44.png"/>
+    <span>购物车还没有商品，赶紧选购吧！</span>
+</div>
+</body>
+
+<script src="/js/jquery1.9.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/js.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    function addToCart(obj) {
+        var canClick = $(obj).attr("canClick");
+        if (canClick == '0') {
+            return;
+        }
+        $("#itemForm").submit();
+    }
+
+    function switchSkuId() {
+
+        // 被选中属性
+        var checkDivs = $(".redborder div");
+        var valueIds = "";
+        // 拼接成属性值串
+        for (var i = 0; i < checkDivs.length; i++) {
+            var saleAttrValueDiv = checkDivs.eq(i);
+            if (i > 0) {
+                valueIds = valueIds + "|";
+            }
+            valueIds = valueIds + saleAttrValueDiv.attr("value");
+        }
+        //页面上的hashjson
+        var valuesSku = $("#valuesSku").attr("value");
+        var valuesSkuJson = JSON.parse(valuesSku);
+        // 看看hash有没有
+        var skuId = valuesSkuJson[valueIds];
+        // 当前sku
+        var skuIdSelf = $("#skuId").val();
+
+        // 判断是否跳转
+        if (skuId) {
+            if (skuId == skuIdSelf) {
+                $("#cartBtn").attr("class", "box-btns-two");
+            } else {
+                window.location.href = "/" + skuId + ".html";
+            }
+        } else {
+            $("#cartBtn").attr("class", "box-btns-two-off");
+        }
+    }
+</script>
+
+</html>

@@ -26,14 +26,16 @@ public class AttrServiceImpl implements AttrService {
     private PmsBaseAttrValueMapper pmsBaseAttrValueMapper;
     private PmsBaseSaleAttrMapper pmsBaseSaleAttrMapper;
     private PmsProductSaleAttrValueMapper pmsProductSaleAttrValueMapper;
+    private PmsSkuAttrValueMapper pmsSkuAttrValueMapper;
 
-    public AttrServiceImpl(PmsProductSaleAttrMapper pmsProductSaleAttrMapper, PmsProductImageMapper pmsProductImageMapper, PmsBaseAttrInfoMapper pmsBaseAttrInfoMapper, PmsBaseAttrValueMapper pmsBaseAttrValueMapper, PmsBaseSaleAttrMapper pmsBaseSaleAttrMapper, PmsProductSaleAttrValueMapper pmsProductSaleAttrValueMapper) {
+    public AttrServiceImpl(PmsProductSaleAttrMapper pmsProductSaleAttrMapper, PmsProductImageMapper pmsProductImageMapper, PmsBaseAttrInfoMapper pmsBaseAttrInfoMapper, PmsBaseAttrValueMapper pmsBaseAttrValueMapper, PmsBaseSaleAttrMapper pmsBaseSaleAttrMapper, PmsProductSaleAttrValueMapper pmsProductSaleAttrValueMapper, PmsSkuAttrValueMapper pmsSkuAttrValueMapper) {
         this.pmsProductSaleAttrMapper = pmsProductSaleAttrMapper;
         this.pmsProductImageMapper = pmsProductImageMapper;
         this.pmsBaseAttrInfoMapper = pmsBaseAttrInfoMapper;
         this.pmsBaseAttrValueMapper = pmsBaseAttrValueMapper;
         this.pmsBaseSaleAttrMapper = pmsBaseSaleAttrMapper;
         this.pmsProductSaleAttrValueMapper = pmsProductSaleAttrValueMapper;
+        this.pmsSkuAttrValueMapper = pmsSkuAttrValueMapper;
     }
 
     @Override
@@ -72,8 +74,8 @@ public class AttrServiceImpl implements AttrService {
 
     @Override
     public List<PmsBaseAttrInfoDto> getAttrValueByValueId(HashSet<Long> valueIdSet) {
-        String valueIdStr = StringUtils.join(valueIdSet, ",");
-        return pmsBaseAttrInfoMapper.getAttrValueByValueId(valueIdStr);
+        String valueIdSetStr = StringUtils.join(valueIdSet,",");
+        return pmsBaseAttrInfoMapper.getAttrValueByValueId(valueIdSetStr);
     }
 
 

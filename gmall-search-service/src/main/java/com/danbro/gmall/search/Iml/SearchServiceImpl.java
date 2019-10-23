@@ -38,10 +38,10 @@ public class SearchServiceImpl implements SearchService {
     JestClient jestClient;
 
     @Override
-    public List<PmsSearchSkuInfoDto> getSkuInfoListByParam(PmsSearchParamVo pmsSearchParamVo){
+    public List<PmsSearchSkuInfoDto> getSkuInfoListByParam(PmsSearchParamVo pmsSearchParamVo) {
         /*从es获取sku商品数据*/
         PmsSearchParamDto pmsSearchParamDto = new PmsSearchParamDto();
-        BeanUtils.copyProperties(pmsSearchParamVo,pmsSearchParamDto);
+        BeanUtils.copyProperties(pmsSearchParamVo, pmsSearchParamDto);
         String dsl = this.getDsl(pmsSearchParamDto);
         System.out.println(dsl);
         List<PmsSearchSkuInfoDto> pmsSearchSkuInfoDtoList = new ArrayList<>();
@@ -54,44 +54,39 @@ public class SearchServiceImpl implements SearchService {
         }
         List<SearchResult.Hit<PmsSkuInfoFromEsDto, Void>> hits = execute.getHits(PmsSkuInfoFromEsDto.class);
 
-        HashMap<Long, PmsSearchSkuInfoDto> pmsSearchSkuInfoDtoHashMap = new HashMap<>(16);
         for (SearchResult.Hit<PmsSkuInfoFromEsDto, Void> hit : hits) {
-            PmsSkuInfoFromEsDto source = hit.source;
-            PmsSkuAttrValueDto pmsSkuAttrValueDto = new PmsSkuAttrValueDto();
-
-            if (!pmsSearchSkuInfoDtoHashMap.keySet().contains(source.getId())){
-                PmsSearchSkuInfoDto pmsSearchSkuInfoDto = new PmsSearchSkuInfoDto();
-                BeanUtils.copyProperties(source,pmsSearchSkuInfoDto);
-                ArrayList<PmsSkuAttrValueDto> skuAttrValueDtoArrayList = new ArrayList<>();
-                BeanUtils.copyProperties(source,pmsSkuAttrValueDto);
-                skuAttrValueDtoArrayList.add(pmsSkuAttrValueDto);
-                pmsSearchSkuInfoDto.setSkuAttrValueList(skuAttrValueDtoArrayList);
-                pmsSearchSkuInfoDtoHashMap.put(source.getId(),pmsSearchSkuInfoDto);
-            }else {
-                PmsSearchSkuInfoDto pmsSearchSkuInfoDto = pmsSearchSkuInfoDtoHashMap.get(source.getId());
-                BeanUtils.copyProperties(source,pmsSkuAttrValueDto);
-                pmsSearchSkuInfoDto.getSkuAttrValueList().add(pmsSkuAttrValueDto);
+            PmsSkuInfoFromEsDto pmsSkuInfoFromEsDto = hit.source;
+            List<String> skuAttrValueStrList = pmsSkuInfoFromEsDto.getSkuAttrValueList();
+            PmsSearchSkuInfoDto pmsSearchSkuInfoDto = new PmsSearchSkuInfoDto();
+            if (skuAttrValueStrList != null) {
+                String[] skuAttrValueList = StringUtils.split(skuAttrValueStrList.get(0), ',');
+                ArrayList<PmsSkuAttrValueDto> pmsSkuAttrValueDtoList = new ArrayList<>();
+                for (String valueIdStr : skuAttrValueList) {
+                    PmsSkuAttrValueDto pmsSkuAttrValueDto = new PmsSkuAttrValueDto();
+                    pmsSkuAttrValueDto.setValueId(Long.parseLong(valueIdStr));
+                    pmsSkuAttrValueDtoList.add(pmsSkuAttrValueDto);
+                    BeanUtils.copyProperties(pmsSkuInfoFromEsDto, pmsSearchSkuInfoDto);
+                    pmsSearchSkuInfoDto.setSkuAttrValueList(pmsSkuAttrValueDtoList);
+                    //关键词变红
+                    if (StringUtils.isNotBlank(pmsSearchParamDto.getKeyword())) {
+                        Map<String, List<String>> highlight = hit.highlight;
+                        String skuName = highlight.get("skuName").get(0);
+                        pmsSkuInfoFromEsDto.setSkuName(skuName);
+                    }
+                    pmsSearchSkuInfoDtoList.add(pmsSearchSkuInfoDto);
+                }
             }
-
-            if (StringUtils.isNotBlank(pmsSearchParamDto.getKeyword())){
-                Map<String, List<String>> highlight = hit.highlight;
-                String skuName = highlight.get("skuName").get(0);
-                source.setSkuName(skuName);
-            }
-        }
-        for (Long key : pmsSearchSkuInfoDtoHashMap.keySet()) {
-            PmsSearchSkuInfoDto pmsSearchSkuInfoDto = pmsSearchSkuInfoDtoHashMap.get(key);
-            pmsSearchSkuInfoDtoList.add(pmsSearchSkuInfoDto);
         }
         return pmsSearchSkuInfoDtoList;
     }
 
     /**
      * 通过搜索参数过滤出商品列表
+     *
      * @param pmsSearchParamDto 搜索参数对象
      * @return 过滤后的商品列表
      */
-    private String getDsl(PmsSearchParamDto pmsSearchParamDto){
+    private String getDsl(PmsSearchParamDto pmsSearchParamDto) {
         String keyword = pmsSearchParamDto.getKeyword();
         String[] skuAttrValueList = pmsSearchParamDto.getValueId();
         Long catalog3Id = pmsSearchParamDto.getCatalog3Id();
@@ -99,18 +94,18 @@ public class SearchServiceImpl implements SearchService {
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
         //filter
-        if(skuAttrValueList != null){
+        if (skuAttrValueList != null) {
             for (String pmsSkuAttrValue : skuAttrValueList) {
-                TermQueryBuilder termQueryBuilder = new TermQueryBuilder("valueId",pmsSkuAttrValue);
+                TermQueryBuilder termQueryBuilder = new TermQueryBuilder("valueId", pmsSkuAttrValue);
                 boolQueryBuilder.filter(termQueryBuilder);
             }
         }
-        if (catalog3Id != null){
+        if (catalog3Id != null) {
             TermQueryBuilder termQueryBuilder = new TermQueryBuilder("catalog3Id", catalog3Id);
             boolQueryBuilder.filter(termQueryBuilder);
         }
         //must
-        if (StringUtils.isNotBlank(keyword)){
+        if (StringUtils.isNotBlank(keyword)) {
             MatchQueryBuilder matchQueryBuilder = new MatchQueryBuilder("skuName", keyword);
             boolQueryBuilder.must(matchQueryBuilder);
         }

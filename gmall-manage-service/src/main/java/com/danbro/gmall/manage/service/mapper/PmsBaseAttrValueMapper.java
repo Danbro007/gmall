@@ -10,4 +10,5 @@ import com.danbro.gmall.api.po.PmsBaseAttrValuePo;
  * description
  **/
 public interface PmsBaseAttrValueMapper extends BaseMapper<PmsBaseAttrValueDto> {
+
 }

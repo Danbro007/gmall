@@ -24,4 +24,5 @@
         AND
             ai.id = av.attr_id
     </select>
+
 </mapper>

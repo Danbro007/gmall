@@ -1,10 +1,9 @@
 package com.danbro.gmall.item.web.controller;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import annotation.ResponseResult;
 import com.danbro.gmall.api.dto.PmsProductSaleAttrDto;
 import com.danbro.gmall.api.dto.PmsSkuInfoDto;
-import com.danbro.gmall.api.po.PmsProductSaleAttrPo;
-import com.danbro.gmall.api.po.PmsSkuInfoPo;
 import com.danbro.gmall.api.service.PmsProductService;
 import com.danbro.gmall.api.service.PmsSkuService;
 import org.springframework.stereotype.Controller;
@@ -22,6 +21,7 @@ import java.util.List;
  **/
 @Controller
 @CrossOrigin
+@ResponseResult
 public class ItemController {
 
     @Reference
@@ -40,5 +40,11 @@ public class ItemController {
         model.addAttribute("valuesSku",skuInfoMap);
         return "item";
     }
+    @RequestMapping("error.html")
+    public String errorView(){
+
+        return "error";
+    }
+
 
 }
