@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/gmall-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-common-utils" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-exception-handle" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-exception-handle" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-item-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-manage-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-manage-web" charset="UTF-8" />
@@ -13,7 +14,6 @@
     <file url="file://$PROJECT_DIR$/gmall-search-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-search-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-service-utils" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-test-canal" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-user-web" charset="UTF-8" />

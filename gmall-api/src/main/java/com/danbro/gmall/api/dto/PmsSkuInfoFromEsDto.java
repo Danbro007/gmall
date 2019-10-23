@@ -3,6 +3,7 @@ package com.danbro.gmall.api.dto;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @author Danrbo
@@ -11,7 +12,6 @@ import java.io.Serializable;
  **/
 @Data
 public class PmsSkuInfoFromEsDto implements Serializable {
-
     private Long id;
     private String skuName;
     private String skuDesc;
@@ -19,7 +19,6 @@ public class PmsSkuInfoFromEsDto implements Serializable {
     private Double price;
     private String skuDefaultImg;
     private Long productId;
-    private Long attrId;
-    private Long valueId;
+    private List<PmsSkuAttrValueDto> skuAttrValueList;
 
 }
