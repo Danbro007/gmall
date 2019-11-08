@@ -5,10 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9e539db0-3c96-4ff8-9e6b-da5094266bda" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_16.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuInfoFromEsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuInfoFromEsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/dto/PmsSkuInfoFromEsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/dto/PmsSkuInfoFromEsDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gmall-search-service/src/main/java/com/danbro/gmall/search/Iml/SearchServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search-service/src/main/java/com/danbro/gmall/search/Iml/SearchServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsSkuInfoPo.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsSkuInfoPo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/po/PmsSkuInfoPo.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-api/target/classes/com/danbro/gmall/api/po/PmsSkuInfoPo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common-utils/gmall-common-utils.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-common-utils/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/src/main/java/com/danbro/gmall/exception/handle/Advice/CustiomExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/src/main/java/com/danbro/gmall/exception/handle/Exception/CustomException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/src/main/java/com/danbro/gmall/exception/handle/Exception/CustomizeErrorCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/src/main/java/com/danbro/gmall/exception/handle/Exception/MyCustomizeErrorCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/src/main/java/com/danbro/gmall/exception/handle/GmallExceptionHandleApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-exception-handle/src/test/java/com/danbro/gmall/exception/handle/GmallExceptionHandleApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-item-web/src/main/java/com/danbro/gmall/item/web/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-item-web/src/main/java/com/danbro/gmall/item/web/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-item-web/src/main/resources/static/bootstrap/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-item-web/src/main/resources/static/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-item-web/src/main/resources/static/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-item-web/src/main/resources/static/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-item-web/src/main/resources/templates/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-item-web/src/main/resources/templates/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Impl/SkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Impl/SkuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-manage-service/src/test/java/com/danbro/gmall/manage/service/GmallManageServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-manage-service/src/test/java/com/danbro/gmall/manage/service/GmallManageServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/src/main/java/com/danbro/gmall/GmallRedissonTestApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/src/main/java/com/danbro/gmall/redisson/test/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-redisson-test/src/test/java/com/danbro/gmall/redisson/test/GmallRedissonTestApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/GmallSearchWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/GmallSearchWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search-web/src/main/resources/static/list/js/jquery-1.12.4.js" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search-web/src/main/resources/static/list/js/jquery-1.12.4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search-web/src/main/resources/static/list/js/jquery-3.2.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search-web/src/main/resources/static/list/js/jquery-3.2.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-search-web/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-search-web/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-service-utils/gmall-service-utils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-service-utils/gmall-service-utils.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-service-utils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-service-utils/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-service-utils/src/main/java/com/danbro/gmall/conf/RedisConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-service-utils/src/main/java/com/danbro/gmall/conf/RedisConf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-service-utils/src/main/java/com/danbro/gmall/conf/RedissonConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-service-utils/src/main/java/com/danbro/gmall/conf/RedissonConf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-service-utils/src/main/java/com/danbro/gmall/util/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-service-utils/src/main/java/com/danbro/gmall/util/RedisUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-service-utils/target/classes/com/danbro/gmall/conf/RedisConf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-service-utils/target/classes/com/danbro/gmall/conf/RedissonConf.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-service-utils/target/classes/com/danbro/gmall/conf/RedissonConf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-service-utils/target/classes/com/danbro/gmall/util/RedisUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-user-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-user-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-user/gmall-user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-user/gmall-user.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-user/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-user/target/classes/mapper/MemberMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-user/target/test-classes/com/danbro/gmall/user/GmallUserApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/gmall-user/target/test-classes/com/danbro/gmall/user/GmallUserApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-web-utils/gmall-web-utils.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-web-utils/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gmall-web-utils/target/classes/META-INF/gmall-web-utils.kotlin_module" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/gmall-user/target/" />
     <ignored path="$PROJECT_DIR$/gmall-api/target/" />
@@ -30,6 +110,9 @@
     <ignored path="$PROJECT_DIR$/gmall-search-web/target/" />
     <ignored path="$PROJECT_DIR$/gmall-search-service/target/" />
     <ignored path="$PROJECT_DIR$/gmall-test-canal/target/" />
+    <ignored path="$PROJECT_DIR$/gmall-cart-web/target/" />
+    <ignored path="$PROJECT_DIR$/gmall-cart-service/target/" />
+    <ignored path="$PROJECT_DIR$/gmall-passport-web/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,49 +158,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/controller/SearchController.java">
+        <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/interceptor/AuthInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="38" selection-start-line="38" selection-end-line="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuInfoFromEsDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSearchSkuInfoDto.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/AttrService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Impl/AttrServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="46">
+              <caret line="24" column="62" lean-forward="true" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,54 +175,59 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Interface" />
-        <option value="Interface" />
         <option value="Enum" />
-        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="AnnotationType" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>skuLsInfoList</find>
-      <find>hide</find>
-      <find>urlpa</find>
-      <find>urlParam</find>
-      <find>valueId</find>
-      <find>8081</find>
-      <find>PmsProductSaleAttrValueMapper</find>
-      <find>sale_attr_value_id</find>
-      <find>getAttrInfoByCatalog3Id</find>
-      <find>addOrUpdateAttr</find>
-      <find>80</find>
-      <find>getAllSku</find>
-      <find>geta</find>
-      <find>spring.datasource.password=</find>
-      <find>new HashSet</find>
-      <find>getImageList</find>
-      <find>PmsSkuSaleAttrValuePo</find>
-      <find>skuSaleAttrValueList</find>
-      <find>logging.level.root=debug</find>
-      <find>getPmsSearchParamCrumbVoList</find>
-      <find>getValueIdSet</find>
-      <find>size</find>
-      <find>catalog1</find>
-      <find>pms_base_attr_info_dto</find>
-      <find>selectSpuSaleAttrListCheckBySku</find>
-      <find>PmsSkuAttrValueMapper</find>
-      <find>pmsSkuAttrValueMapper</find>
-      <find>pmsSearchSkuInfoDtoList</find>
-      <find>getSkuInfoListByParam</find>
-      <find>getAttrValueByValueId</find>
+      <find>changeQu</find>
+      <find>check!!</find>
+      <find>sumSumPrice</find>
+      <find>put</find>
+      <find>updateItemCart</find>
+      <find>toItem</find>
+      <find>che</find>
+      <find>getCartListByMemberId</find>
+      <find>移到</find>
+      <find>static</find>
+      <find>删除</find>
+      <find>One_ShopFootBuy</find>
+      <find>One_isDel</find>
+      <find>denglu</find>
+      <find>../</find>
+      <find>../JD</find>
+      <find>/static/</find>
+      <find>Mapper</find>
+      <find>cursor: pointer</find>
+      <find>cursor</find>
+      <find>devtools</find>
+      <find>tools</find>
+      <find>change</find>
+      <find>header_head_p</find>
+      <find>登录</find>
+      <find>check</find>
+      <find>trade</find>
+      <find>结算</find>
+      <find>toTrade</find>
+      <find>http</find>
     </findStrings>
     <replaceStrings>
       <replace>192.168.0.109</replace>
-      <replace>/</replace>
       <replace>spring.datasource.password=123456</replace>
       <replace>spring.datasource.password=1</replace>
       <replace />
+      <replace>/JD</replace>
+      <replace>/</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>D:\javaProject\gmall\gmall-passport-web</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="SYNC" />
@@ -201,57 +250,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsProductInfoDto.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsProductSaleAttrValuePo.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsProductSaleAttrValueDto.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/SpuServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsSkuSaleAttrValuePo.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsSkuImagePo.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuImageDto.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsSkuInfoPo.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsSkuAttrValuePo.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsBaseAttrInfoPo.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/AttrServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuSaleAttrValueDto.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsSkuInfoMapper.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/vo/PmsSkuInfoVo.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuInfoDto.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuAttrValueDto.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/resources/mapper/PmsSkuInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsSkuSaleAttrValueMapper.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Iml/SkuServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Impl/PmsBaseCatalogServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gmall-result-code/src/ResultCode.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/ResultCode.java" />
-        <option value="$PROJECT_DIR$/gmall-item-web/src/main/resources/templates/error.html" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean/Result.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/annotation/ResponseResult.java" />
+        <option value="$PROJECT_DIR$/gmall-service-utils/src/main/java/com/danbro/gmall/util/RedisUtil.java" />
+        <option value="$PROJECT_DIR$/gmall-service-utils/src/main/java/com/danbro/gmall/conf/RedisConf.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-service-utils/src/main/java/com/danbro/gmall/conf/RedissonConf.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-cart-service/src/main/java/com/danbro/gmall/cart/service/Impl/CartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Impl/SkuServiceImpl.java" />
         <option value="$PROJECT_DIR$/gmall-item-web/src/main/java/com/danbro/gmall/item/web/controller/ItemController.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/interceptor/ResponseResultInterceptor.java" />
-        <option value="$PROJECT_DIR$/gmall-item-web/src/main/java/com/danbro/gmall/item/web/test.java" />
-        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/annotation/ResponseResult.java" />
-        <option value="$PROJECT_DIR$/gmall-api/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/interceptor/ResponseResultInterceptor.java" />
-        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/bean/ResultCode.java" />
-        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/bean/ErrorResult.java" />
-        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/bean/ErrorResultException.java" />
-        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/bean/MyCustomResultCode.java" />
-        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/bean/Result.java" />
-        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/handler/ResponseResultHandler.java" />
-        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/config/WebConfig.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/SearchService.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/AttrService.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/resources/mapper/PmsBaseAttrInfoMapper.xml" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseAttrValueMapper.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsSkuAttrValueMapper.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/resources/mapper/PmsSkuAttrValue.xml" />
-        <option value="$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/controller/SearchController.java" />
-        <option value="$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Impl/AttrServiceImpl.java" />
-        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuInfoFromEsDto.java" />
-        <option value="$PROJECT_DIR$/gmall-search-service/src/test/java/com/danbro/gmall/search/GmallSearchServiceApplicationTests.java" />
-        <option value="$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/utils/SearchControllerUtils.java" />
-        <option value="$PROJECT_DIR$/gmall-search-service/src/main/java/com/danbro/gmall/search/Iml/SearchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/gmall-redisson-test/src/main/java/com/danbro/gmall/redisson/test/Controller.java" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/CartService.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-service/src/main/resources/mapper/OmsCartItemMapper.xml" />
+        <option value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/OmsCartItemPo.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-service/src/main/java/com/danbro/gmall/cart/service/mapper/CartMapper.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/java/com/danbro/gmall/cart/web/utils/ControllerUtil.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-service/src/test/java/com/danbro/gmall/cart/service/GmallCartServiceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-service/src/main/java/com/danbro/gmall/cart/service/impl/CartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/gmall-passport-web/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/gmall-passport-web/src/test/java/com/danbro/gmall/passport/web/GmallPassportWebApplicationTests.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-passport-web/src/main/resources/static/templates/index.html" />
+        <option value="$PROJECT_DIR$/gmall-passport-web/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/target/config/AuthIntercepetor.java" />
+        <option value="$PROJECT_DIR$/gmall-manage-service/src/test/java/com/danbro/gmall/manage/service/GmallManageServiceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/target/config/WebConfiguration.java" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/target/config/WebConf.java" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/target/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/target/intercepetor/AuthIntercepetor.java" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/GmallWebUtilsApplication.java" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/intercepetor/WebConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/intercepetor/AuthIntercepetor.java" />
+        <option value="$PROJECT_DIR$/gmall-passport-web/src/main/java/com/danbro/gmall/passport/web/GmallPassportWebApplication.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/resources/templates/cartListInner.html" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/gmall-search-web/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/gmall-passport-web/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/resources/templates/cartList.html" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/resources/templates/trade.html" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/annotations/LoginRequired.java" />
+        <option value="$PROJECT_DIR$/gmall-common-utils/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/gmall-common-utils/src/main/java/com/danbro/gmall/common/utils/util/CookieUtil.java" />
+        <option value="$PROJECT_DIR$/gmall-common-utils/src/main/java/com/danbro/gmall/common/utils/util/HttpClientUtils.java" />
+        <option value="$PROJECT_DIR$/gmall-common-utils/src/main/java/com/danbro/gmall/common/utils/util/HttpClientUtil.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/java/com/danbro/gmall/cart/web/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/interceptor/AuthInterceptor.java" />
+        <option value="$PROJECT_DIR$/gmall-passport-web/src/main/java/com/danbro/gmall/passport/web/controller/PassportController.java" />
+        <option value="$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/GmallSearchWebApplication.java" />
+        <option value="$PROJECT_DIR$/gmall-cart-web/src/main/java/com/danbro/gmall/cart/web/GmallCartWebApplication.java" />
       </list>
     </option>
   </component>
@@ -271,35 +320,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="gmall-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="gmall-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="gmall-item-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="gmall-item-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="gmall-search-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="gmall-search-web" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -318,6 +339,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -326,11 +348,53 @@
               <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
               <item name="gmall" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gmall" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gmall" type="462c0819:PsiDirectoryNode" />
+              <item name="gmall-cart-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -349,38 +413,41 @@
     <property name="database.console.LAST_STATE" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/bean" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../community" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaProject\gmall\gmall-passport-web\src\main\resources\templates" />
+      <recent name="D:\javaProject\gmall\gmall-passport-web\src\main\resources\static" />
+      <recent name="D:\javaProject\gmall\gmall-passport-web\src\main\resources" />
+      <recent name="D:\javaProject\gmall\gmall-passport-web\src\main\resources\static\templates" />
+      <recent name="D:\javaProject\gmall\gmall-cart-web\src\main\resources\static" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.danbro.gmall.cart.web" />
       <recent name="" />
       <recent name="com.danbro.gmall" />
       <recent name="com.danbro.gmall.manage" />
       <recent name="com.danbro.gmall.user" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\javaProject\gmall\gmall-api\src\main\java\com\danbro\gmall\api\bean" />
-      <recent name="D:\javaProject\gmall\gmall-search-web\src\main\resources" />
-      <recent name="D:\javaProject\gmall\gmall-api" />
-      <recent name="D:\javaProject\gmall\gmall-manage-service\src\main\java\com\danbro\gmall\manage" />
-      <recent name="D:\javaProject\gmall\gmall-manage-service\src\main\java\com\danbro\gmall" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.danbro.gmall.api.dto" />
       <recent name="com.danbro.gmall.manage.service.Iml" />
       <recent name="com.danbro.gmall.manage.service.mapper" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\javaProject\gmall\gmall-web-utils\src\main\java" />
-      <recent name="D:\javaProject\gmall\gmall-search-web\src\main\resources\static" />
-      <recent name="D:\javaProject\gmall\gmall-search-web\src\main\resources\templates" />
-      <recent name="D:\javaProject\gmall\gmall-exception-handle\src\main\java\com\danbro\gmall\exception\handle" />
-      <recent name="D:\javaProject\gmall\gmall-exception\src\main\java\com\danbro\gmall\exception" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaProject\gmall\gmall-passport-web\src\main\resources" />
+      <recent name="D:\javaProject\gmall\gmall-passport-web\src\main\resources\static" />
+      <recent name="D:\javaProject\gmall\gmall-cart-service\src\main\resources\mapper" />
+      <recent name="D:\javaProject\gmall\gmall-cart-web\src\main\resources\static" />
+      <recent name="D:\javaProject\gmall\gmall-api\src\main\java\com\danbro\gmall\api\po" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -396,36 +463,22 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.GmallSearchWebApplication">
-    <configuration name="ClientTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.danbro.gmall.test.canal.ClientTest" />
-      <module name="gmall-test-canal" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.danbro.gmall.test.canal.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GmallManageServiceApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gmall-manage-service" />
+    <configuration name="GmallCartServiceApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gmall-cart-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.danbro.gmall.manage.service.*" />
+          <option name="PATTERN" value="com.danbro.gmall.cart.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.danbro.gmall.manage.service" />
-      <option name="MAIN_CLASS_NAME" value="com.danbro.gmall.manage.service.GmallManageServiceApplicationTests" />
+      <option name="PACKAGE_NAME" value="com.danbro.gmall.cart.service" />
+      <option name="MAIN_CLASS_NAME" value="com.danbro.gmall.cart.service.GmallCartServiceApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -433,24 +486,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GmallManageServiceApplicationTests.test04" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gmall-manage-service" />
+    <configuration name="GmallCartServiceApplicationTests.test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gmall-cart-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.danbro.gmall.manage.service.*" />
+          <option name="PATTERN" value="com.danbro.gmall.cart.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.danbro.gmall.manage.service" />
-      <option name="MAIN_CLASS_NAME" value="com.danbro.gmall.manage.service.GmallManageServiceApplicationTests" />
-      <option name="METHOD_NAME" value="test04" />
+      <option name="PACKAGE_NAME" value="com.danbro.gmall.cart.service" />
+      <option name="MAIN_CLASS_NAME" value="com.danbro.gmall.cart.service.GmallCartServiceApplicationTests" />
+      <option name="METHOD_NAME" value="test01" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GmallManageServiceApplicationTests.test05" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GmallCartServiceApplicationTests.test02" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gmall-cart-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.danbro.gmall.cart.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.danbro.gmall.cart.service" />
+      <option name="MAIN_CLASS_NAME" value="com.danbro.gmall.cart.service.GmallCartServiceApplicationTests" />
+      <option name="METHOD_NAME" value="test02" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GmallManageServiceApplicationTests.test06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gmall-manage-service" />
       <extension name="coverage">
         <pattern>
@@ -460,7 +530,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.danbro.gmall.manage.service" />
       <option name="MAIN_CLASS_NAME" value="com.danbro.gmall.manage.service.GmallManageServiceApplicationTests" />
-      <option name="METHOD_NAME" value="test05" />
+      <option name="METHOD_NAME" value="test06" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -487,6 +557,20 @@
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GmallCartServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-cart-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.danbro.gmall.cart.service.GmallCartServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GmallCartWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-cart-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.danbro.gmall.cart.web.GmallCartWebApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -518,6 +602,13 @@
     <configuration name="GmallManageWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="gmall-manage-web" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.danbro.gmall.manage.web.GmallManageWebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GmallPassportWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-passport-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.danbro.gmall.passport.web.GmallPassportWebApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -587,6 +678,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GmallWebUtilsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="gmall-web-utils" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.danbro.gmall.web.utils.GmallWebUtilsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -597,11 +695,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ClientTest" />
-      <item itemvalue="JUnit.GmallManageServiceApplicationTests.test04" />
-      <item itemvalue="JUnit.GmallManageServiceApplicationTests.test05" />
-      <item itemvalue="JUnit.GmallManageServiceApplicationTests.contextLoads" />
       <item itemvalue="JUnit.GmallSearchServiceApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.GmallCartServiceApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.GmallCartServiceApplicationTests.test01" />
+      <item itemvalue="JUnit.GmallCartServiceApplicationTests.test02" />
+      <item itemvalue="JUnit.GmallManageServiceApplicationTests.test06" />
       <item itemvalue="Spring Boot.GmallItemWebApplication" />
       <item itemvalue="Spring Boot.GmallManageServiceApplication" />
       <item itemvalue="Spring Boot.GmallManageWebApplication" />
@@ -614,14 +712,18 @@
       <item itemvalue="Spring Boot.GmallSearchWebApplication" />
       <item itemvalue="Spring Boot.GmallSearchServiceApplication" />
       <item itemvalue="Spring Boot.GmallExceptionHandleApplication" />
+      <item itemvalue="Spring Boot.GmallCartWebApplication" />
+      <item itemvalue="Spring Boot.GmallCartServiceApplication" />
+      <item itemvalue="Spring Boot.GmallPassportWebApplication" />
+      <item itemvalue="Spring Boot.GmallWebUtilsApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GmallCartServiceApplicationTests.test02" />
+        <item itemvalue="JUnit.GmallManageServiceApplicationTests.test06" />
+        <item itemvalue="JUnit.GmallCartServiceApplicationTests.test01" />
+        <item itemvalue="JUnit.GmallCartServiceApplicationTests.contextLoads" />
         <item itemvalue="JUnit.GmallSearchServiceApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.GmallManageServiceApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.GmallManageServiceApplicationTests.test05" />
-        <item itemvalue="JUnit.GmallManageServiceApplicationTests.test04" />
-        <item itemvalue="Application.ClientTest" />
       </list>
     </recent_temporary>
   </component>
@@ -692,6 +794,22 @@
       <workItem from="1571636315592" duration="11467000" />
       <workItem from="1571656652910" duration="8246000" />
       <workItem from="1571801605359" duration="7411000" />
+      <workItem from="1572238929656" duration="10022000" />
+      <workItem from="1572318443688" duration="11909000" />
+      <workItem from="1572349273563" duration="3248000" />
+      <workItem from="1572407412614" duration="10270000" />
+      <workItem from="1572487449044" duration="1192000" />
+      <workItem from="1572580977909" duration="13128000" />
+      <workItem from="1572694955925" duration="8150000" />
+      <workItem from="1572832643325" duration="18129000" />
+      <workItem from="1572869091960" duration="5371000" />
+      <workItem from="1572874650592" duration="148000" />
+      <workItem from="1572874864594" duration="315000" />
+      <workItem from="1572919971385" duration="1193000" />
+      <workItem from="1573005684422" duration="16944000" />
+      <workItem from="1573093054440" duration="7903000" />
+      <workItem from="1573187471482" duration="5048000" />
+      <workItem from="1573196812855" duration="731000" />
     </task>
     <task id="LOCAL-00001" summary="创建member模块">
       <created>1567668664533</created>
@@ -739,39 +857,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GmallManageServiceApplicationTests_contextLoads - 2019.10.18 at 14h 33m 18s.xml">
-      <configuration name="GmallManageServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 14h 58m 54s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GmallManageServiceApplicationTests_contextLoads - 2019.10.18 at 14h 35m 05s.xml">
-      <configuration name="GmallManageServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 15h 00m 26s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GmallManageServiceApplicationTests_contextLoads - 2019.10.18 at 14h 38m 43s.xml">
-      <configuration name="GmallManageServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 15h 01m 18s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GmallManageServiceApplicationTests_contextLoads - 2019.10.18 at 15h 13m 21s.xml">
-      <configuration name="GmallManageServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 15h 03m 02s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GmallSearchServiceApplicationTests_contextLoads - 2019.10.21 at 12h 41m 12s.xml">
-      <configuration name="GmallSearchServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 15h 08m 06s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GmallSearchServiceApplicationTests_contextLoads - 2019.10.21 at 12h 42m 17s.xml">
-      <configuration name="GmallSearchServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 16h 36m 04s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GmallSearchServiceApplicationTests_contextLoads - 2019.10.21 at 12h 42m 31s.xml">
-      <configuration name="GmallSearchServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 16h 36m 50s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GmallSearchServiceApplicationTests_contextLoads - 2019.10.21 at 12h 42m 55s.xml">
-      <configuration name="GmallSearchServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 16h 37m 27s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GmallSearchServiceApplicationTests_contextLoads - 2019.10.23 at 14h 58m 29s.xml">
-      <configuration name="GmallSearchServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 16h 38m 49s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GmallSearchServiceApplicationTests_contextLoads - 2019.10.23 at 14h 59m 49s.xml">
-      <configuration name="GmallSearchServiceApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="GmallCartServiceApplicationTests_test02 - 2019.11.04 at 21h 45m 50s.xml">
+      <configuration name="GmallCartServiceApplicationTests.test02" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330047000" />
+    <option name="totallyTimeSpent" value="443785000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,7 +904,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49704143" visible="true" weight="0.1956346" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49704143" visible="true" weight="0.23686337" />
       <window_info id="Structure" order="1" sideWeight="0.5029586" side_tool="true" weight="0.23443815" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -795,9 +913,9 @@
       <window_info id="Image Layers" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.660746" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987874" weight="0.053285968" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.57073563" weight="0.6856128" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.8703375" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987874" weight="0.27708703" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.57073563" visible="true" weight="0.6660746" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.9094139" />
@@ -806,14 +924,14 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.8419183" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.42926434" side_tool="true" weight="0.77442276" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.6980462" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.36589697" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="15" visible="true" weight="0.12611012" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.5133215" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.25222313" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.2716249" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.16168149" />
@@ -823,7 +941,7 @@
       <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.32983023" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49704143" weight="0.2279709" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49704143" visible="true" weight="0.2716249" />
       <window_info id="Structure" order="1" sideWeight="0.5029586" side_tool="true" weight="0.23443815" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -832,25 +950,25 @@
       <window_info id="Image Layers" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.660746" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987874" weight="0.40852576" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.57235247" visible="true" weight="0.053285968" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.8703375" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4987874" weight="0.27708703" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.57073563" weight="0.053285968" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.9094139" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3285968" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.1563055" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.053285968" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.8419183" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5012126" side_tool="true" weight="0.63232684" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.13676731" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.42926434" side_tool="true" weight="0.77442276" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.36589697" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="15" weight="0.3676732" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.5133215" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.109135" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.024252223" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.16168149" />
@@ -916,10 +1034,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/controller/SearchController.java</url>
-          <line>36</line>
+          <url>file://$PROJECT_DIR$/gmall-cart-service/src/test/java/com/danbro/gmall/cart/service/GmallCartServiceApplicationTests.java</url>
+          <line>64</line>
           <properties />
-          <option name="timeStamp" value="110" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gmall-web-utils/src/main/java/target/intercepetor/AuthIntercepetor.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/interceptor/AuthInterceptor.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -930,433 +1060,447 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/gmall$GmallCartServiceApplicationTests_test02.ic" NAME="GmallCartServiceApplicationTests.test02 Coverage Results" MODIFIED="1572597653620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.danbro.gmall.cart.service.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/gmall$GmallRedissonTestApplication.ic" NAME="GmallRedissonTestApplication Coverage Results" MODIFIED="1569309226811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>skuInfoList</expression-string>
+        <expression-string>longOmsCartItemDtoTreeMap</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>skuAttrValueStrList</expression-string>
+        <expression-string>cartList</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>pmsSkuAttrValueDtoList</expression-string>
+        <expression-string>omsCartItemDtoList</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>skuAttrValueList</expression-string>
+        <expression-string>dataFromCache</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>hits</expression-string>
+        <expression-string>omsCartItemDtoFromCache</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>pmsBaseAttrInfoDtoList</expression-string>
+        <expression-string>omsCartItemDto</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>valueIdStr</expression-string>
+        <expression-string>entries</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>StringUtils</expression-string>
+        <expression-string>bigDecimal</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>valueIdSet</expression-string>
+        <expression-string>total</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/gmall-item-web/src/main/resources/templates/item.html">
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/springframework/spring-web/5.1.7.RELEASE/spring-web-5.1.7.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="71" selection-end-line="1057" />
+        <state relative-caret-position="264">
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-item-web/src/main/resources/templates/error.html">
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/com/alibaba/dubbo/2.6.6/dubbo-2.6.6.jar!/com/alibaba/dubbo/rpc/proxy/AbstractProxyInvoker.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+        <state relative-caret-position="92">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/gmall-api.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-item-web/pom.xml">
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/com/alibaba/dubbo/2.6.6/dubbo-2.6.6.jar!/com/alibaba/dubbo/rpc/proxy/javassist/JavassistProxyFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="81">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/pom.xml">
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/com/alibaba/dubbo/2.6.6/dubbo-2.6.6-sources.jar!/com/alibaba/dubbo/rpc/proxy/javassist/JavassistProxyFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="108">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE.jar!/org/springframework/web/servlet/HandlerInterceptor.class">
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/com/alibaba/dubbo/2.6.6/dubbo-2.6.6-sources.jar!/com/alibaba/dubbo/rpc/proxy/AbstractProxyInvoker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="71">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-item-web/src/main/java/com/danbro/gmall/item/web/test.java">
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/com/alibaba/dubbo/2.6.6/dubbo-2.6.6-sources.jar!/com/alibaba/dubbo/config/invoker/DelegateProviderMetaDataInvoker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="11" />
+        <state relative-caret-position="108">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-utils/pom.xml">
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/java/com/danbro/gmall/cart/web/utils/ControllerUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
+        <state relative-caret-position="86">
+          <caret line="51" column="19" lean-forward="true" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#ifCartExist#0;class#ControllerUtil#0" />
+            <element signature="method#getOmsCartItemDto#0;class#ControllerUtil#0" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-parent/pom.xml">
+    <entry file="file://$PROJECT_DIR$/gmall-cart-service/src/main/java/com/danbro/gmall/cart/service/impl/CartServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/interceptor/ResponseResultInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="22" column="62" selection-start-line="22" selection-end-line="23" />
+        <state relative-caret-position="-266">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/src.zip!/java/lang/Exception.java">
+    <entry file="file://$PROJECT_DIR$/gmall-cart-service/src/test/java/com/danbro/gmall/cart/service/GmallCartServiceApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="80" column="18" lean-forward="true" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+        <state relative-caret-position="836">
+          <caret line="56" column="62" selection-start-line="56" selection-start-column="62" selection-end-line="56" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="247">
+            <caret line="13" selection-start-line="13" selection-end-line="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-manage-web/src/main/java/com/danbro/gmall/manage/web/GmallManageWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="4" column="79" lean-forward="true" selection-start-line="4" selection-start-column="79" selection-end-line="4" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-133">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="28" column="52" lean-forward="true" selection-start-line="28" selection-start-column="52" selection-end-line="28" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-passport-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-passport-web/src/test/java/com/danbro/gmall/passport/web/GmallPassportWebApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
-            <element signature="e#2406#2407#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar!/org/apache/zookeeper/OpResult.class">
+    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/test/java/com/danbro/gmall/manage/service/GmallManageServiceApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="20" selection-start-line="20" selection-end-line="21" />
+        <state relative-caret-position="190">
+          <caret line="82" column="38" lean-forward="true" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/annotation/ResponseResult.java">
+    <entry file="file://$PROJECT_DIR$/gmall-cart-service/src/main/java/com/danbro/gmall/cart/service/GmallCartServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <caret line="4" column="68" lean-forward="true" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8-sources.jar!/org/apache/zookeeper/OpResult.java">
+    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/target/intercepetor/AuthIntercepetor.java" />
+    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/target/config/WebConfig.java" />
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE-sources.jar!/org/springframework/web/servlet/handler/HandlerInterceptorAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/bean/MyCustomResultCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="32" />
+        <state relative-caret-position="94">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="102" selection-start-line="102" selection-end-line="103" />
+        <state relative-caret-position="255">
+          <caret line="102" selection-start-line="102" selection-end-line="103" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/handler/ResponseResultHandler.java">
+    <entry file="file://$PROJECT_DIR$/gmall-web-utils/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="88">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/bean/ErrorResultException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="21" column="60" lean-forward="true" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/bean/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/bean/ResultCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Impl/SkuServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-item-web/src/main/java/com/danbro/gmall/item/web/controller/ItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsBaseAttrInfoDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseAttrValueMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsBaseAttrValueDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" column="61" lean-forward="true" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsBaseAttrInfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/mapper/PmsSkuAttrValueMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/com/baomidou/mybatis-plus-core/3.2.0/mybatis-plus-core-3.2.0-sources.jar!/com/baomidou/mybatisplus/core/conditions/Wrapper.java">
+    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/GmallWebUtilsApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/com/alibaba/dubbo/2.6.6/dubbo-2.6.6.jar!/com/alibaba/dubbo/config/annotation/Reference.class">
+    <entry file="file://$PROJECT_DIR$/gmall-passport-web/src/main/resources/static/css/gm1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="38">
+          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/com/baomidou/mybatis-plus-core/3.2.0/mybatis-plus-core-3.2.0-sources.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.java">
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/springframework/spring-web/5.1.7.RELEASE/spring-web-5.1.7.RELEASE-sources.jar!/org/springframework/web/bind/annotation/ResponseBody.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="176" column="7" selection-start-line="176" selection-start-column="7" selection-end-line="176" selection-end-column="7" />
+        <state relative-caret-position="174">
+          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsBaseAttrValuePo.java">
+    <entry file="file://$PROJECT_DIR$/gmall-search-web/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="133">
+          <caret line="101" column="15" lean-forward="true" selection-start-line="100" selection-start-column="60" selection-end-line="101" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-search-web/src/test/java/com/danbro/gmall/search/GmallSearchWebApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fastdfs-client-java/build.xml">
+    <entry file="file://$PROJECT_DIR$/gmall-search-web/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/resources/mapper/PmsSkuAttrValue.xml">
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/resources/templates/trade.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/resources/mapper/PmsSkuInfoMapper.xml">
+    <entry file="file://$PROJECT_DIR$/gmall-passport-web/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/resources/mapper/PmsBaseAttrInfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/GmallSearchWebApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuInfoDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/utils/SearchControllerUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="84" column="5" lean-forward="true" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuInfoFromEsDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="18" column="25" lean-forward="true" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/po/PmsSkuAttrValuePo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSkuAttrValueDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-search-service/src/main/java/com/danbro/gmall/search/Iml/SearchServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-691">
-          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
+        <state relative-caret-position="129">
+          <caret line="112" column="36" lean-forward="true" selection-start-line="112" selection-start-column="36" selection-end-line="112" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1445#1451#0" expanded="true" />
+            <element signature="e#1452#1458#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/SearchService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-search-service/src/test/java/com/danbro/gmall/search/GmallSearchServiceApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/service/AttrService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-manage-service/src/main/java/com/danbro/gmall/manage/service/Impl/AttrServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gmall-api/src/main/java/com/danbro/gmall/api/dto/PmsSearchSkuInfoDto.java">
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/resources/templates/cartList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="12" column="14" lean-forward="true" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <caret line="148" column="52" selection-start-line="148" selection-start-column="52" selection-end-line="148" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#a#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/resources/templates/cartListInner.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="86" column="42" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#li#4;n#ol#0;n#div#1;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#ol#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/apache/httpcomponents/httpclient/4.5.5/httpclient-4.5.5.jar!/org/apache/http/client/methods/HttpGet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-common-utils/src/main/java/com/danbro/gmall/common/utils/GmallCommonUtilsApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="3" column="68" lean-forward="true" selection-start-line="3" selection-start-column="68" selection-end-line="3" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-common-utils/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="74" column="21" lean-forward="true" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-parent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-common-utils/src/main/java/com/danbro/gmall/common/utils/util/CookieUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="23" column="85" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar!/org/apache/http/util/EntityUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" selection-start-line="6" selection-end-line="20" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11-sources.jar!/org/apache/http/util/EntityUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="80" column="17" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/annotations/LoginRequired.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-common-utils/src/main/java/com/danbro/gmall/common/utils/util/HttpClientUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="30" column="46" lean-forward="true" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="1035" column="17" lean-forward="true" selection-start-line="1035" selection-start-column="17" selection-end-line="1035" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/JavaSoftWare/maven/apache-maven-3.6.1/repository/org/springframework/spring-webmvc/5.1.7.RELEASE/spring-webmvc-5.1.7.RELEASE-sources.jar!/org/springframework/web/servlet/HandlerExecutionChain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="38" selection-start-line="38" selection-end-line="39" />
+        <state relative-caret-position="131">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#1903#1904#0" expanded="true" />
+            <element signature="e#1933#1934#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/java/com/danbro/gmall/cart/web/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2090">
+          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-passport-web/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-passport-web/src/main/java/com/danbro/gmall/passport/web/GmallPassportWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="6" column="60" lean-forward="true" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-search-web/src/main/java/com/danbro/gmall/search/GmallSearchWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-cart-web/src/main/java/com/danbro/gmall/cart/web/GmallCartWebApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-passport-web/src/main/java/com/danbro/gmall/passport/web/controller/PassportController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gmall-web-utils/src/main/java/com/danbro/gmall/web/utils/interceptor/AuthInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="24" column="62" lean-forward="true" selection-start-line="24" selection-start-column="62" selection-end-line="24" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1413,7 +1557,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>gmall-manage-service</last-edited>
+          <last-edited>gmall-common-utils</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

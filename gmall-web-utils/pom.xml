@@ -10,11 +10,11 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    
+
     <groupId>com.danbro.gmall.web.utils</groupId>
     <artifactId>gmall-web-utils</artifactId>
     <version>1.0-SNAPSHOT</version>
-    
+
     <dependencies>
         <dependency>
             <groupId>com.danbro.gmall.common.utils</groupId>
@@ -30,7 +30,11 @@
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>2.1.5.RELEASE</version>
+        </dependency>
 
     </dependencies>
 

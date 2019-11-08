@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.danbro.gmall.cart.service.mapper.CartMapper">
+    <resultMap id="omsCartItemMap" type="com.danbro.gmall.api.dto.OmsCartItemDto" autoMapping="true">
+    </resultMap>
+
+    <update id="updateCartItemQuantity" parameterType="com.danbro.gmall.api.dto.OmsCartItemDto">
+        UPDATE oms_cart_item
+        SET quantity = quantity + #{quantity}
+        WHERE
+	        product_sku_id = #{productSkuId} and member_id = #{memberId}
+    </update>
+</mapper>

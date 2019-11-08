@@ -3,19 +3,15 @@ package com.danbro.gmall.manage.service;
 import com.danbro.gmall.api.dto.PmsBaseAttrInfoDto;
 import com.danbro.gmall.api.dto.PmsProductSaleAttrDto;
 import com.danbro.gmall.api.dto.PmsSkuInfoDto;
-import com.danbro.gmall.api.po.PmsBaseAttrInfoPo;
-import com.danbro.gmall.api.po.PmsProductSaleAttrPo;
-import com.danbro.gmall.api.po.PmsSkuInfoPo;
 import com.danbro.gmall.manage.service.mapper.PmsBaseAttrInfoMapper;
 import com.danbro.gmall.manage.service.mapper.PmsProductSaleAttrMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuInfoMapper;
-import com.danbro.gmall.util.RedisUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-import redis.clients.jedis.Jedis;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -26,8 +22,6 @@ import java.util.List;
 @SpringBootTest
 public class GmallManageServiceApplicationTests {
 
-    @Autowired
-    RedisUtil redisUtil;
 
     @Autowired
     PmsProductSaleAttrMapper pmsProductSaleAttrMapper;
@@ -37,6 +31,10 @@ public class GmallManageServiceApplicationTests {
 
     @Autowired
     PmsBaseAttrInfoMapper pmsBaseAttrInfoMapper;
+
+    @Autowired
+    RedisTemplate redisTemplate;
+
     @Test
     public void contextLoads() {
 
@@ -57,8 +55,7 @@ public class GmallManageServiceApplicationTests {
 
     @Test
     public void test03(){
-        Jedis jedis = redisUtil.getJedis();
-        System.out.println(jedis);
+
     }
 
     @Test
@@ -88,7 +85,8 @@ public class GmallManageServiceApplicationTests {
     }
     @Test
     public void test06(){
-
+        Object o = redisTemplate.opsForValue().get("sku:105:info");
+        System.out.println(o);
     }
 
 }

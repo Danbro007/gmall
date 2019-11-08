@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -22,7 +23,7 @@ public class PmsSkuInfoPo implements Serializable {
 
     private Long productId;
 
-    private Double price;
+    private BigDecimal price;
 
     private String skuName;
 

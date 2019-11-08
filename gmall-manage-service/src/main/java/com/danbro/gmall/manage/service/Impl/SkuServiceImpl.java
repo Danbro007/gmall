@@ -2,24 +2,22 @@ package com.danbro.gmall.manage.service.Impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.fastjson.JSON;
-import com.danbro.gmall.api.dto.PmsSkuAttrValueDto;
-import com.danbro.gmall.api.dto.PmsSkuImageDto;
-import com.danbro.gmall.api.dto.PmsSkuInfoDto;
-import com.danbro.gmall.api.dto.PmsSkuSaleAttrValueDto;
-import com.danbro.gmall.api.vo.PmsSkuInfoVo;
+import com.danbro.gmall.api.dto.*;
 import com.danbro.gmall.api.service.PmsSkuService;
+import com.danbro.gmall.api.vo.PmsSkuInfoVo;
 import com.danbro.gmall.manage.service.mapper.PmsSkuAttrValueMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuImageMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuInfoMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuSaleAttrValueMapper;
-import com.danbro.gmall.util.RedisUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
-import redis.clients.jedis.Jedis;
 
 import java.util.HashMap;
 import java.util.List;
@@ -37,18 +35,18 @@ public class SkuServiceImpl implements PmsSkuService {
     private PmsSkuAttrValueMapper pmsSkuAttrValueMapper;
     private PmsSkuImageMapper pmsSkuImageMapper;
     private PmsSkuSaleAttrValueMapper pmsSkuSaleAttrValueMapper;
-    private RedisUtil redisUtil;
     private RedissonClient redissonClient;
 
-
-    public SkuServiceImpl(PmsSkuInfoMapper pmsSkuInfoMapper, PmsSkuAttrValueMapper pmsSkuAttrValueMapper, PmsSkuImageMapper pmsSkuImageMapper, PmsSkuSaleAttrValueMapper pmsSkuSaleAttrValueMapper, RedisUtil redisUtil, RedissonClient redissonClient) {
+    public SkuServiceImpl(PmsSkuInfoMapper pmsSkuInfoMapper, PmsSkuAttrValueMapper pmsSkuAttrValueMapper, PmsSkuImageMapper pmsSkuImageMapper, PmsSkuSaleAttrValueMapper pmsSkuSaleAttrValueMapper, RedissonClient redissonClient, StringRedisTemplate stringRedisTemplate) {
         this.pmsSkuInfoMapper = pmsSkuInfoMapper;
         this.pmsSkuAttrValueMapper = pmsSkuAttrValueMapper;
         this.pmsSkuImageMapper = pmsSkuImageMapper;
         this.pmsSkuSaleAttrValueMapper = pmsSkuSaleAttrValueMapper;
-        this.redisUtil = redisUtil;
         this.redissonClient = redissonClient;
     }
+
+    @Autowired
+    RedisTemplate redisTemplate;
 
     @Transactional(rollbackFor = Exception.class)
     @Override
@@ -117,26 +115,26 @@ public class SkuServiceImpl implements PmsSkuService {
 
     @Override
     public PmsSkuInfoDto getSkuById(Long skuId) {
-        Jedis jedis = redisUtil.getJedis();
         RLock lock = redissonClient.getLock("lock");
         lock.lock();
         try {
             String skuKey = "sku:" + skuId + ":info";
-            String skuVal = jedis.get(skuKey);
-            if (StringUtils.isNotBlank(skuVal)) {
-                return JSON.parseObject(skuVal, PmsSkuInfoDto.class);
+            Object pmsSkuInfoDto = redisTemplate.opsForValue().get(skuKey);
+            if (pmsSkuInfoDto != null){
+                return (PmsSkuInfoDto) pmsSkuInfoDto;
             } else {
                 PmsSkuInfoDto skuFromDb = getSkuFromDb(skuId);
                 if (skuFromDb != null) {
-                    jedis.set(skuKey, JSON.toJSONString(skuFromDb));
+                    redisTemplate.opsForValue().set(skuKey,skuFromDb);
                 } else {
-                    jedis.setex(skuKey, 60 * 5, JSON.toJSONString(""));
+                    PmsSkuInfoDto pmsSkuInfoDto1 = new PmsSkuInfoDto();
+                    //数据库里没有商品数据则显示异常页面， 之后修改
+                    redisTemplate.opsForValue().set(skuKey,pmsSkuInfoDto1,60 * 5);
                 }
                 return skuFromDb;
             }
         } finally {
             lock.unlock();
-            jedis.close();
         }
     }
 

@@ -3,8 +3,6 @@ package com.danbro.gmall.item.web.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.danbro.gmall.api.dto.PmsProductSaleAttrDto;
 import com.danbro.gmall.api.dto.PmsSkuInfoDto;
-import com.danbro.gmall.api.po.PmsProductSaleAttrPo;
-import com.danbro.gmall.api.po.PmsSkuInfoPo;
 import com.danbro.gmall.api.service.PmsProductService;
 import com.danbro.gmall.api.service.PmsSkuService;
 import org.springframework.stereotype.Controller;
