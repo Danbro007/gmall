@@ -40,6 +40,7 @@
         <lombok.version>1.18.8</lombok.version>
         <redisson.version>3.10.5</redisson.version>
         <redis.version>2.1.5.RELEASE</redis.version>
+        <jjwt.version>0.9.0</jjwt.version>
 <!--        <thymeleaf-spring5.version>2.1.5.RELEASE</thymeleaf-spring5.version>-->
     </properties>
 
@@ -54,6 +55,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
             </dependency>
 
             <dependency>

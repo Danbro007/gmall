@@ -2,13 +2,18 @@ package com.danbro.gmall.manage.service.Impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.fastjson.JSON;
-import com.danbro.gmall.api.dto.*;
+import com.danbro.gmall.api.dto.PmsSkuAttrValueDto;
+import com.danbro.gmall.api.dto.PmsSkuImageDto;
+import com.danbro.gmall.api.dto.PmsSkuInfoDto;
+import com.danbro.gmall.api.dto.PmsSkuSaleAttrValueDto;
 import com.danbro.gmall.api.service.PmsSkuService;
 import com.danbro.gmall.api.vo.PmsSkuInfoVo;
 import com.danbro.gmall.manage.service.mapper.PmsSkuAttrValueMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuImageMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuInfoMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuSaleAttrValueMapper;
+import com.danbro.gmall.web.utils.bean.Result;
+import com.danbro.gmall.web.utils.enums.ResultCode;
 import org.apache.commons.lang3.StringUtils;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -84,6 +89,9 @@ public class SkuServiceImpl implements PmsSkuService {
     @Override
     public PmsSkuInfoDto getSkuFromDb(Long skuId) {
         PmsSkuInfoDto pmsSkuInfoDto = pmsSkuInfoMapper.selectById(skuId);
+        if (pmsSkuInfoDto == null){
+            return null;
+        }
         HashMap<String, Object> imageColumnMap = new HashMap<>(16);
         imageColumnMap.put("sku_id", skuId);
         List<PmsSkuImageDto> pmsSkuImageDtoList = pmsSkuImageMapper.selectByMap(imageColumnMap);
@@ -120,6 +128,7 @@ public class SkuServiceImpl implements PmsSkuService {
         try {
             String skuKey = "sku:" + skuId + ":info";
             Object pmsSkuInfoDto = redisTemplate.opsForValue().get(skuKey);
+            //从缓存获取 没有的话到数据库获取
             if (pmsSkuInfoDto != null){
                 return (PmsSkuInfoDto) pmsSkuInfoDto;
             } else {
@@ -127,12 +136,11 @@ public class SkuServiceImpl implements PmsSkuService {
                 if (skuFromDb != null) {
                     redisTemplate.opsForValue().set(skuKey,skuFromDb);
                 } else {
-                    PmsSkuInfoDto pmsSkuInfoDto1 = new PmsSkuInfoDto();
-                    //数据库里没有商品数据则显示异常页面， 之后修改
-                    redisTemplate.opsForValue().set(skuKey,pmsSkuInfoDto1,60 * 5);
+
                 }
                 return skuFromDb;
             }
+
         } finally {
             lock.unlock();
         }

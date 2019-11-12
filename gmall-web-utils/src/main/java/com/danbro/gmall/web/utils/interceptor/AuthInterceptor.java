@@ -1,5 +1,6 @@
 package com.danbro.gmall.web.utils.interceptor;
 
+import com.alibaba.fastjson.JSON;
 import com.danbro.gmall.common.utils.util.CookieUtil;
 import com.danbro.gmall.common.utils.util.HttpClientUtil;
 import com.danbro.gmall.web.utils.annotations.LoginRequired;
@@ -10,6 +11,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.HashMap;
 
 /**
  * @author Danrbo
@@ -22,41 +24,48 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        HandlerMethod handlerMethod = (HandlerMethod) handler;
-        LoginRequired loginRequired = handlerMethod.getMethodAnnotation(LoginRequired.class);
-        //判断有没有@LoginRequiredzhu注解
-        if (loginRequired == null) {
-            return true;
-        }
-        boolean successNecessary = loginRequired.successNecessary();
-        String token = "";
-        //旧token
-        String oldToken = CookieUtil.getCookieValue(request, "oldToken", true);
-        //新token
-        String newToken = CookieUtil.getCookieValue(request, "newToken", true);
-        if (!StringUtils.isBlank(oldToken)) {
-            token = oldToken;
-        }
-        if (!StringUtils.isBlank(newToken)) {
-            token = newToken;
-        }
-        //想认证中心获取用户token是否合法
-        String success = HttpClientUtil.doGet("http://passport.gmall.com:8085/identify?token=" + token);
-        //判断是否必须要验证成功
-        String flag = "success";
-        if (successNecessary) {
-            //验证失败 跳回登录页面
-            if (!flag.equals(success)) {
-                response.sendRedirect("http://passport.gmall.com:8085/index?returnUrl=" + request.getRequestURL());
-                return false;
+        if (handler instanceof HandlerMethod) {
+            HandlerMethod handlerMethod = (HandlerMethod) handler;
+            LoginRequired loginRequired = handlerMethod.getMethodAnnotation(LoginRequired.class);
+            //判断有没有@LoginRequiredzhu注解
+            if (loginRequired == null) {
+                return true;
             }
-            request.setAttribute("memberId","1");
-            request.setAttribute("nickName","shanqijie");
-        }
-        else {
-            if (!flag.equals(success)){
-                request.setAttribute("memberId","1");
-                request.setAttribute("nickName","shanqijie");
+            boolean successNecessary = loginRequired.successNecessary();
+            String token = "";
+            //从Cookie获取旧token
+            String oldToken = CookieUtil.getCookieValue(request, "oldToken", true);
+            if (!StringUtils.isBlank(oldToken)) {
+                token = oldToken;
+            }
+            //新token
+            String newToken = request.getParameter("token");
+            if (!StringUtils.isBlank(newToken)) {
+                token = newToken;
+
+            }
+            HashMap<String, Object> map = new HashMap<>(16);
+            String status = "success";
+            //获得token里的用户信息
+            if (StringUtils.isNotBlank(token)) {
+                String userJson = HttpClientUtil.doGet("http://passport.gmall.com:8085/identify?token=" + token + "&currentIp=" + request.getRemoteAddr());
+                map = JSON.parseObject(userJson, HashMap.class);
+                status = (String) map.get("status");
+            }
+            //判断是否必须要验证成功
+            String flag = "success";
+            //验证成功
+            if (successNecessary) {
+                //验证失败 跳回登录页面 登录成功获取token
+                if (!flag.equals(status)) {
+                    response.sendRedirect("http://passport.gmall.com:8085/index?returnUrl=" + request.getRequestURL());
+                    return false;
+                }
+            }
+            request.setAttribute("memberId", map.get("memberId"));
+            request.setAttribute("nickName", map.get("nickname"));
+            if (StringUtils.isNotBlank(token)) {
+                CookieUtil.setCookie(request, response, "oldToken", token, 60 * 60 * 2, true);
             }
         }
         return true;

@@ -43,4 +43,26 @@ public interface MemberService {
      */
     MemberPoInfoVo selectMember(Long memberId);
 
+    /**
+     * 通过用户账号和密码登录
+     * @param username 用户名
+     * @param password 密码
+     * @return 用户信息
+     */
+    MemberPo login(String username,String password);
+
+    /**
+     * 从数据库登录获取用户信息
+     * @param username 用户名
+     * @param password 密码
+     * @return 用户信息
+     */
+    MemberPo loginFromDb(String username,String password);
+
+    /**
+     * 把用户token存储在缓存里
+     * @param memberId 用户id
+     * @param token 用户token
+     */
+    void addUserToken(Long memberId, String token);
 }

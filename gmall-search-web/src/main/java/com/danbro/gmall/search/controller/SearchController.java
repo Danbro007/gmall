@@ -7,6 +7,7 @@ import com.danbro.gmall.api.service.AttrService;
 import com.danbro.gmall.api.service.SearchService;
 import com.danbro.gmall.api.vo.PmsSearchParamVo;
 import com.danbro.gmall.search.utils.SearchControllerUtils;
+import com.danbro.gmall.web.utils.annotations.LoginRequired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -49,6 +50,7 @@ public class SearchController {
     }
 
     @GetMapping("/index")
+    @LoginRequired
     public String indexView() {
         return "index";
     }
