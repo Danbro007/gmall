@@ -32,8 +32,11 @@ public class MemberPo implements Serializable {
     private String job;
     private String personalizedSignature;
     private Integer sourceType;
+    private String sourceUid;
     private Integer integration;
     private Integer growth;
     private Integer luckeyCount;
     private Integer historyIntegration;
+    private String accessToken;
+    private String accessCode;
 }

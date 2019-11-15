@@ -11,19 +11,16 @@ import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.TermQueryBuilder;
 import org.elasticsearch.search.builder.SearchSourceBuilder;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.util.DigestUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
 public class GmallSearchServiceApplicationTests {
 

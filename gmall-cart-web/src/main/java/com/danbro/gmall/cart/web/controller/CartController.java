@@ -36,13 +36,15 @@ public class CartController {
     @Reference
     PmsSkuService pmsSkuService;
 
+    @LoginRequired
     @PostMapping("/addToCart")
     public String addToCart(@Param("quantity") Integer quantity, @Param("skuId") Long skuId, HttpServletRequest request, HttpServletResponse response, Model model) {
         //通过skuId到数据库中查询商品信息
         PmsSkuInfoDto skuInfo = pmsSkuService.getSkuById(skuId);
         //建立购物车里的商品对象
         OmsCartItemDto omsCartItemDto = ControllerUtil.getOmsCartItemDto(skuInfo, quantity);
-        String memberId = "1";
+
+        String memberId = (String) request.getAttribute("memberId");
         //用户未登录
         if (StringUtils.isBlank(memberId)) {
             String cartListCookie = CookieUtil.getCookieValue(request, "cartListCookie", true);
@@ -93,7 +95,7 @@ public class CartController {
     @GetMapping("/cartList")
     @LoginRequired()
     public String cartList(HttpServletRequest request, Model model) {
-        String memberId = "1";
+        String memberId = (String) request.getAttribute("memberId");
         List<OmsCartItemDto> cartList = new ArrayList<>();
         if (StringUtils.isBlank(memberId)) {
             String cartListCookie = CookieUtil.getCookieValue(request, "cartListCookie", true);

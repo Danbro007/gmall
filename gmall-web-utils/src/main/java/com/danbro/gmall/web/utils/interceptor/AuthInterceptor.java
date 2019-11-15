@@ -53,7 +53,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
                 status = (String) map.get("status");
             }
             //判断是否必须要验证成功
-            String flag = "success";
+            String flag = "fail";
             //验证成功
             if (successNecessary) {
                 //验证失败 跳回登录页面 登录成功获取token

@@ -34,12 +34,6 @@
             <artifactId>redisson</artifactId>
             <version>3.11.3</version>
         </dependency>
-        <dependency>
-            <groupId>com.danbro.gmall.web.utils</groupId>
-            <artifactId>gmall-web-utils</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
     </dependencies>
 
     <build>

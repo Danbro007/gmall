@@ -22,8 +22,13 @@ import java.util.Map;
  * description
  **/
 public class HttpClientUtil {
-
-    public static String doGet(String url)   {
+    /**
+     * get请求
+     *
+     * @param url 请求url
+     * @return get请求得到的数据
+     */
+    public static String doGet(String url) {
         // 创建Httpclient对象
         CloseableHttpClient httpclient = HttpClients.createDefault();
         // 创建http GET请求
@@ -41,11 +46,45 @@ public class HttpClientUtil {
                 return result;
             }
             httpclient.close();
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
-        return  null;
+        return null;
+    }
+
+    public static String doPost(String url, Map<String, String> paramMap) {
+        // 创建Httpclient对象
+        CloseableHttpClient httpclient = HttpClients.createDefault();
+        // 创建http Post请求
+        HttpPost httpPost = new HttpPost(url);
+        CloseableHttpResponse response = null;
+        try {
+            List<BasicNameValuePair> list = new ArrayList<>();
+            for (Map.Entry<String, String> entry : paramMap.entrySet()) {
+                list.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+            }
+            HttpEntity httpEntity = new UrlEncodedFormEntity(list, "utf-8");
+
+            httpPost.setEntity(httpEntity);
+            // 执行请求
+            response = httpclient.execute(httpPost);
+
+            // 判断返回状态是否为200
+            if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
+                HttpEntity entity = response.getEntity();
+                String result = EntityUtils.toString(entity, "UTF-8");
+                EntityUtils.consume(entity);
+                httpclient.close();
+                return result;
+            }
+            httpclient.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        return null;
     }
 }
 

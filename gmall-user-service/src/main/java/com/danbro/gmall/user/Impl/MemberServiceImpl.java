@@ -11,9 +11,7 @@ import com.danbro.gmall.user.mapper.MemberReceiveAddressMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.DigestUtils;
 
-import java.security.Key;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -103,6 +101,18 @@ public class MemberServiceImpl implements MemberService {
         String key = "User:" + memberId + "token";
         redisTemplate.delete(key);
         redisTemplate.opsForValue().set(key, token, 60 * 60 * 12, TimeUnit.SECONDS);
+    }
+
+    @Override
+    public void addOauthUser(MemberPo memberPo) {
+        memberMapper.insert(memberPo);
+    }
+
+    @Override
+    public MemberPo checkOauthUser(MemberPo memberPo) {
+        QueryWrapper<MemberPo> memberPoQueryWrapper = new QueryWrapper<>();
+        memberPoQueryWrapper.eq("source_type",memberPo.getSourceType()).eq("source_uid",memberPo.getSourceUid());
+        return memberMapper.selectOne(memberPoQueryWrapper);
     }
 
 }

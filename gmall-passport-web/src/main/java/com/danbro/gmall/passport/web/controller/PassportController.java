@@ -5,10 +5,13 @@ import com.alibaba.fastjson.JSON;
 import com.danbro.gmall.api.po.MemberPo;
 import com.danbro.gmall.api.service.MemberService;
 import com.danbro.gmall.common.utils.JwtUtil;
-import jdk.nashorn.internal.objects.annotations.Property;
-import org.apache.commons.codec.cli.Digest;
+import com.danbro.gmall.passport.web.thirdSocialAccountLogin.accessToken.WeiboAccessToken;
+import com.danbro.gmall.passport.web.thirdSocialAccountLogin.postParam.WeiboPostParam;
+import com.danbro.gmall.passport.web.thirdSocialAccountLogin.userProvider.WeiboUserProvider;
+import com.danbro.gmall.passport.web.thirdSocialAccountLogin.user.WeiboUser;
+import com.danbro.gmall.passport.web.utils.TokenUtil;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +20,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
@@ -37,6 +39,18 @@ public class PassportController {
     @Value("${default.ip}")
     private String defaultIp;
 
+    @Value("${weibo.client.id}")
+    private String clientId;
+
+    @Value("${weibo.client.secret}")
+    private String clientSecret;
+
+    @Value("${weibo.redirect.uri}")
+    private String redirectUri;
+
+    @Value("${weibo.grant.type}")
+    private String grantType;
+
     @Reference
     MemberService memberService;
 
@@ -49,26 +63,11 @@ public class PassportController {
     @PostMapping("/login")
     @ResponseBody
     public String login(String username, String password, HttpServletRequest request) {
-        String token = "";
         MemberPo loginMember = memberService.login(username, password);
-        if (loginMember != null) {
-            String ip = request.getHeader("x-forwarded-for");
-            if (StringUtils.isBlank(ip)) {
-                ip = request.getRemoteAddr();
-                if (StringUtils.isBlank(ip)) {
-                    ip = defaultIp;
-                }
-            }
-            HashMap<String, Object> userMap = new HashMap<>(16);
-            String nickname = loginMember.getNickname();
-            Long memberId = loginMember.getId();
-            userMap.put("nickname", nickname);
-            userMap.put("memberId", memberId);
-            //jwt token加密
-            token = JwtUtil.encode(tokenKey, userMap, DigestUtils.md5DigestAsHex(ip.getBytes()));
-            memberService.addUserToken(memberId, token);
-        } else {
-            token = "fail";
+        String token = TokenUtil.getToken(loginMember, request, defaultIp, tokenKey);
+        String fail = "fail";
+        if (!token.equals(fail)) {
+            memberService.addUserToken(loginMember.getId(), token);
         }
         return token;
     }
@@ -91,5 +90,44 @@ public class PassportController {
         }
 
         return JSON.toJSONString(map);
+    }
+
+
+    @GetMapping("/vlogin")
+    public String weiboLogin(@Param("code") String code, HttpServletRequest request) {
+        WeiboPostParam weiboPostParam = new WeiboPostParam();
+        weiboPostParam.setClientId(clientId);
+        weiboPostParam.setClientSecret(clientSecret);
+        weiboPostParam.setGrantType(grantType);
+        weiboPostParam.setCode(code);
+        weiboPostParam.setRedirectUri(redirectUri);
+        WeiboUserProvider weiboUserProvider = new WeiboUserProvider();
+        //获取token
+        String token = "";
+        WeiboAccessToken weiboAccessToken = weiboUserProvider.getAccessToken(weiboPostParam);
+        if (weiboAccessToken != null){
+            //通过token获取账户信息
+            MemberPo memberPo = weiboUserProvider.getUserInfo(weiboAccessToken, code);
+            MemberPo checkMember = new MemberPo();
+            checkMember.setSourceType(memberPo.getSourceType());
+            checkMember.setSourceUid(memberPo.getSourceUid());
+
+            MemberPo checkMemberFromDb = memberService.checkOauthUser(checkMember);
+            //判断此用户在数据库是否存在
+            if (checkMemberFromDb == null) {
+//            //不存在添加到数据库中
+                memberService.addOauthUser(memberPo);
+            } else {
+                memberPo = checkMemberFromDb;
+            }
+            //获取token
+            token = TokenUtil.getToken(memberPo, request, defaultIp, tokenKey);
+            String fail = "fail";
+            if (!token.equals(fail)) {
+                memberService.addUserToken(memberPo.getId(), token);
+            }
+        }
+        return "redirect:http://search.gmall.com:8082/index?token=" + token;
+
     }
 }

@@ -10,4 +10,6 @@ import com.danbro.gmall.api.po.MemberPo;
  * description
  **/
 public interface MemberMapper extends BaseMapper<MemberPo> {
+
+
 }

@@ -65,4 +65,18 @@ public interface MemberService {
      * @param token 用户token
      */
     void addUserToken(Long memberId, String token);
+
+
+    /**
+     * 添加社交账户的用户
+     * @param memberPo 用户信息
+     */
+    void addOauthUser(MemberPo memberPo);
+
+    /**
+     * 通过用户信息判断此用户是否在数据库里
+     * @param memberPo 用户信息
+     * @return
+     */
+    MemberPo checkOauthUser(MemberPo memberPo);
 }
