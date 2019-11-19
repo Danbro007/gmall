@@ -1,6 +1,7 @@
 package com.danbro.gmall.manage.service.Impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.danbro.gmall.api.dto.*;
 import com.danbro.gmall.api.service.AttrService;
 import com.danbro.gmall.api.vo.PmsBaseAttrInfoVo;
@@ -38,9 +39,9 @@ public class AttrServiceImpl implements AttrService {
 
     @Override
     public List<PmsBaseAttrValueDto> getAttrValueByAttrInfoId(Long id) {
-        HashMap<String, Object> columnMap = new HashMap<>(16);
-        columnMap.put("attr_id", id);
-        return pmsBaseAttrValueMapper.selectByMap(columnMap);
+        QueryWrapper<PmsBaseAttrValueDto> pmsBaseAttrValueDtoQueryWrapper = new QueryWrapper<>();
+        pmsBaseAttrValueDtoQueryWrapper.eq("attr_id",id);
+        return pmsBaseAttrValueMapper.selectList(pmsBaseAttrValueDtoQueryWrapper);
     }
 
     @Override
@@ -50,24 +51,23 @@ public class AttrServiceImpl implements AttrService {
 
     @Override
     public List<PmsProductSaleAttrDto> getProductSaleAttrListBySpuId(Long id) {
-        HashMap<String, Object> columnMap = new HashMap<>(16);
-        columnMap.put("product_id", id);
-        List<PmsProductSaleAttrDto> pmsProductSaleAttrDtoList = pmsProductSaleAttrMapper.selectByMap(columnMap);
-        for (PmsProductSaleAttrDto pmsProductSaleAttrDto : pmsProductSaleAttrDtoList) {
-            HashMap<String, Object> searchMap = new HashMap<>(16);
-            searchMap.put("product_id", pmsProductSaleAttrDto.getProductId());
-            searchMap.put("sale_attr_id", pmsProductSaleAttrDto.getSaleAttrId());
-            List<PmsProductSaleAttrValueDto> pmsProductSaleAttrValueDtoList = pmsProductSaleAttrValueMapper.selectByMap(searchMap);
+        QueryWrapper<PmsProductSaleAttrDto> saleAttrQueryWrapper = new QueryWrapper<>();
+        saleAttrQueryWrapper.eq("product_id",id);
+        List<PmsProductSaleAttrDto> saleAttrDtoList = pmsProductSaleAttrMapper.selectList(saleAttrQueryWrapper);
+        for (PmsProductSaleAttrDto pmsProductSaleAttrDto : saleAttrDtoList) {
+            QueryWrapper<PmsProductSaleAttrValueDto> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("product_id",pmsProductSaleAttrDto.getProductId()).eq("sale_attr_id",pmsProductSaleAttrDto.getSaleAttrId());
+            List<PmsProductSaleAttrValueDto> pmsProductSaleAttrValueDtoList = pmsProductSaleAttrValueMapper.selectList(queryWrapper);
             pmsProductSaleAttrDto.setSaleAttrValueList(pmsProductSaleAttrValueDtoList);
         }
-        return pmsProductSaleAttrDtoList;
+        return saleAttrDtoList;
     }
 
     @Override
     public List<PmsProductImageDto> getProductImageListBySpuId(Long id) {
-        HashMap<String, Object> columnMap = new HashMap<>(16);
-        columnMap.put("product_id", id);
-        return pmsProductImageMapper.selectByMap(columnMap);
+        QueryWrapper<PmsProductImageDto> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("product_id",id);
+        return pmsProductImageMapper.selectList(queryWrapper);
     }
 
     @Override
@@ -79,13 +79,13 @@ public class AttrServiceImpl implements AttrService {
 
     @Override
     public List<PmsBaseAttrInfoDto> getAttrInfoByCatalog3Id(Long id) {
-        HashMap<String, Object> columnMap = new HashMap<>(16);
-        columnMap.put("catalog3_id", id);
-        List<PmsBaseAttrInfoDto> pmsBaseAttrInfoDtoList = pmsBaseAttrInfoMapper.selectByMap(columnMap);
+        QueryWrapper<PmsBaseAttrInfoDto> attrInfoQueryWrapper = new QueryWrapper<>();
+        attrInfoQueryWrapper.eq("catalog3_id",id);
+        List<PmsBaseAttrInfoDto> pmsBaseAttrInfoDtoList = pmsBaseAttrInfoMapper.selectList(attrInfoQueryWrapper);
         for (PmsBaseAttrInfoDto pmsBaseAttrInfoDto : pmsBaseAttrInfoDtoList) {
-            HashMap<String, Object> searchMap = new HashMap<>(16);
-            searchMap.put("attr_id", pmsBaseAttrInfoDto.getId());
-            List<PmsBaseAttrValueDto> pmsBaseAttrValueDtoList = pmsBaseAttrValueMapper.selectByMap(searchMap);
+            QueryWrapper<PmsBaseAttrValueDto> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("attr_id",pmsBaseAttrInfoDto.getId());
+            List<PmsBaseAttrValueDto> pmsBaseAttrValueDtoList = pmsBaseAttrValueMapper.selectList(queryWrapper);
             pmsBaseAttrInfoDto.setAttrValueList(pmsBaseAttrValueDtoList);
         }
         return pmsBaseAttrInfoDtoList;
@@ -97,13 +97,14 @@ public class AttrServiceImpl implements AttrService {
         PmsBaseAttrInfoDto pmsBaseAttrInfoDto = new PmsBaseAttrInfoDto();
         BeanUtils.copyProperties(pmsBaseAttrInfoVo,pmsBaseAttrInfoDto);
         Long attrId = pmsBaseAttrInfoDto.getId();
+        //获得这个属性的所有平台属性值
         List<PmsBaseAttrValueDto> attrValueList = pmsBaseAttrInfoDto.getAttrValueList();
         /*修改*/
         if (attrId != null) {
             pmsBaseAttrInfoMapper.updateById(pmsBaseAttrInfoDto);
-            HashMap<String, Object> columnMap = new HashMap<>(16);
-            columnMap.put("attr_id", pmsBaseAttrInfoDto.getId());
-            pmsBaseAttrValueMapper.deleteByMap(columnMap);
+            QueryWrapper<PmsBaseAttrValueDto> queryWrapper = new QueryWrapper<>();
+            queryWrapper.eq("attr_id",pmsBaseAttrInfoDto.getId());
+            pmsBaseAttrValueMapper.delete(queryWrapper);
             for (PmsBaseAttrValueDto pmsBaseAttrValueDto : attrValueList) {
                 pmsBaseAttrValueDto.setAttrId(pmsBaseAttrInfoDto.getId());
                 pmsBaseAttrValueMapper.insert(pmsBaseAttrValueDto);

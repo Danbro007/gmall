@@ -1,10 +1,12 @@
 package com.danbro.gmall.api.po;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 @Data
+@TableName(value = "oms_order_item")
 public class OmsOrderItemPo implements Serializable {
 
     private Long id;

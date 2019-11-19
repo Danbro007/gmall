@@ -12,8 +12,6 @@ import com.danbro.gmall.manage.service.mapper.PmsSkuAttrValueMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuImageMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuInfoMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuSaleAttrValueMapper;
-import com.danbro.gmall.web.utils.bean.Result;
-import com.danbro.gmall.web.utils.enums.ResultCode;
 import org.apache.commons.lang3.StringUtils;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -136,7 +134,7 @@ public class SkuServiceImpl implements PmsSkuService {
                 if (skuFromDb != null) {
                     redisTemplate.opsForValue().set(skuKey,skuFromDb);
                 } else {
-
+                    redisTemplate.opsForValue().set(skuKey,null);
                 }
                 return skuFromDb;
             }

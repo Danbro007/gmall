@@ -71,7 +71,7 @@ public interface MemberService {
      * 添加社交账户的用户
      * @param memberPo 用户信息
      */
-    void addOauthUser(MemberPo memberPo);
+    MemberPo addOauthUser(MemberPo memberPo);
 
     /**
      * 通过用户信息判断此用户是否在数据库里

@@ -129,6 +129,7 @@
             if (token == "fail") {
                 $("#errorMessage").show();
             } else {
+                console.log(returnUrl)
                 window.location.href = returnUrl + "?token=" + token
             }
         })

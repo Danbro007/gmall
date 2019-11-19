@@ -1,18 +1,15 @@
 package com.danbro.gmall.cart.service;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.danbro.gmall.api.dto.OmsCartItemDto;
 import com.danbro.gmall.api.service.CartService;
 import com.danbro.gmall.cart.service.mapper.CartMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
-import java.math.BigDecimal;
-import java.util.*;
+import java.util.TreeMap;
 
 @SpringBootTest
 class GmallCartServiceApplicationTests {

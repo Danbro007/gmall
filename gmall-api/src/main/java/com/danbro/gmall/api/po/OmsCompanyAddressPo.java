@@ -1,9 +1,11 @@
 package com.danbro.gmall.api.po;
 
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
 @Data
+@TableName(value = "oms_company_address")
 public class OmsCompanyAddressPo implements Serializable {
 
     private Long id;

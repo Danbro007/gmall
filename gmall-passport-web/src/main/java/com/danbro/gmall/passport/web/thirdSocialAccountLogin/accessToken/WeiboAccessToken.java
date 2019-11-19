@@ -13,4 +13,5 @@ public class WeiboAccessToken extends AccessToken{
     private String remindIn;
     private String expiresIn;
     private String isRealName;
+    private String code;
 }

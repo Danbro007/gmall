@@ -17,3 +17,6 @@ cart-service端口8074
 
 passport-web端口8085
 user-service端口8077
+
+order-web端口8088
+order-service端口8078

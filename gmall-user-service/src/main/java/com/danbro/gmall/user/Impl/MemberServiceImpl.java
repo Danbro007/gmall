@@ -11,6 +11,7 @@ import com.danbro.gmall.user.mapper.MemberReceiveAddressMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.DigestUtils;
 
 import java.util.HashMap;
 import java.util.List;
@@ -73,15 +74,13 @@ public class MemberServiceImpl implements MemberService {
 
     @Override
     public MemberPo login(String username, String password) {
-//        String passwordMd5 = DigestUtils.md5DigestAsHex(password.getBytes());
-//
-//        String key = "User:" + username + ":" + passwordMd5;
-        String key = "User:" + username + ":" + password;
+        String hashPasspord = DigestUtils.md5DigestAsHex(password.getBytes());
+        String key = "User:" + username + ":" + hashPasspord;
         Object value = redisTemplate.opsForValue().get(key);
         if (value != null) {
             return (MemberPo) value;
         }
-        MemberPo memberPo = loginFromDb(username, password);
+        MemberPo memberPo = loginFromDb(username, hashPasspord);
         if (memberPo != null) {
             redisTemplate.opsForValue().set(key, memberPo);
             return memberPo;
@@ -104,8 +103,9 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public void addOauthUser(MemberPo memberPo) {
+    public MemberPo addOauthUser(MemberPo memberPo) {
         memberMapper.insert(memberPo);
+        return memberPo;
     }
 
     @Override

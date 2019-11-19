@@ -95,9 +95,9 @@ public class CartController {
     @GetMapping("/cartList")
     @LoginRequired()
     public String cartList(HttpServletRequest request, Model model) {
-        String memberId = (String) request.getAttribute("memberId");
+         Object memberId = request.getAttribute("memberId");
         List<OmsCartItemDto> cartList = new ArrayList<>();
-        if (StringUtils.isBlank(memberId)) {
+        if (StringUtils.isBlank(memberId.toString())) {
             String cartListCookie = CookieUtil.getCookieValue(request, "cartListCookie", true);
             List<OmsCartItemDto> omsCartItemDtoListFromCookie = JSON.parseArray(cartListCookie, OmsCartItemDto.class);
             if (omsCartItemDtoListFromCookie != null) {
@@ -105,7 +105,7 @@ public class CartController {
             }
         } else {
             //登录
-            List<OmsCartItemDto> omsCartItemDtoList = cartService.getCartListByMemberId(memberId);
+            List<OmsCartItemDto> omsCartItemDtoList = cartService.getCartListByMemberId(memberId.toString());
             cartList.addAll(omsCartItemDtoList);
         }
         model.addAttribute("cartList", cartList);
@@ -130,15 +130,5 @@ public class CartController {
         model.addAttribute("totalPrice", ControllerUtil.getTotalPrice(cartList));
         return "cartListInner";
     }
-
-
-    @LoginRequired(successNecessary = true)
-    @GetMapping("/toTrade")
-    public String toTrade(ServletRequest request) {
-        String memberId = (String) request.getAttribute("memberId");
-        String nickName = (String) request.getAttribute("nickName");
-        return "trade";
-    }
-
 
 }

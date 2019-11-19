@@ -8,7 +8,6 @@ import com.danbro.gmall.common.utils.JwtUtil;
 import com.danbro.gmall.passport.web.thirdSocialAccountLogin.accessToken.WeiboAccessToken;
 import com.danbro.gmall.passport.web.thirdSocialAccountLogin.postParam.WeiboPostParam;
 import com.danbro.gmall.passport.web.thirdSocialAccountLogin.userProvider.WeiboUserProvider;
-import com.danbro.gmall.passport.web.thirdSocialAccountLogin.user.WeiboUser;
 import com.danbro.gmall.passport.web.utils.TokenUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.annotations.Param;
@@ -107,7 +106,8 @@ public class PassportController {
         WeiboAccessToken weiboAccessToken = weiboUserProvider.getAccessToken(weiboPostParam);
         if (weiboAccessToken != null){
             //通过token获取账户信息
-            MemberPo memberPo = weiboUserProvider.getUserInfo(weiboAccessToken, code);
+            weiboAccessToken.setCode(code);
+            MemberPo memberPo = weiboUserProvider.getUserInfo(weiboAccessToken);
             MemberPo checkMember = new MemberPo();
             checkMember.setSourceType(memberPo.getSourceType());
             checkMember.setSourceUid(memberPo.getSourceUid());
@@ -116,7 +116,7 @@ public class PassportController {
             //判断此用户在数据库是否存在
             if (checkMemberFromDb == null) {
 //            //不存在添加到数据库中
-                memberService.addOauthUser(memberPo);
+                memberPo = memberService.addOauthUser(memberPo);
             } else {
                 memberPo = checkMemberFromDb;
             }
@@ -130,4 +130,5 @@ public class PassportController {
         return "redirect:http://search.gmall.com:8082/index?token=" + token;
 
     }
+
 }
