@@ -8,6 +8,6 @@ import com.danbro.gmall.api.po.PmsBaseSaleAttrPo;
  * @date 2019/10/18 14:09
  * description
 **/
- @TableName(value = "pms_base_sale_attr")
+@TableName(value = "pms_base_sale_attr")
 public class PmsBaseSaleAttrDto extends PmsBaseSaleAttrPo {
 }

@@ -5,10 +5,10 @@ import com.alibaba.fastjson.JSON;
 import com.danbro.gmall.api.dto.OmsCartItemDto;
 import com.danbro.gmall.api.dto.PmsSkuInfoDto;
 import com.danbro.gmall.api.service.CartService;
-import com.danbro.gmall.api.service.PmsSkuService;
+import com.danbro.gmall.api.service.SkuService;
 import com.danbro.gmall.cart.web.utils.ControllerUtil;
+import com.danbro.gmall.common.utils.annotations.LoginRequired;
 import com.danbro.gmall.common.utils.util.CookieUtil;
-import com.danbro.gmall.web.utils.annotations.LoginRequired;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
@@ -34,13 +33,18 @@ public class CartController {
     CartService cartService;
 
     @Reference
-    PmsSkuService pmsSkuService;
+    SkuService skuService;
 
     @LoginRequired
     @PostMapping("/addToCart")
-    public String addToCart(@Param("quantity") Integer quantity, @Param("skuId") Long skuId, HttpServletRequest request, HttpServletResponse response, Model model) {
+
+    public String addToCart(@Param("quantity") Integer quantity,
+                            @Param("skuId") Long skuId,
+                            HttpServletRequest request,
+                            HttpServletResponse response,
+                            Model model) {
         //通过skuId到数据库中查询商品信息
-        PmsSkuInfoDto skuInfo = pmsSkuService.getSkuById(skuId);
+        PmsSkuInfoDto skuInfo = skuService.getSkuById(skuId);
         //建立购物车里的商品对象
         OmsCartItemDto omsCartItemDto = ControllerUtil.getOmsCartItemDto(skuInfo, quantity);
 
@@ -62,7 +66,7 @@ public class CartController {
                     for (OmsCartItemDto cartItemDtoFromCookie : omsCartItemList) {
                         if (cartItemDtoFromCookie.getProductSkuId().equals(omsCartItemDto.getProductSkuId())) {
                             cartItemDtoFromCookie.setQuantity(cartItemDtoFromCookie.getQuantity() + omsCartItemDto.getQuantity());
-                            cartItemDtoFromCookie.setPrice(cartItemDtoFromCookie.getPrice().add(omsCartItemDto.getPrice()));
+                            cartItemDtoFromCookie.setProductPrice(cartItemDtoFromCookie.getProductPrice().add(omsCartItemDto.getProductPrice()));
                         }
                     }
                 }
@@ -93,11 +97,13 @@ public class CartController {
 
 
     @GetMapping("/cartList")
-    @LoginRequired()
+    @LoginRequired
     public String cartList(HttpServletRequest request, Model model) {
-         Object memberId = request.getAttribute("memberId");
+        String memberId = (String) request.getAttribute("memberId");
+        String nickname = (String) request.getAttribute("nickName");
+
         List<OmsCartItemDto> cartList = new ArrayList<>();
-        if (StringUtils.isBlank(memberId.toString())) {
+        if (memberId == null) {
             String cartListCookie = CookieUtil.getCookieValue(request, "cartListCookie", true);
             List<OmsCartItemDto> omsCartItemDtoListFromCookie = JSON.parseArray(cartListCookie, OmsCartItemDto.class);
             if (omsCartItemDtoListFromCookie != null) {
@@ -105,7 +111,7 @@ public class CartController {
             }
         } else {
             //登录
-            List<OmsCartItemDto> omsCartItemDtoList = cartService.getCartListByMemberId(memberId.toString());
+            List<OmsCartItemDto> omsCartItemDtoList = cartService.getCartListByMemberId(Long.parseLong(memberId), false);
             cartList.addAll(omsCartItemDtoList);
         }
         model.addAttribute("cartList", cartList);
@@ -114,8 +120,12 @@ public class CartController {
     }
 
     @PostMapping("/checkCart")
-    public String checkCart(@Param("skuId") Long skuId, @Param("isChecked") Integer isChecked, @Param("quantity") Integer quantity, Model model) {
-        String memberId = "1";
+    public String checkCart(@Param("skuId") Long skuId,
+                            @Param("isChecked") Integer isChecked,
+                            @Param("quantity") Integer quantity,
+                            Model model,
+                            HttpServletRequest request) {
+        String memberId = (String) request.getAttribute("memberId");
         OmsCartItemDto omsCartItemDto = new OmsCartItemDto();
         omsCartItemDto.setMemberId(memberId);
         omsCartItemDto.setProductSkuId(skuId);

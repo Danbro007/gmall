@@ -26,7 +26,6 @@
         <option value="$PROJECT_DIR$/gmall-common-utils/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-order-service/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-order-web/pom.xml" />
-        <option value="$PROJECT_DIR$/gmall-test-redisson/pom.xml" />
         <option value="$PROJECT_DIR$/gmall-search-web/pom.xml" />
       </list>
     </option>

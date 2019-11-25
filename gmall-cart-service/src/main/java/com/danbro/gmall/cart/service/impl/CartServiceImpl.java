@@ -6,7 +6,6 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.danbro.gmall.api.dto.OmsCartItemDto;
 import com.danbro.gmall.api.service.CartService;
 import com.danbro.gmall.cart.service.mapper.CartMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,6 +17,7 @@ import java.util.*;
  * description getCartListByMemberId
  **/
 @Service
+@SuppressWarnings("unchecked")
 public class CartServiceImpl implements CartService {
 
 
@@ -65,13 +65,14 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
-    public List<OmsCartItemDto> getCartListByMemberId(String memberId) {
+    public List<OmsCartItemDto> getCartListByMemberId(Long memberId, Boolean isChecked) {
         Map<Long, OmsCartItemDto> dataFromCache = redisTemplate.opsForHash().entries("User:" + memberId + ":cart");
+        List<OmsCartItemDto> omsCartItemDtoList;
         //缓存为空 到数据库中取数据
         if (dataFromCache.isEmpty()) {
             QueryWrapper<OmsCartItemDto> queryWrapper = new QueryWrapper<>();
             queryWrapper.eq("member_id", memberId);
-            List<OmsCartItemDto> omsCartItemDtoList = cartMapper.selectList(queryWrapper);
+            omsCartItemDtoList = cartMapper.selectList(queryWrapper);
             if (omsCartItemDtoList != null) {
                 //同步到缓存里
                 Map<Long, OmsCartItemDto> omsCartItemDtoMap = new HashMap<>(16);
@@ -80,14 +81,25 @@ public class CartServiceImpl implements CartService {
                 }
                 redisTemplate.opsForHash().putAll("User:" + memberId + ":cart", omsCartItemDtoMap);
             }
-            return omsCartItemDtoList;
         } else {
-            //缓存中的数据
-            return new ArrayList<>(dataFromCache.values());
+            omsCartItemDtoList = new ArrayList<>(dataFromCache.values());
         }
+        //判断是否需要过滤出购物车里已经勾选的商品
+        if (isChecked) {
+            ArrayList<OmsCartItemDto> omsCartItemDtoArrayList = new ArrayList<>();
+            if (omsCartItemDtoList != null) {
+                for (OmsCartItemDto omsCartItemDto : omsCartItemDtoList) {
+                    if (omsCartItemDto.getIsChecked() == 1) {
+                        omsCartItemDtoArrayList.add(omsCartItemDto);
+                    }
+                }
+                return omsCartItemDtoArrayList;
+            }
+        }
+        return omsCartItemDtoList;
     }
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public List<OmsCartItemDto> updateItemCart(OmsCartItemDto omsCartItemDto) {
         //获取缓存里的数据
@@ -115,5 +127,12 @@ public class CartServiceImpl implements CartService {
         }
         redisTemplate.opsForHash().putAll("User:" + omsCartItemDto.getMemberId() + ":cart", dataFromCache);
         return new ArrayList<>(new TreeMap<>(dataFromCache).values());
+    }
+
+    @Override
+    public void deleteCartItem(String memberId, Long skuId) {
+        QueryWrapper<OmsCartItemDto> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("member_id",memberId).eq("product_sku_id",skuId);
+        cartMapper.delete(queryWrapper);
     }
 }

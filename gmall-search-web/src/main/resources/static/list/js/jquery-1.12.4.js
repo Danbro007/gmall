@@ -1294,7 +1294,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// on a disconnected node (IE 9)
 			support.disconnectedMatch = matches.call( div, "div" );
 
-			// This should fail with an exception
+			// This should fail with an exceptions
 			// Gecko does not error, returns false instead
 			matches.call( div, "[s!='']:x" );
 			rbuggyMatches.push( "!=", pseudos );
@@ -5212,7 +5212,7 @@ jQuery.event = {
 			event.currentTarget = matched.elem;
 
 			j = 0;
-			while ( ( handleObj = matched.handlers[ j++ ] ) &&
+			while ( ( handleObj = com.danbro.gmall.common.utils.handlers[ j++ ] ) &&
 				!event.isImmediatePropagationStopped() ) {
 
 				// Triggered event must either 1) have no namespace, or 2) have namespace(s)
@@ -6367,7 +6367,7 @@ jQuery.fn.extend( {
 
 					elem = 0;
 
-				// If using innerHTML throws an exception, use the fallback method
+				// If using innerHTML throws an exceptions, use the fallback method
 				} catch ( e ) {}
 			}
 
@@ -9738,7 +9738,7 @@ jQuery.extend( {
 				transport.send( requestHeaders, done );
 			} catch ( e ) {
 
-				// Propagate exception as error if not done
+				// Propagate exceptions as error if not done
 				if ( state < 2 ) {
 					done( -1, e );
 
@@ -10238,7 +10238,7 @@ if ( xhrSupported ) {
 					for ( i in headers ) {
 
 						// Support: IE<9
-						// IE's ActiveXObject throws a 'Type Mismatch' exception when setting
+						// IE's ActiveXObject throws a 'Type Mismatch' exceptions when setting
 						// request header to a null-value.
 						//
 						// To keep consistent with other XHR implementations, cast the value
@@ -10249,7 +10249,7 @@ if ( xhrSupported ) {
 					}
 
 					// Do send the request
-					// This may raise an exception which is actually
+					// This may raise an exceptions which is actually
 					// handled in jQuery.ajax (so no try/catch here)
 					xhr.send( ( options.hasContent && options.data ) || null );
 
@@ -10275,13 +10275,13 @@ if ( xhrSupported ) {
 								status = xhr.status;
 
 								// Support: IE<10
-								// Accessing binary-data responseText throws an exception
+								// Accessing binary-data responseText throws an exceptions
 								// (#11426)
 								if ( typeof xhr.responseText === "string" ) {
 									responses.text = xhr.responseText;
 								}
 
-								// Firefox throws an exception when accessing
+								// Firefox throws an exceptions when accessing
 								// statusText for faulty cross-domain requests
 								try {
 									statusText = xhr.statusText;
@@ -10313,7 +10313,7 @@ if ( xhrSupported ) {
 					};
 
 					// Do send the request
-					// `xhr.send` may raise an exception, but it will be
+					// `xhr.send` may raise an exceptions, but it will be
 					// handled in jQuery.ajax (so no try/catch here)
 					if ( !options.async ) {
 

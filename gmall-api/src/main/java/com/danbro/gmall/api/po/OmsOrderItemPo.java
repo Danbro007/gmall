@@ -1,14 +1,22 @@
 package com.danbro.gmall.api.po;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+/**
+ * @author Danrbo
+ * @date 2019/9/10 14:17
+ * description
+ **/
 @Data
 @TableName(value = "oms_order_item")
 public class OmsOrderItemPo implements Serializable {
 
+    @TableId(type = IdType.AUTO)
     private Long id;
     private Long orderId;
     private String orderSn;
@@ -17,7 +25,7 @@ public class OmsOrderItemPo implements Serializable {
     private String productName;
     private String productBrand;
     private String productSn;
-    private String productPrice;
+    private BigDecimal productPrice;
     private Integer productQuantity;
     private Long productSkuId;
     private String productSkuCode;
@@ -33,5 +41,4 @@ public class OmsOrderItemPo implements Serializable {
     private Integer giftIntegration;
     private Integer giftGrowth;
     private String productAttr;
-
 }

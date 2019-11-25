@@ -19,7 +19,6 @@
       <module fileurl="file://$PROJECT_DIR$/gmall-search-service/gmall-search-service.iml" filepath="$PROJECT_DIR$/gmall-search-service/gmall-search-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-search-web/gmall-search-web.iml" filepath="$PROJECT_DIR$/gmall-search-web/gmall-search-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-service-utils/gmall-service-utils.iml" filepath="$PROJECT_DIR$/gmall-service-utils/gmall-service-utils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gmall-test-redisson/gmall-test-redisson.iml" filepath="$PROJECT_DIR$/gmall-test-redisson/gmall-test-redisson.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-user-service/gmall-user-service.iml" filepath="$PROJECT_DIR$/gmall-user-service/gmall-user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-user-web/gmall-user-web.iml" filepath="$PROJECT_DIR$/gmall-user-web/gmall-user-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-web-utils/gmall-web-utils.iml" filepath="$PROJECT_DIR$/gmall-web-utils/gmall-web-utils.iml" />

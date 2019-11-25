@@ -4,7 +4,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSON;
 import com.danbro.gmall.api.po.MemberPo;
 import com.danbro.gmall.api.service.MemberService;
-import com.danbro.gmall.common.utils.JwtUtil;
+import com.danbro.gmall.common.utils.util.JwtUtil;
 import com.danbro.gmall.passport.web.thirdSocialAccountLogin.accessToken.WeiboAccessToken;
 import com.danbro.gmall.passport.web.thirdSocialAccountLogin.postParam.WeiboPostParam;
 import com.danbro.gmall.passport.web.thirdSocialAccountLogin.userProvider.WeiboUserProvider;
@@ -83,9 +83,9 @@ public class PassportController {
         if (decode != null) {
             map.put("nickname", decode.get("nickname"));
             map.put("memberId", decode.get("memberId"));
-            map.put("status", "success");
+            map.put("status", true);
         } else {
-            map.put("status", "fail");
+            map.put("status", false);
         }
 
         return JSON.toJSONString(map);

@@ -6,7 +6,7 @@ import com.danbro.gmall.api.dto.PmsSkuAttrValueDto;
 import com.danbro.gmall.api.dto.PmsSkuImageDto;
 import com.danbro.gmall.api.dto.PmsSkuInfoDto;
 import com.danbro.gmall.api.dto.PmsSkuSaleAttrValueDto;
-import com.danbro.gmall.api.service.PmsSkuService;
+import com.danbro.gmall.api.service.SkuService;
 import com.danbro.gmall.api.vo.PmsSkuInfoVo;
 import com.danbro.gmall.manage.service.mapper.PmsSkuAttrValueMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuImageMapper;
@@ -22,6 +22,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 
@@ -31,8 +32,9 @@ import java.util.List;
  * description
  **/
 @Service
+@SuppressWarnings("unchecked")
 @CacheConfig(cacheNames = "sku")
-public class SkuServiceImpl implements PmsSkuService {
+public class SkuServiceImpl implements SkuService {
 
     private PmsSkuInfoMapper pmsSkuInfoMapper;
     private PmsSkuAttrValueMapper pmsSkuAttrValueMapper;
@@ -73,7 +75,7 @@ public class SkuServiceImpl implements PmsSkuService {
                     pmsSkuSaleAttrValueMapper.insert(pmsSkuSaleAttrValueDto);
                 }
             }
-            if (skuImageList.size() > 0){
+            if (skuImageList.size() > 0) {
                 for (PmsSkuImageDto pmsSkuImageDto : skuImageList) {
                     pmsSkuImageDto.setSkuId(pmsSkuInfoDto.getId());
                     pmsSkuImageMapper.insert(pmsSkuImageDto);
@@ -87,7 +89,7 @@ public class SkuServiceImpl implements PmsSkuService {
     @Override
     public PmsSkuInfoDto getSkuFromDb(Long skuId) {
         PmsSkuInfoDto pmsSkuInfoDto = pmsSkuInfoMapper.selectById(skuId);
-        if (pmsSkuInfoDto == null){
+        if (pmsSkuInfoDto == null) {
             return null;
         }
         HashMap<String, Object> imageColumnMap = new HashMap<>(16);
@@ -127,14 +129,14 @@ public class SkuServiceImpl implements PmsSkuService {
             String skuKey = "sku:" + skuId + ":info";
             Object pmsSkuInfoDto = redisTemplate.opsForValue().get(skuKey);
             //从缓存获取 没有的话到数据库获取
-            if (pmsSkuInfoDto != null){
+            if (pmsSkuInfoDto != null) {
                 return (PmsSkuInfoDto) pmsSkuInfoDto;
             } else {
                 PmsSkuInfoDto skuFromDb = getSkuFromDb(skuId);
                 if (skuFromDb != null) {
-                    redisTemplate.opsForValue().set(skuKey,skuFromDb);
+                    redisTemplate.opsForValue().set(skuKey, skuFromDb);
                 } else {
-                    redisTemplate.opsForValue().set(skuKey,null);
+                    redisTemplate.opsForValue().set(skuKey, null);
                 }
                 return skuFromDb;
             }
@@ -158,5 +160,15 @@ public class SkuServiceImpl implements PmsSkuService {
             pmsSkuInfoDto.setSkuAttrValueList(pmsSkuAttrValueDtoList);
         }
         return pmsSkuInfoDtoList;
+    }
+
+    @Override
+    public Boolean checkSkuPrice(Long skuId, BigDecimal price) {
+        boolean flag = false;
+        PmsSkuInfoDto pmsSkuInfoDto = pmsSkuInfoMapper.selectById(skuId);
+        if (price.compareTo(pmsSkuInfoDto.getPrice()) == 0) {
+            flag = true;
+        }
+        return flag;
     }
 }

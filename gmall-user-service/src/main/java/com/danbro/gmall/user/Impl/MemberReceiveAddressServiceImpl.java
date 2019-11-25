@@ -1,6 +1,7 @@
 package com.danbro.gmall.user.Impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.danbro.gmall.api.po.MemberReceiveAddressPo;
 import com.danbro.gmall.api.service.MemberReceiveAddressService;
 import com.danbro.gmall.user.mapper.MemberReceiveAddressMapper;
@@ -47,5 +48,12 @@ public class MemberReceiveAddressServiceImpl implements MemberReceiveAddressServ
         HashMap<String, Object> columnMap = new HashMap<>(16);
         columnMap.put("member_id",memberId);
         return memberReceiveAddressMapper.selectByMap(columnMap);
+    }
+
+    @Override
+    public MemberReceiveAddressPo selectDefaultAddressByMemberId(Long memberId) {
+        QueryWrapper<MemberReceiveAddressPo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("member_id",memberId).eq("default_status",1);
+        return memberReceiveAddressMapper.selectOne(queryWrapper);
     }
 }

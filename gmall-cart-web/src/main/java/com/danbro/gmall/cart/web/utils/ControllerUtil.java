@@ -36,7 +36,7 @@ public class ControllerUtil {
         omsCartItemDto.setModifyDate(new Date());
         omsCartItemDto.setProductId(skuInfo.getProductId());
         omsCartItemDto.setProductSkuId(skuInfo.getId());
-        omsCartItemDto.setPrice(skuInfo.getPrice());
+        omsCartItemDto.setProductPrice(skuInfo.getPrice());
         omsCartItemDto.setProductName(skuInfo.getSkuName());
         omsCartItemDto.setProductCategoryId(skuInfo.getCatalog3Id());
         omsCartItemDto.setProductPic(skuInfo.getSkuDefaultImg());
@@ -59,7 +59,7 @@ public class ControllerUtil {
         for (OmsCartItemDto omsCartItemDto : cartList) {
             if (omsCartItemDto.getIsChecked().equals(1)) {
                 BigDecimal quantity = new BigDecimal(omsCartItemDto.getQuantity());
-                BigDecimal total = quantity.multiply(omsCartItemDto.getPrice());
+                BigDecimal total = quantity.multiply(omsCartItemDto.getProductPrice());
                 totalPrice = totalPrice.add(total);
             }
         }

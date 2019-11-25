@@ -42,4 +42,11 @@ public interface MemberReceiveAddressService {
      * @return 会员的所有地址
      */
     List<MemberReceiveAddressPo> selectAddressByMemberId(Long memberId);
+
+    /**
+     * 找到用户默认收货地址
+     * @param memberId 用户id
+     * @return 收货地址
+     */
+    MemberReceiveAddressPo selectDefaultAddressByMemberId(Long memberId);
 }

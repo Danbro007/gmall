@@ -13,7 +13,6 @@ import java.io.Serializable;
  * description
  **/
 @Data
-
 public class PmsBaseSaleAttrPo implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;

@@ -4,7 +4,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.danbro.gmall.api.dto.PmsSkuInfoDto;
 import com.danbro.gmall.api.dto.PmsSkuInfoFromEsDto;
 import com.danbro.gmall.api.po.PmsSkuInfoPo;
-import com.danbro.gmall.api.service.PmsSkuService;
+import com.danbro.gmall.api.service.SkuService;
 import io.searchbox.client.JestClient;
 import io.searchbox.core.Index;
 import org.elasticsearch.index.query.BoolQueryBuilder;
@@ -15,7 +15,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,7 +27,7 @@ public class GmallSearchServiceApplicationTests {
     JestClient jestClient;
 
     @Reference
-    PmsSkuService pmsSkuService;
+    SkuService skuService;
 
     /**
      * 更新elasticsearch
@@ -36,7 +35,7 @@ public class GmallSearchServiceApplicationTests {
      */
     @Test
     public void contextLoads() throws IOException {
-        List<PmsSkuInfoDto> pmsSkuInfoDtoList = pmsSkuService.getAllSku(285L);
+        List<PmsSkuInfoDto> pmsSkuInfoDtoList = skuService.getAllSku(285L);
         List<PmsSkuInfoFromEsDto> searchPmsSkuInfos = new ArrayList<>();
         for (PmsSkuInfoPo pmsSkuInfoPo : pmsSkuInfoDtoList) {
             PmsSkuInfoFromEsDto pmsSkuInfoFromEsDto = new PmsSkuInfoFromEsDto();

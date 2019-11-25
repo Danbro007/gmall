@@ -7,7 +7,11 @@ import lombok.Data;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-
+/**
+ * @author Danrbo
+ * @date 2019/9/10 14:17
+ * description
+ **/
 @Data
 public class OmsCartItemPo implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
@@ -16,7 +20,7 @@ public class OmsCartItemPo implements Serializable {
     private Long productSkuId;
     private String memberId;
     private Integer quantity;
-    private BigDecimal price;
+    private BigDecimal productPrice;
     private String sp1;
     private String sp2;
     private String sp3;

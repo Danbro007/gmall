@@ -16,6 +16,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+
         <dependency>
             <groupId>com.danbro.gmall.common.utils</groupId>
             <artifactId>gmall-common-utils</artifactId>
@@ -26,6 +27,7 @@
             <groupId>net.sourceforge.nekohtml</groupId>
             <artifactId>nekohtml</artifactId>
         </dependency>
+
         <dependency>
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
@@ -34,6 +36,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.danbro.gmall.exception.handler</groupId>
+            <artifactId>gmall-exception-handle</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

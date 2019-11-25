@@ -1229,7 +1229,7 @@ window.Zepto = Zepto
       ajaxSuccess(data, xhr, options)
     }
 
-    script.onerror = function() { abort('error') }
+    script.onerror = function() { abort('templates.error') }
 
     script.src = options.url.replace(/=\?/, '=' + callbackName)
     $('head').append(script)
@@ -1351,7 +1351,7 @@ window.Zepto = Zepto
           if (error) ajaxError(error, 'parsererror', xhr, settings)
           else ajaxSuccess(result, xhr, settings)
         } else {
-          ajaxError(null, xhr.status ? 'error' : 'abort', xhr, settings)
+          ajaxError(null, xhr.status ? 'templates.error' : 'abort', xhr, settings)
         }
       }
     }

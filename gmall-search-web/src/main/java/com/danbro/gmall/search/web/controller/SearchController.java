@@ -6,15 +6,14 @@ import com.danbro.gmall.api.dto.PmsSearchSkuInfoDto;
 import com.danbro.gmall.api.service.AttrService;
 import com.danbro.gmall.api.service.SearchService;
 import com.danbro.gmall.api.vo.PmsSearchParamVo;
-import com.danbro.gmall.search.utils.SearchControllerUtils;
-import com.danbro.gmall.web.utils.annotations.LoginRequired;
+import com.danbro.gmall.common.utils.annotations.LoginRequired;
+import com.danbro.gmall.search.web.utils.SearchControllerUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import javax.jws.WebParam;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.List;

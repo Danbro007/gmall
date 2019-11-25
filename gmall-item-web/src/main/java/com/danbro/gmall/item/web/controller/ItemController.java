@@ -4,16 +4,14 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.danbro.gmall.api.dto.PmsProductSaleAttrDto;
 import com.danbro.gmall.api.dto.PmsSkuInfoDto;
 import com.danbro.gmall.api.service.PmsProductService;
-import com.danbro.gmall.api.service.PmsSkuService;
-import com.danbro.gmall.web.utils.annotations.LoginRequired;
-import com.danbro.gmall.web.utils.annotations.ResponseResult;
-import com.danbro.gmall.web.utils.bean.Result;
-import com.danbro.gmall.web.utils.enums.ResultCode;
+import com.danbro.gmall.api.service.SkuService;
+
+
+import com.danbro.gmall.common.utils.exceptions.CustomizeErrorCode;
+import com.danbro.gmall.common.utils.exceptions.CustomizeException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,20 +25,25 @@ import java.util.List;
 public class ItemController {
 
     @Reference
-    PmsSkuService pmsSkuService;
+    SkuService skuService;
 
     @Reference
     PmsProductService pmsProductService;
 
-    @RequestMapping("{skuId}.html")
-    public String itemView(@PathVariable("skuId") Long skuId, Model model){
-        PmsSkuInfoDto pmsSkuInfoDto = pmsSkuService.getSkuById(skuId);
-        String skuInfoMap = pmsSkuService.selectSkuSaleAttrListCheckBySpu(pmsSkuInfoDto.getProductId());
+
+    @GetMapping("{skuId}.html")
+    public String itemView(@PathVariable("skuId") Long skuId, Model model) {
+        PmsSkuInfoDto pmsSkuInfoDto = skuService.getSkuById(skuId);
+        if (pmsSkuInfoDto == null){
+            throw new CustomizeException(CustomizeErrorCode.ITEM_NOT_FOUND);
+        }
+        String skuInfoMap = skuService.selectSkuSaleAttrListCheckBySpu(pmsSkuInfoDto.getProductId());
         List<PmsProductSaleAttrDto> pmsProductSaleAttrDtoList = pmsProductService.selectSpuSaleAttrListCheckBySku(pmsSkuInfoDto.getProductId(), skuId);
         model.addAttribute("skuInfo", pmsSkuInfoDto);
         model.addAttribute("spuSaleAttrValueList", pmsProductSaleAttrDtoList);
         model.addAttribute("valuesSku",skuInfoMap);
         return "item";
     }
+
 
 }

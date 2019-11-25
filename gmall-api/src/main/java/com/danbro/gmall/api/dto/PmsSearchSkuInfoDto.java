@@ -1,7 +1,5 @@
 package com.danbro.gmall.api.dto;
 
-import com.danbro.gmall.api.po.PmsSkuAttrValuePo;
-import com.danbro.gmall.api.vo.PmsSearchSkuInfoVo;
 import lombok.Data;
 
 import java.io.Serializable;

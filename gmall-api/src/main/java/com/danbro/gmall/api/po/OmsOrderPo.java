@@ -9,10 +9,13 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * @author Danrbo
+ * @date 2019/9/10 14:17
+ * description
+ **/
 @Data
-@TableName(value = "oms_order")
 public class OmsOrderPo implements Serializable {
-
     @TableId(type = IdType.AUTO)
     private Long id;
     private Long memberId;
