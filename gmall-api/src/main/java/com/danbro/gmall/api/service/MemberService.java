@@ -49,7 +49,7 @@ public interface MemberService {
      * @param password 密码
      * @return 用户信息
      */
-    MemberPo login(String username,String password);
+    MemberPo login(String username, String password);
 
     /**
      * 从数据库登录获取用户信息
@@ -57,7 +57,7 @@ public interface MemberService {
      * @param password 密码
      * @return 用户信息
      */
-    MemberPo loginFromDb(String username,String password);
+    MemberPo loginFromDb(String username, String password);
 
     /**
      * 把用户token存储在缓存里

@@ -1,7 +1,6 @@
 package com.danbro.gmall.api.service;
 
 import com.danbro.gmall.api.dto.*;
-import com.danbro.gmall.api.po.*;
 import com.danbro.gmall.api.vo.PmsBaseAttrInfoVo;
 
 import java.util.HashSet;

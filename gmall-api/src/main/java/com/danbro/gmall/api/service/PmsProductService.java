@@ -2,8 +2,6 @@ package com.danbro.gmall.api.service;
 
 import com.danbro.gmall.api.dto.PmsProductInfoDto;
 import com.danbro.gmall.api.dto.PmsProductSaleAttrDto;
-import com.danbro.gmall.api.po.PmsProductInfoPo;
-import com.danbro.gmall.api.po.PmsProductSaleAttrPo;
 import com.danbro.gmall.api.vo.PmsProductInfoVo;
 
 import java.util.List;

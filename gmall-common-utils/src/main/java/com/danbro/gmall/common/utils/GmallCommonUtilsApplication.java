@@ -1,8 +1,7 @@
-package com.danbro.gmall;
+package com.danbro.gmall.common.utils;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 public class GmallCommonUtilsApplication {

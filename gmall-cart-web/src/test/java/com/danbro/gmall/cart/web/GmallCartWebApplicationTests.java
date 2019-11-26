@@ -8,6 +8,7 @@ class GmallCartWebApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("222");
     }
 
 }

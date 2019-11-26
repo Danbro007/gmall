@@ -4,10 +4,11 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class GmallUserWebApplicationTests {
+class GmallUserWebApplicationTests {
 
     @Test
-    public void contextLoads() {
+    void contextLoads() {
+        System.out.println("2222");
     }
 
 }

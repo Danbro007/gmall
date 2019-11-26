@@ -8,6 +8,7 @@ class GmallCommonUtilsApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("2222");
     }
 
 }

@@ -38,10 +38,7 @@ class GmallCartServiceApplicationTests {
 
     @Test
     void test01() {
-        OmsCartItemDto omsCartItemDto = new OmsCartItemDto();
-        omsCartItemDto.setMemberId("4");
-        omsCartItemDto.setQuantity(1);
-        cartMapper.insert(omsCartItemDto);
+        System.out.println("2222");
     }
 
     @Test

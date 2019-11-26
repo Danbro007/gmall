@@ -7,6 +7,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+
 /**
  * @author Danrbo
  * @date 2019/9/10 14:17

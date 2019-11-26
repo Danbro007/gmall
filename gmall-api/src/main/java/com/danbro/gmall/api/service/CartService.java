@@ -48,7 +48,7 @@ public interface CartService {
      * @param isChecked 是否过滤出已购物车里已经勾选的商品 true :显示已勾选的商品 false:显示购物车里所有的商品
      * @return 购物车里的商品列表
      */
-    List<OmsCartItemDto> getCartListByMemberId(Long memberId,Boolean isChecked);
+    List<OmsCartItemDto> getCartListByMemberId(Long memberId, Boolean isChecked);
 
     /**
      * 更新购物车里的商品信息
@@ -63,7 +63,7 @@ public interface CartService {
      * @param memberId 用户id
      * @param skuId 商品id
      */
-    void deleteCartItem(String memberId,Long skuId);
+    void deleteCartItem(String memberId, Long skuId);
 
 
 

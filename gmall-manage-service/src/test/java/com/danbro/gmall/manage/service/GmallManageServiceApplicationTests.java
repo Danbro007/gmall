@@ -17,7 +17,7 @@ import java.util.Iterator;
 import java.util.List;
 
 @SpringBootTest
-public class GmallManageServiceApplicationTests {
+class GmallManageServiceApplicationTests {
 
 
     @Autowired
@@ -33,7 +33,7 @@ public class GmallManageServiceApplicationTests {
     RedisTemplate redisTemplate;
 
     @Test
-    public void contextLoads() {
+    void contextLoads() {
 
         List<PmsProductSaleAttrDto> pmsProductSaleAttrDtoList = pmsProductSaleAttrMapper.selectSpuSaleAttrListCheckBySku(65L, 105L);
         for (PmsProductSaleAttrDto pmsProductSaleAttrDto : pmsProductSaleAttrDtoList) {
@@ -43,7 +43,7 @@ public class GmallManageServiceApplicationTests {
     }
 
     @Test
-    public void test2(){
+    void test2() {
         List<PmsSkuInfoDto> pmsSkuInfoDtoList = pmsSkuInfoMapper.selectSkuSaleAttrListCheckBySpu(66L);
         for (PmsSkuInfoDto pmsSkuInfoDto : pmsSkuInfoDtoList) {
             System.out.println(pmsSkuInfoDto);
@@ -51,12 +51,12 @@ public class GmallManageServiceApplicationTests {
     }
 
     @Test
-    public void test03(){
-
+    void test03() {
+        System.out.println("2222");
     }
 
     @Test
-    public void test04(){
+    void test04() {
         List<PmsBaseAttrInfoDto> attrValueByValueId = pmsBaseAttrInfoMapper.getAttrValueByValueId("41,45,46");
         for (PmsBaseAttrInfoDto pmsBaseAttrInfoDto : attrValueByValueId) {
             System.out.println(pmsBaseAttrInfoDto);
@@ -64,15 +64,15 @@ public class GmallManageServiceApplicationTests {
     }
 
     @Test
-    public void test05(){
-       String[] a = {"1","2","3"};
+    void test05() {
+        String[] a = {"1", "2", "3"};
         HashSet<Long> b = new HashSet<>();
         b.add(1L);
         b.add(2L);
         Iterator<Long> iterator = b.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Long next = iterator.next();
-            if (Arrays.asList(a).contains(next.toString())){
+            if (Arrays.asList(a).contains(next.toString())) {
                 iterator.remove();
             }
         }
@@ -80,8 +80,9 @@ public class GmallManageServiceApplicationTests {
             System.out.println(aLong);
         }
     }
+
     @Test
-    public void test06(){
+    public void test06() {
         Object o = redisTemplate.opsForValue().get("sku:105:info");
         System.out.println(o);
     }

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.io.Serializable;
+
 /**
  * @author Danrbo
  * @date 2019/9/10 14:17

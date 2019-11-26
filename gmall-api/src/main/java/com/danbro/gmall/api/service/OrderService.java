@@ -24,7 +24,7 @@ public interface OrderService {
      * @param tradeCode 交易码
      * @return true：交易码校验通过 false;交易码校验失败
      */
-    Boolean checkTradeCode(Long memberId,String tradeCode);
+    Boolean checkTradeCode(Long memberId, String tradeCode);
 
     /**
      * 保存订单

@@ -2,8 +2,6 @@ package com.danbro.gmall.api.dto;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.danbro.gmall.api.po.PmsSkuAttrValuePo;
-import com.danbro.gmall.api.po.PmsSkuImagePo;
 import com.danbro.gmall.api.po.PmsSkuInfoPo;
 import lombok.Data;
 

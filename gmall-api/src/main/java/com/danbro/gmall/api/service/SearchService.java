@@ -1,9 +1,7 @@
 package com.danbro.gmall.api.service;
 
-import com.danbro.gmall.api.dto.PmsSearchParamDto;
 import com.danbro.gmall.api.dto.PmsSearchSkuInfoDto;
 import com.danbro.gmall.api.vo.PmsSearchParamVo;
-import com.danbro.gmall.api.vo.PmsSearchSkuInfoVo;
 
 import java.io.IOException;
 import java.util.List;

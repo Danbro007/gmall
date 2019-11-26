@@ -42,7 +42,7 @@
         <jjwt.version>0.9.0</jjwt.version>
         <okhttp.version>3.12.0</okhttp.version>
         <devtools.version>2.2.1.RELEASE</devtools.version>
-<!--        <thymeleaf.version>2.2.1.RELEASE</thymeleaf.version>-->
+        <!--        <thymeleaf.version>2.2.1.RELEASE</thymeleaf.version>-->
     </properties>
 
     <dependencyManagement>
@@ -174,11 +174,11 @@
                 <version>${lombok.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-<!--                <version>${thymeleaf.version}</version>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>org.springframework.boot</groupId>-->
+            <!--                <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
+            <!--                <version>${thymeleaf.version}</version>-->
+            <!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 
