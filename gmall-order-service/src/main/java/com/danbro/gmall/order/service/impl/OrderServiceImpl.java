@@ -2,6 +2,7 @@ package com.danbro.gmall.order.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.danbro.gmall.api.dto.OmsOrderDto;
 import com.danbro.gmall.api.po.OmsOrderItemPo;
 import com.danbro.gmall.api.service.CartService;
@@ -83,7 +84,19 @@ public class OrderServiceImpl implements OrderService {
                 orderItemMapper.insert(omsOrderItemPo);
                 cartService.deleteCartItem(Long.toString(omsOrderDto.getMemberId()),omsOrderItemPo.getProductSkuId());
             }
+            cartService.syncCartCache(Long.toString(omsOrderDto.getMemberId()));
         }
-        cartService.syncCartCache(Long.toString(omsOrderDto.getMemberId()));
+    }
+
+    @Override
+    public OmsOrderDto selectOrderByOrderSn(String orderSn) {
+        QueryWrapper<OmsOrderDto> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("order_sn",orderSn);
+        return orderMapper.selectOne(queryWrapper);
+    }
+
+    @Override
+    public int updateOrder(OmsOrderDto omsOrderDto) {
+        return orderMapper.updateById(omsOrderDto);
     }
 }

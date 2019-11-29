@@ -45,9 +45,9 @@ public class MemberReceiveAddressServiceImpl implements MemberReceiveAddressServ
 
     @Override
     public List<MemberReceiveAddressPo> selectAddressByMemberId(Long memberId) {
-        HashMap<String, Object> columnMap = new HashMap<>(16);
-        columnMap.put("member_id",memberId);
-        return memberReceiveAddressMapper.selectByMap(columnMap);
+        QueryWrapper<MemberReceiveAddressPo> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("member_id",memberId);
+        return memberReceiveAddressMapper.selectList(queryWrapper);
     }
 
     @Override

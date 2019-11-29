@@ -12,12 +12,14 @@ import com.danbro.gmall.api.service.OrderService;
 import com.danbro.gmall.api.service.SkuService;
 import com.danbro.gmall.cart.web.utils.ControllerUtil;
 import com.danbro.gmall.common.utils.annotations.LoginRequired;
+import com.danbro.gmall.order.web.utils.OrderUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -35,6 +37,7 @@ public class OrderController {
 
     @Reference
     CartService cartService;
+
     @Reference
     MemberReceiveAddressService memberReceiveAddressService;
 
@@ -70,17 +73,15 @@ public class OrderController {
     }
 
 
-    @PostMapping("submitOrder")
+    @PostMapping("/submitOrder")
     @LoginRequired(successNecessary = true)
     @Transactional(rollbackFor = Exception.class)
-    public String submitOrder(HttpServletRequest request,
-                              String tradeCode) {
-
+    public ModelAndView submitOrder(HttpServletRequest request,
+                                    String tradeCode) {
         Long memberId = Long.parseLong((String) request.getAttribute("memberId"));
         Boolean success = orderService.checkTradeCode(memberId, tradeCode);
-
-        if (!success){
-            return "tradeFail";
+        if (!success) {
+            return new ModelAndView("tradeFail");
         }
         //创建订单
         OmsOrderDto omsOrderDto = new OmsOrderDto();
@@ -100,6 +101,8 @@ public class OrderController {
         omsOrderDto.setBillReceiverPhone("131222809765");
         //订单创建时间
         omsOrderDto.setCreateTime(new Date());
+        //订单编号
+        omsOrderDto.setOrderSn(OrderUtil.createOrderSn());
 
         omsOrderDto.setDeleteStatus(0);
 
@@ -113,15 +116,15 @@ public class OrderController {
         omsOrderDto.setReceiverProvince(memberReceiveAddressPo.getProvince());
         omsOrderDto.setReceiverRegion(memberReceiveAddressPo.getRegion());
         Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DATE,7);
+        calendar.add(Calendar.DATE, 7);
         omsOrderDto.setReceiveTime(calendar.getTime());
 
         List<OmsCartItemDto> cartList = cartService.getCartListByMemberId(memberId, true);
         for (OmsCartItemDto omsCartItemDto : cartList) {
             Boolean flag = skuService.checkSkuPrice(omsCartItemDto.getProductSkuId(), omsCartItemDto.getProductPrice());
             //价格校验失败 跳转到交易失败页面
-            if (!flag){
-                return "tradeFail";
+            if (!flag) {
+                return new ModelAndView("tradeFail");
             }
             OmsOrderItemPo omsOrderItemPo = new OmsOrderItemPo();
             omsOrderItemPo.setProductAttr(omsCartItemDto.getProductAttr());
@@ -145,8 +148,11 @@ public class OrderController {
         omsOrderDto.setTotalAmount(ControllerUtil.getTotalPrice(cartList));
         //保存订单
         orderService.saveOrder(omsOrderDto);
+        //跳转到支付页面
+        ModelAndView modelAndView = new ModelAndView("redirect:http://payment.gmall.com:8089/index");
+        modelAndView.addObject("orderId",omsOrderDto.getOrderSn());
+        return modelAndView;
 
-        return "success";
     }
 
 }

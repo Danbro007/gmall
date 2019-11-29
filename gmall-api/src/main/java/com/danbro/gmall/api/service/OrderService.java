@@ -32,4 +32,17 @@ public interface OrderService {
      */
     void saveOrder(OmsOrderDto omsOrderDto);
 
+    /**
+     * 通过用户id和订单号找出订单
+     * @param orderSn 外部订单号
+     * @return 订单信息
+     */
+    OmsOrderDto selectOrderByOrderSn(String orderSn);
+
+    /**
+     * 更新订单信息
+     * @param omsOrderDto 订单信息
+     * @return 1：更新成功 0：更新失败
+     */
+    int updateOrder(OmsOrderDto omsOrderDto);
 }

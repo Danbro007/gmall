@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://D:/gmall/gmall-payment-service" charset="UTF-8" />
+    <file url="file://D:/gmall/gmall-payment-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/fastdfs-client-java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-cart-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-cart-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/gmall-common-utils" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-common-utils" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-item-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-manage-service" charset="UTF-8" />
@@ -14,6 +15,8 @@
     <file url="file://$PROJECT_DIR$/gmall-order-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-passport-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-payment-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-payment-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-search-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-search-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-service-utils" charset="UTF-8" />

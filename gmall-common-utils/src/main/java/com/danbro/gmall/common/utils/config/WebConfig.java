@@ -3,9 +3,13 @@ package com.danbro.gmall.common.utils.config;
 
 import com.danbro.gmall.common.utils.interceptor.AuthInterceptor;
 import com.danbro.gmall.common.utils.interceptor.ResponseResultInterceptor;
+import com.danbro.gmall.common.utils.processor.CustomServletModelAttributeMethodProcessor;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import java.util.List;
 
 /**
  * @author Danrbo
@@ -29,5 +33,10 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(authInterceptor).addPathPatterns("/**").excludePathPatterns("/static/**");
         registry.addInterceptor(responseResultInterceptor).addPathPatterns("/**").excludePathPatterns("/static/**");
+    }
+
+    @Override
+    public void addArgumentResolvers(List<HandlerMethodArgumentResolver> resolvers) {
+        resolvers.add(new CustomServletModelAttributeMethodProcessor(true));
     }
 }
