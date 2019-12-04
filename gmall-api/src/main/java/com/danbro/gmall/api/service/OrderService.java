@@ -45,4 +45,6 @@ public interface OrderService {
      * @return 1：更新成功 0：更新失败
      */
     int updateOrder(OmsOrderDto omsOrderDto);
+
+    int updateOrderStatusByOrderSn(OmsOrderDto omsOrderDto);
 }

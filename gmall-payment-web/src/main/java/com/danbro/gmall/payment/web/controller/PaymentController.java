@@ -13,6 +13,7 @@ import com.danbro.gmall.api.service.PaymentService;
 import com.danbro.gmall.api.vo.AlipayReturnParamVo;
 import com.danbro.gmall.common.utils.annotations.LoginRequired;
 import com.danbro.gmall.payment.web.config.AlipayConfig;
+import com.danbro.gmall.service.utils.util.MqProducerUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -71,7 +72,6 @@ public class PaymentController {
         } catch (AlipayApiException e) {
             e.printStackTrace();
         }
-        System.out.println(form);
         return form;
     }
 
@@ -96,13 +96,6 @@ public class PaymentController {
             paymentInfo.setCallbackContent(request.getQueryString());
             paymentInfo.setSubject("支付测试");
             paymentService.insert(paymentInfo);
-            omsOrderDto.setPayAmount(alipayReturnParamVo.getTotalAmount());
-            omsOrderDto.setPayType(1);
-            omsOrderDto.setStatus(1);
-            omsOrderDto.setPaymentTime(paymentInfo.getCreateTime());
-            int i = orderService.updateOrder(omsOrderDto);
-            System.out.println(i);
-
         }
         return "支付成功";
     }

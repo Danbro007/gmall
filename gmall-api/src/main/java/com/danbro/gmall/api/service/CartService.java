@@ -65,8 +65,4 @@ public interface CartService {
      */
     void deleteCartItem(String memberId, Long skuId);
 
-
-
-
-
 }

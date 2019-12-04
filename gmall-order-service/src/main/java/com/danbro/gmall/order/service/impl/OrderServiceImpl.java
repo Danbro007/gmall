@@ -3,12 +3,14 @@ package com.danbro.gmall.order.service.impl;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.danbro.gmall.api.dto.OmsOrderDto;
 import com.danbro.gmall.api.po.OmsOrderItemPo;
 import com.danbro.gmall.api.service.CartService;
 import com.danbro.gmall.api.service.OrderService;
-import com.danbro.gmall.order.service.mapper.OrderMapper;
+
 import com.danbro.gmall.order.service.mapper.OrderItemMapper;
+import com.danbro.gmall.order.service.mapper.OrderMapper;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -98,5 +100,12 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public int updateOrder(OmsOrderDto omsOrderDto) {
         return orderMapper.updateById(omsOrderDto);
+    }
+
+    @Override
+    public int updateOrderStatusByOrderSn(OmsOrderDto omsOrderDto) {
+        UpdateWrapper<OmsOrderDto> updateWrapper = new UpdateWrapper<>();
+        updateWrapper.eq("order_sn",omsOrderDto.getOrderSn()).set("status",omsOrderDto.getStatus());
+        return orderMapper.update(omsOrderDto, updateWrapper);
     }
 }

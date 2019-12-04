@@ -6,11 +6,16 @@ import com.danbro.gmall.api.dto.PmsSkuInfoDto;
 import com.danbro.gmall.manage.service.mapper.PmsBaseAttrInfoMapper;
 import com.danbro.gmall.manage.service.mapper.PmsProductSaleAttrMapper;
 import com.danbro.gmall.manage.service.mapper.PmsSkuInfoMapper;
+import com.danbro.gmall.service.utils.util.ActiveMqUtil;
+import com.danbro.gmall.service.utils.util.MqProducerUtil;
+import org.apache.activemq.command.ActiveMQMapMessage;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import javax.jms.*;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -19,7 +24,8 @@ import java.util.List;
 @SpringBootTest
 class GmallManageServiceApplicationTests {
 
-
+    @Autowired
+    MqProducerUtil mqProducerUtil;
     @Autowired
     PmsProductSaleAttrMapper pmsProductSaleAttrMapper;
 
@@ -82,9 +88,10 @@ class GmallManageServiceApplicationTests {
     }
 
     @Test
-    public void test06() {
-        Object o = redisTemplate.opsForValue().get("sku:105:info");
-        System.out.println(o);
+    void test06() throws JMSException {
+        ActiveMQMapMessage activeMQMapMessage = new ActiveMQMapMessage();
+        activeMQMapMessage.setString("name","shanqijie");
+        mqProducerUtil.setMessage("test02",activeMQMapMessage);
     }
 
 }

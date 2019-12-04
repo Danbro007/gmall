@@ -2,13 +2,21 @@ package com.danbro.gmall.cart.service;
 
 import com.danbro.gmall.api.dto.OmsCartItemDto;
 import com.danbro.gmall.api.service.CartService;
+import com.danbro.gmall.api.service.OrderService;
 import com.danbro.gmall.cart.service.mapper.CartMapper;
+import com.danbro.gmall.service.utils.util.MqProducerUtil;
+import org.apache.activemq.broker.region.Queue;
+import org.apache.activemq.command.ActiveMQMapMessage;
+import org.apache.activemq.command.ActiveMQQueue;
+import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.jms.core.JmsMessagingTemplate;
 
+import javax.jms.JMSException;
 import java.util.TreeMap;
 
 @SpringBootTest
@@ -26,6 +34,14 @@ class GmallCartServiceApplicationTests {
     @Autowired
     StringRedisTemplate stringRedisTemplate;
 
+    @Autowired
+    JmsMessagingTemplate jmsMessagingTemplate;
+
+    @Autowired
+    MqProducerUtil mqProducerUtil;
+
+
+
     @Test
     void contextLoads() {
         OmsCartItemDto itemBySkuId = cartService.getItemBySkuId(105L, "1");
@@ -42,20 +58,17 @@ class GmallCartServiceApplicationTests {
     }
 
     @Test
-    void test02() {
-        TreeMap<Long, OmsCartItemDto> longOmsCartItemDtoTreeMap = new TreeMap<>();
-        OmsCartItemDto omsCartItemDto1 = new OmsCartItemDto();
-        omsCartItemDto1.setId(3L);
-        OmsCartItemDto omsCartItemDto = new OmsCartItemDto();
-        omsCartItemDto.setId(1L);
-        OmsCartItemDto omsCartItemDto2 = new OmsCartItemDto();
-        omsCartItemDto2.setId(4L);
-        OmsCartItemDto omsCartItemDto3 = new OmsCartItemDto();
-        omsCartItemDto3.setId(2L);
-        longOmsCartItemDtoTreeMap.put(omsCartItemDto1.getId(),omsCartItemDto1);
-        longOmsCartItemDtoTreeMap.put(omsCartItemDto.getId(),omsCartItemDto);
-        longOmsCartItemDtoTreeMap.put(omsCartItemDto2.getId(),omsCartItemDto2);
-        longOmsCartItemDtoTreeMap.put(omsCartItemDto3.getId(),omsCartItemDto3);
-        System.out.println(1);
+    void test02() throws JMSException {
+        ActiveMQMapMessage activeMQMapMessage = new ActiveMQMapMessage();
+        activeMQMapMessage.setString("name","test");
+        ActiveMQQueue queue = new ActiveMQQueue("test");
+        jmsMessagingTemplate.convertAndSend(queue,activeMQMapMessage);
     }
+    @Test
+    void test03() throws JMSException {
+        ActiveMQMapMessage activeMQMapMessage = new ActiveMQMapMessage();
+        activeMQMapMessage.setString("name","test");
+        mqProducerUtil.setMessage("test02",activeMQMapMessage);
+    }
+
 }

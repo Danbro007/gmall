@@ -6,9 +6,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class GmallServiceUtilsApplicationTests {
 
+
+
     @Test
-    void contextLoads() {
+    private void contextLoads() {
         System.out.println("2222");
+
     }
 
 }

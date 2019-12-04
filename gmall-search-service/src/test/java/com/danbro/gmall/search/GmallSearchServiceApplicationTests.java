@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
-public class GmallSearchServiceApplicationTests {
+class GmallSearchServiceApplicationTests {
 
     @Autowired
     JestClient jestClient;
@@ -31,10 +31,11 @@ public class GmallSearchServiceApplicationTests {
 
     /**
      * 更新elasticsearch
+     *
      * @throws IOException
      */
     @Test
-    public void contextLoads() throws IOException {
+    void contextLoads() throws IOException {
         List<PmsSkuInfoDto> pmsSkuInfoDtoList = skuService.getAllSku(285L);
         List<PmsSkuInfoFromEsDto> searchPmsSkuInfos = new ArrayList<>();
         for (PmsSkuInfoPo pmsSkuInfoPo : pmsSkuInfoDtoList) {
@@ -49,10 +50,10 @@ public class GmallSearchServiceApplicationTests {
     }
 
     @Test
-    public void testSearch(){
+    void testSearch() {
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
-        TermQueryBuilder termQueryBuilder = new TermQueryBuilder("skuAttrValueList.valueId","39");
+        TermQueryBuilder termQueryBuilder = new TermQueryBuilder("skuAttrValueList.valueId", "39");
         TermQueryBuilder termQueryBuilder1 = new TermQueryBuilder("skuAttrValueList.valueId", "43");
         boolQueryBuilder.filter(termQueryBuilder);
         boolQueryBuilder.filter(termQueryBuilder1);
@@ -62,6 +63,12 @@ public class GmallSearchServiceApplicationTests {
         searchSourceBuilder.highlighter(null);
         String dsl = searchSourceBuilder.toString();
         System.out.println(dsl);
+
+    }
+
+    @Test
+    void test01() {
+        System.out.println("1");
 
     }
 

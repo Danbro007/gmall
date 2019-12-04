@@ -1,4 +1,4 @@
-package com.danbro.gmall.manage.service.Impl;
+package com.danbro.gmall.manage.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.danbro.gmall.api.po.PmsBaseCatalog1Po;

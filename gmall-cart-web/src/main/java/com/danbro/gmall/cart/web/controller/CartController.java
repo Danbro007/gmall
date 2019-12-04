@@ -48,7 +48,7 @@ public class CartController {
         PmsSkuInfoDto skuInfo = skuService.getSkuById(skuId);
         //建立购物车里的商品对象
         OmsCartItemDto omsCartItemDto = ControllerUtil.getOmsCartItemDto(skuInfo, quantity);
-
+        omsCartItemDto.setIsChecked(1);
         String memberId = (String) request.getAttribute("memberId");
         //用户未登录
         if (StringUtils.isBlank(memberId)) {

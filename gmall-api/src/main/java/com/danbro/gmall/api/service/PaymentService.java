@@ -12,6 +12,7 @@ public interface PaymentService {
 
     /**
      * 添加支付记录
+     *
      * @param paymentInfo 支付信息
      */
     void insert(PaymentInfoPo paymentInfo);
