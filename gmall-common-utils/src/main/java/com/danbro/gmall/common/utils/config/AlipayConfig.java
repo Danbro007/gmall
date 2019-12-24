@@ -1,4 +1,4 @@
-package com.danbro.gmall.payment.web.config;
+package com.danbro.gmall.common.utils.config;
 
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;

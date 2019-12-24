@@ -6,13 +6,18 @@ import com.danbro.gmall.api.po.MemberPo;
 import com.danbro.gmall.api.po.MemberReceiveAddressPo;
 import com.danbro.gmall.api.service.MemberService;
 import com.danbro.gmall.api.vo.MemberPoInfoVo;
+import com.danbro.gmall.service.utils.util.MqProducerUtil;
 import com.danbro.gmall.user.mapper.MemberMapper;
 import com.danbro.gmall.user.mapper.MemberReceiveAddressMapper;
+import org.apache.activemq.command.ActiveMQMapMessage;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
+import org.springframework.util.StringUtils;
 
+import javax.jms.JMSException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -31,6 +36,8 @@ public class MemberServiceImpl implements MemberService {
 
     private MemberReceiveAddressMapper memberReceiveAddressMapper;
 
+    @Autowired
+    private MqProducerUtil mqProducerUtil;
     public MemberServiceImpl(MemberMapper memberMapper, RedisTemplate redisTemplate, MemberReceiveAddressMapper memberReceiveAddressMapper) {
         this.memberMapper = memberMapper;
         this.redisTemplate = redisTemplate;
@@ -96,10 +103,20 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public void addUserToken(Long memberId, String token) {
+    public void addUserToken(Long memberId, String token,String cartList) {
         String key = "User:" + memberId + "token";
         redisTemplate.delete(key);
         redisTemplate.opsForValue().set(key, token, 60 * 60 * 12, TimeUnit.SECONDS);
+        if (!StringUtils.isEmpty(cartList)){
+            ActiveMQMapMessage mapMessage = new ActiveMQMapMessage();
+            try {
+                mapMessage.setLong("memberId",memberId);
+                mapMessage.setString("cartList",cartList);
+            } catch (JMSException e) {
+                e.printStackTrace();
+            }
+            mqProducerUtil.setMessage("CART_MERGE",mapMessage);
+        }
     }
 
     @Override
@@ -111,7 +128,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public MemberPo checkOauthUser(MemberPo memberPo) {
         QueryWrapper<MemberPo> memberPoQueryWrapper = new QueryWrapper<>();
-        memberPoQueryWrapper.eq("source_type",memberPo.getSourceType()).eq("source_uid",memberPo.getSourceUid());
+        memberPoQueryWrapper.eq("source_type", memberPo.getSourceType()).eq("source_uid", memberPo.getSourceUid());
         return memberMapper.selectOne(memberPoQueryWrapper);
     }
 

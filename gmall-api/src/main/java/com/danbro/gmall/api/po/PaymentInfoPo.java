@@ -19,7 +19,6 @@ import java.util.Date;
 public class PaymentInfoPo implements Serializable {
     @TableId(type = IdType.AUTO)
     private Long  id;
-    private String outTradeNo;
     private Long orderId;
     private String orderSn;
     private String alipayTradeNo;

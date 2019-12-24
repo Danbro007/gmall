@@ -20,3 +20,6 @@ user-service端口8077
 
 order-web端口8088
 order-service端口8078
+
+payment-web端口8089
+payment-service端口8079

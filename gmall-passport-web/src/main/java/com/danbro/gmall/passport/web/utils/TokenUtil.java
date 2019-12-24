@@ -18,7 +18,7 @@ import java.util.HashMap;
 public class TokenUtil {
 
     public static String getToken(MemberPo loginMember, HttpServletRequest request,String defaultIp,String tokenKey){
-        String token = "";
+        String token;
         if (loginMember != null) {
             String ip = request.getHeader("x-forwarded-for");
             if (StringUtils.isBlank(ip)) {

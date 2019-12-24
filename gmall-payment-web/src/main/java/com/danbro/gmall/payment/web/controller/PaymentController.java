@@ -12,8 +12,9 @@ import com.danbro.gmall.api.service.OrderService;
 import com.danbro.gmall.api.service.PaymentService;
 import com.danbro.gmall.api.vo.AlipayReturnParamVo;
 import com.danbro.gmall.common.utils.annotations.LoginRequired;
-import com.danbro.gmall.payment.web.config.AlipayConfig;
-import com.danbro.gmall.service.utils.util.MqProducerUtil;
+import com.danbro.gmall.common.utils.config.AlipayConfig;
+import com.danbro.gmall.common.utils.exceptions.CustomizeErrorCode;
+import com.danbro.gmall.common.utils.exceptions.CustomizeException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -39,12 +40,12 @@ public class PaymentController {
     @LoginRequired(successNecessary = true)
     @GetMapping("/index")
     public String index(HttpServletRequest request,
-                        String orderId,
+                        String orderSn,
                         Model model) {
         Long memberId = Long.parseLong((String) request.getAttribute("memberId"));
-        OmsOrderDto omsOrderDto = orderService.selectOrderByOrderSn(orderId);
+        OmsOrderDto omsOrderDto = orderService.selectOrderByOrderSn(orderSn);
         model.addAttribute("totalAmount", omsOrderDto.getTotalAmount());
-        model.addAttribute("orderId", omsOrderDto.getOrderSn());
+        model.addAttribute("orderSn", omsOrderDto.getOrderSn());
         return "index";
     }
 
@@ -52,7 +53,7 @@ public class PaymentController {
     @PostMapping("/alipay/submit")
     @ResponseBody
     public String alipayPay(HttpServletRequest request,
-                            String orderId,
+                            String orderSn,
                             BigDecimal totalAmount) {
         Long memberId = Long.parseLong((String) request.getAttribute("memberId"));
         AlipayTradePagePayRequest alipayRequest = new AlipayTradePagePayRequest();
@@ -60,7 +61,7 @@ public class PaymentController {
         alipayRequest.setNotifyUrl(AlipayConfig.notifyPaymentUrl);
 
         HashMap<String, String> map = new HashMap<>(16);
-        map.put("out_trade_no", orderId);
+        map.put("out_trade_no", orderSn);
         map.put("product_code", "FAST_INSTANT_TRADE_PAY");
         map.put("total_amount", "0.01");
         map.put("subject", "小米手机测试");
@@ -72,6 +73,18 @@ public class PaymentController {
         } catch (AlipayApiException e) {
             e.printStackTrace();
         }
+
+        OmsOrderDto omsOrderDto = orderService.selectOrderByOrderSn(orderSn);
+        //创建支付记录
+        PaymentInfoPo paymentInfo = new PaymentInfoPo();
+        paymentInfo.setOrderSn(orderSn);
+        paymentInfo.setTotalAmount(totalAmount);
+        paymentInfo.setCreateTime(new Date());
+        paymentInfo.setPaymentStatus(false);
+        paymentInfo.setOrderId(omsOrderDto.getId());
+        paymentService.insert(paymentInfo);
+        //通过延迟队列检查当前订单的支付状态
+        paymentService.checkPaymentSuccessQueue(orderSn,5);
         return form;
     }
 
@@ -80,22 +93,24 @@ public class PaymentController {
     @Transactional(rollbackFor = Exception.class)
     @GetMapping("/alipay/callback/return")
     public String alipayCallbackReturn(AlipayReturnParamVo alipayReturnParamVo,
-                                       HttpServletRequest request){
+                                       HttpServletRequest request) {
 
-        if (alipayReturnParamVo.getSign() != null){
+        if (alipayReturnParamVo.getSign() != null) {
             //验证签名成功
-            OmsOrderDto omsOrderDto = orderService.selectOrderByOrderSn(alipayReturnParamVo.getOutTradeNo());
-            PaymentInfoPo paymentInfo = new PaymentInfoPo();
-            paymentInfo.setAlipayTradeNo(alipayReturnParamVo.getTradeNo());
-            paymentInfo.setCreateTime(new Date());
-            paymentInfo.setCallbackTime(paymentInfo.getCreateTime());
-            paymentInfo.setOrderSn(alipayReturnParamVo.getOutTradeNo());
-            paymentInfo.setPaymentStatus(true);
-            paymentInfo.setOrderId(omsOrderDto.getId());
-            paymentInfo.setTotalAmount(alipayReturnParamVo.getTotalAmount());
-            paymentInfo.setCallbackContent(request.getQueryString());
-            paymentInfo.setSubject("支付测试");
-            paymentService.insert(paymentInfo);
+            PaymentInfoPo paymentInfoFromDb = paymentService.selectPaymentByTradeNoCode(alipayReturnParamVo.getOutTradeNo());
+            if (paymentInfoFromDb == null){
+                throw new CustomizeException(CustomizeErrorCode.PAYMENT_NOT_FOUND);
+            }
+
+            paymentInfoFromDb.setAlipayTradeNo(alipayReturnParamVo.getTradeNo());
+            paymentInfoFromDb.setCallbackTime(paymentInfoFromDb.getCreateTime());
+            paymentInfoFromDb.setOrderSn(alipayReturnParamVo.getOutTradeNo());
+            paymentInfoFromDb.setPaymentStatus(true);
+            paymentInfoFromDb.setCallbackContent(request.getQueryString());
+            paymentInfoFromDb.setSubject("支付测试");
+            //更新订单状态
+            paymentService.updatePayment(paymentInfoFromDb);
+
         }
         return "支付成功";
     }

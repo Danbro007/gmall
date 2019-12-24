@@ -1,5 +1,6 @@
 package com.danbro.gmall.api.service;
 
+import com.danbro.gmall.api.dto.OmsCartItemDto;
 import com.danbro.gmall.api.po.MemberPo;
 import com.danbro.gmall.api.vo.MemberPoInfoVo;
 
@@ -14,30 +15,35 @@ import java.util.List;
 public interface MemberService {
     /**
      * 获得所有memberDto
+     *
      * @return 所有memberDto
      */
     List<MemberPo> getAllMembers();
 
     /**
      * 添加新的会员
+     *
      * @param memberPo 添加的会员数据
      */
     void insertMember(MemberPo memberPo);
 
     /**
      * 通过会员id删除会员
+     *
      * @param memberId 会员id
      */
     void deleteMember(Long memberId);
 
     /**
      * 更新会员信息
+     *
      * @param memberPo 要更新的会员对象
      */
     void updateMember(MemberPo memberPo);
 
     /**
      * 通过会员id查到会员信息
+     *
      * @param memberId 会员id
      * @return 会员对象
      */
@@ -45,6 +51,7 @@ public interface MemberService {
 
     /**
      * 通过用户账号和密码登录
+     *
      * @param username 用户名
      * @param password 密码
      * @return 用户信息
@@ -53,6 +60,7 @@ public interface MemberService {
 
     /**
      * 从数据库登录获取用户信息
+     *
      * @param username 用户名
      * @param password 密码
      * @return 用户信息
@@ -61,20 +69,23 @@ public interface MemberService {
 
     /**
      * 把用户token存储在缓存里
+     *
      * @param memberId 用户id
-     * @param token 用户token
+     * @param token    用户token
+     * @param cartListFromCache cookie里存储的购物车商品信息
      */
-    void addUserToken(Long memberId, String token);
-
+    void addUserToken(Long memberId, String token, String cartListFromCache);
 
     /**
      * 添加社交账户的用户
+     *
      * @param memberPo 用户信息
      */
     MemberPo addOauthUser(MemberPo memberPo);
 
     /**
      * 通过用户信息判断此用户是否在数据库里
+     *
      * @param memberPo 用户信息
      * @return
      */

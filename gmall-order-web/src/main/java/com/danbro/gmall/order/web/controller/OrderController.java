@@ -150,7 +150,7 @@ public class OrderController {
         orderService.saveOrder(omsOrderDto);
         //跳转到支付页面
         ModelAndView modelAndView = new ModelAndView("redirect:http://payment.gmall.com:8089/index");
-        modelAndView.addObject("orderId",omsOrderDto.getOrderSn());
+        modelAndView.addObject("orderSn",omsOrderDto.getOrderSn());
         return modelAndView;
 
     }

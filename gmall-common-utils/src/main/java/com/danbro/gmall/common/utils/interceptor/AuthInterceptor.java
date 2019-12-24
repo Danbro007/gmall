@@ -33,6 +33,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             if (loginRequired == null) {
                 return true;
             }
+            //判断是够需要用户身份验证
             boolean successNecessary = loginRequired.successNecessary();
             String token = "";
             //从Cookie获取旧token
@@ -47,7 +48,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             }
 
             HashMap<String, Object> map = new HashMap<>(16);
-            Boolean status = true;
+            Boolean status = false;
             //获得token里的用户信息
             if (StringUtils.isNotBlank(token)) {
                 String userJson = HttpClientUtil.doGet("http://passport.gmall.com:8085/identify?token=" + token + "&currentIp=" + request.getRemoteAddr());

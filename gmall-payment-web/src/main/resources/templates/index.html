@@ -20,7 +20,7 @@
         <dl>
 
           <dd>
-            <span th:text="'订单提交成功，请尽快付款！订单号：'+${orderId}"> </span>
+            <span th:text="'订单提交成功，请尽快付款！订单号：'+${orderSn}"> </span>
             <span th:text="'应付金额'+${totalAmount}+'元'"> </span>
           </dd>
           <dd>
@@ -63,7 +63,7 @@
     </div>
 
     <form    method="post" id="paymentForm">
-         <input type="hidden" name="orderId" th:value="${orderId}" >
+         <input type="hidden" name="orderSn" th:value="${orderSn}" >
          <input type="hidden" name="totalAmount" th:value="${totalAmount}" >
     </form>
 

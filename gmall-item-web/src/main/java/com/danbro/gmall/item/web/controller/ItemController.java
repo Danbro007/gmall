@@ -7,6 +7,7 @@ import com.danbro.gmall.api.service.PmsProductService;
 import com.danbro.gmall.api.service.SkuService;
 
 
+import com.danbro.gmall.common.utils.annotations.LoginRequired;
 import com.danbro.gmall.common.utils.exceptions.CustomizeErrorCode;
 import com.danbro.gmall.common.utils.exceptions.CustomizeException;
 import org.springframework.stereotype.Controller;
@@ -30,7 +31,7 @@ public class ItemController {
     @Reference
     PmsProductService pmsProductService;
 
-
+    @LoginRequired
     @GetMapping("{skuId}.html")
     public String itemView(@PathVariable("skuId") Long skuId, Model model) {
         PmsSkuInfoDto pmsSkuInfoDto = skuService.getSkuById(skuId);

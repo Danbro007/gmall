@@ -16,7 +16,7 @@ public class MqProducerUtil {
     @Autowired
     ActiveMqUtil activeMqUtil;
 
-    public void setMessage(String queueName, MapMessage messageMap) {
+    public void setMessage(String queueName, MapMessage mapMessage) {
         ConnectionFactory connectionFactory = activeMqUtil.getConnectionFactory();
         Connection connection = null;
         Session session = null;
@@ -27,7 +27,7 @@ public class MqProducerUtil {
             session = connection.createSession(true, Session.SESSION_TRANSACTED);
             Queue queue = session.createQueue(queueName);
             MessageProducer producer = session.createProducer(queue);
-            producer.send(messageMap);
+            producer.send(mapMessage);
             //提交
             session.commit();
         } catch (JMSException e) {

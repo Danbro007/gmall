@@ -3,11 +3,15 @@ package com.danbro.gmall.passport.web.controller;
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.alibaba.fastjson.JSON;
 import com.danbro.gmall.api.po.MemberPo;
+import com.danbro.gmall.api.service.CartService;
 import com.danbro.gmall.api.service.MemberService;
+import com.danbro.gmall.common.utils.annotations.LoginRequired;
+import com.danbro.gmall.common.utils.util.CookieUtil;
 import com.danbro.gmall.common.utils.util.JwtUtil;
 import com.danbro.gmall.passport.web.thirdSocialAccountLogin.accessToken.WeiboAccessToken;
 import com.danbro.gmall.passport.web.thirdSocialAccountLogin.postParam.WeiboPostParam;
 import com.danbro.gmall.passport.web.thirdSocialAccountLogin.userProvider.WeiboUserProvider;
+import com.danbro.gmall.passport.web.utils.LoginUtil;
 import com.danbro.gmall.passport.web.utils.TokenUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.annotations.Param;
@@ -20,6 +24,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -53,6 +58,9 @@ public class PassportController {
     @Reference
     MemberService memberService;
 
+    @Reference
+    CartService cartService;
+
     @GetMapping("/index")
     public String index(Model model, String returnUrl) {
         model.addAttribute("returnUrl", returnUrl);
@@ -61,13 +69,13 @@ public class PassportController {
 
     @PostMapping("/login")
     @ResponseBody
-    public String login(String username, String password, HttpServletRequest request) {
+    public String login(String username, String password, HttpServletRequest request, HttpServletResponse response) {
         MemberPo loginMember = memberService.login(username, password);
+        //获取token
         String token = TokenUtil.getToken(loginMember, request, defaultIp, tokenKey);
-        String fail = "fail";
-        if (!token.equals(fail)) {
-            memberService.addUserToken(loginMember.getId(), token);
-        }
+        CookieUtil.setCookie(request, response, "oldToken", token, 60 * 60 * 2, true);
+        //登录成功
+        LoginUtil.loginByToken(loginMember, request, token, defaultIp, tokenKey, memberService);
         return token;
     }
 
@@ -104,7 +112,7 @@ public class PassportController {
         //获取token
         String token = "";
         WeiboAccessToken weiboAccessToken = weiboUserProvider.getAccessToken(weiboPostParam);
-        if (weiboAccessToken != null){
+        if (weiboAccessToken != null) {
             //通过token获取账户信息
             weiboAccessToken.setCode(code);
             MemberPo memberPo = weiboUserProvider.getUserInfo(weiboAccessToken);
@@ -121,11 +129,7 @@ public class PassportController {
                 memberPo = checkMemberFromDb;
             }
             //获取token
-            token = TokenUtil.getToken(memberPo, request, defaultIp, tokenKey);
-            String fail = "fail";
-            if (!token.equals(fail)) {
-                memberService.addUserToken(memberPo.getId(), token);
-            }
+            LoginUtil.loginByToken(memberPo, request, token, defaultIp, tokenKey, memberService);
         }
         return "redirect:http://search.gmall.com:8082/index?token=" + token;
 
